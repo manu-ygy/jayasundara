@@ -8,13 +8,18 @@ extends CharacterBody2D
 @onready var bump_detection = $Area2D/CollisionShape2D
 @onready var muzzle = $Muzzle
 @onready var indicator = $Indicator
+@onready var glitch = $Glitch
 
 @onready var camera = $Camera2D
 
 var bullet_instance = load('res://bullet.tscn')
+var pillar_instance = load('res://earth_pilllar.tscn')
+var dust_instance = load('res://dash.tres')
 
 const movement_speed = 125
 const dash_speed = 450
+
+var attack_direction
 
 var is_dashing = false
 var is_stunned = false
@@ -31,6 +36,8 @@ func _physics_process(delta):
 		if (velocity == Vector2.ZERO):
 			animation.play('idle')
 		else:
+			attack_direction = direction
+			
 			animation.flip_h = velocity.x <= 0
 			muzzle.rotation = velocity.angle()
 			indicator.rotation = velocity.angle()
@@ -51,6 +58,15 @@ func _input(event):
 		is_dashing = true
 		bump_detection.disabled = false
 		dash_timer.start()
+		
+		var dust = AnimatedSprite2D.new()
+		dust.global_position = global_position
+		dust.sprite_frames = dust_instance
+		dust.flip_h = animation.flip_h
+		dust.play('default')
+		dust.connect('animation_finished', dust.queue_free)
+		
+		world.add_child(dust)
 		
 		for x in range(8):
 			await get_tree().create_timer(0.03).timeout
@@ -78,10 +94,15 @@ func _input(event):
 		
 		await get_tree().create_timer(0.2).timeout
 		
-		var bullet = bullet_instance.instantiate()
-		bullet.transform = muzzle.transform
-		bullet.global_position = global_position
-		world.add_child(bullet)
+		var pillar = pillar_instance.instantiate()
+		pillar.global_position = global_position
+		world.add_child(pillar)
+		pillar.init(attack_direction)
+		
+#		var bullet = bullet_instance.instantiate()
+#		bullet.transform = muzzle.transform
+#		bullet.global_position = global_position
+#		world.add_child(bullet)
 
 func _on_dash_timer_timeout():
 	is_dashing = false
@@ -101,3 +122,8 @@ func _on_area_2d_body_entered(body):
 
 func _on_attack_timer_timeout():
 	is_attacking = false
+
+func _on_glitch_timer_timeout():
+	glitch.show()
+	await get_tree().create_timer(2).timeout
+	glitch.hide()

@@ -4,6 +4,7 @@ extends Area2D
 @onready var animation = $AnimatedSprite2D
 @onready var trail = $Trail
 @onready var explosion = $Explosion
+@onready var is_visible = $IsVisible
 
 var speed = 500
 
@@ -23,7 +24,7 @@ func _on_body_entered(body):
 		var tween = get_tree().create_tween()
 		tween.tween_property(animation, 'scale', Vector2(0, 0), 0.2)
 
-		if (global_position.distance_to(player.global_position) < 128):
+		if (is_visible.is_on_screen()):
 			player.camera.shake_for(0.2)
 			
 		await get_tree().create_timer(0.5).timeout

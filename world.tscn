@@ -432,12 +432,8 @@ layer_0/tile_data = PackedInt32Array(-1, 131073, 2, -65536, 131073, 2, 0, 131073
 
 [node name="Player" type="CharacterBody2D" parent="."]
 z_index = 1
+collision_layer = 2
 script = ExtResource("1_yq2fp")
-
-[node name="Shadow" type="Sprite2D" parent="Player"]
-self_modulate = Color(1, 1, 1, 0.588235)
-z_index = -1
-texture = ExtResource("8_onu4j")
 
 [node name="Indicator" type="Sprite2D" parent="Player"]
 self_modulate = Color(1, 1, 1, 0.588235)
@@ -448,6 +444,10 @@ texture = ExtResource("4_ju3rl")
 [node name="DashTimer" type="Timer" parent="Player"]
 wait_time = 0.2
 one_shot = true
+
+[node name="GlitchTimer" type="Timer" parent="Player"]
+wait_time = 5.0
+autostart = true
 
 [node name="AttackTimer" type="Timer" parent="Player"]
 process_callback = 0
@@ -477,6 +477,20 @@ animation = &"attack"
 frame = 8
 frame_progress = 1.0
 
+[node name="Glitch" type="Sprite2D" parent="Player"]
+visible = false
+material = SubResource("ShaderMaterial_jyvps")
+position = Vector2(0, -0.250001)
+scale = Vector2(0.390625, 0.382813)
+texture = ExtResource("2_1qa3t")
+hframes = 6
+vframes = 2
+
+[node name="Shadow" type="Sprite2D" parent="Player"]
+self_modulate = Color(1, 1, 1, 0.588235)
+z_index = -1
+texture = ExtResource("8_onu4j")
+
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
 script = ExtResource("5_2vc0v")
@@ -484,15 +498,8 @@ script = ExtResource("5_2vc0v")
 [node name="ShakeTimer" type="Timer" parent="Player/Camera2D"]
 one_shot = true
 
-[node name="Glitch" type="Sprite2D" parent="Player"]
-visible = false
-material = SubResource("ShaderMaterial_jyvps")
-scale = Vector2(0.390625, 0.390625)
-texture = ExtResource("2_1qa3t")
-hframes = 6
-vframes = 2
-
 [connection signal="timeout" from="Player/DashTimer" to="Player" method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="Player/GlitchTimer" to="Player" method="_on_glitch_timer_timeout"]
 [connection signal="timeout" from="Player/AttackTimer" to="Player" method="_on_attack_timer_timeout"]
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Player/Camera2D/ShakeTimer" to="Player/Camera2D" method="_on_shake_timer_timeout"]
