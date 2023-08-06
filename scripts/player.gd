@@ -10,6 +10,7 @@ extends CharacterBody2D
 @onready var raycast = $Muzzle/RayCast2D
 @onready var indicator = $Indicator
 @onready var glitch = $Glitch
+@onready var enemy = $/root/World/TileMap/Enemy
 
 @onready var camera = $Camera2D
 
@@ -28,7 +29,8 @@ var current_combinations = []
 var attack_combinations = {
 	'fireball': [KEY_1, KEY_2],
 	'earth_pillar': [KEY_1, KEY_3],
-	'water_prison': [KEY_2, KEY_3]
+	'water_prison': [KEY_2, KEY_3],
+	'meteor': [KEY_2]
 }
 
 var is_dashing = false
@@ -135,6 +137,19 @@ func cast_attack(attack_name):
 			prison.global_position = global_position
 			world.add_child(prison)
 			prison.init(attack_direction)
+			
+		'meteor':
+			await get_tree().create_timer(1).timeout
+			
+			for x in range(5):
+				await get_tree().create_timer(0.5).timeout
+				
+				var firing_position = global_position - Vector2(0, 64)
+				var fireball = fireball_instance.instantiate()
+				
+				fireball.global_position = firing_position
+				world.add_child(fireball)
+				fireball.init(firing_position.direction_to(enemy.global_position), self)
 			
 		_:
 			return
