@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://b04o5ltplddsv"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_a5m0e"]
+[ext_resource type="Texture2D" uid="uid://dn0j75q2mrd1f" path="res://icon.svg" id="1_ofmwq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmay"]
+size = Vector2(22, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oym5w"]
+
+[node name="Enemy" type="StaticBody2D"]
+collision_layer = 2
+script = ExtResource("1_a5m0e")
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("RectangleShape2D_mkmay")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_oym5w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1.49012e-08)
+scale = Vector2(0.152344, 0.152344)
+texture = ExtResource("1_ofmwq")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+theme_override_font_sizes/font_size = 8
+text = "HP: 100"
+horizontal_alignment = 1
+
+[node name="AttackTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

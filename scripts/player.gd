@@ -1,25 +1,35 @@
 extends CharacterBody2D
 
-@onready var world = $/root/World
+@onready var world = $/root/World/TileMap
 
 @onready var animation = $AnimatedSprite2D
 @onready var dash_timer = $DashTimer
 @onready var attack_timer = $AttackTimer
 @onready var bump_detection = $Area2D/CollisionShape2D
 @onready var muzzle = $Muzzle
+@onready var raycast = $Muzzle/RayCast2D
 @onready var indicator = $Indicator
 @onready var glitch = $Glitch
 
 @onready var camera = $Camera2D
 
-var bullet_instance = load('res://bullet.tscn')
-var pillar_instance = load('res://earth_pilllar.tscn')
+var fireball_instance = load('res://attacks/fireball.tscn')
+var pillar_instance = load('res://attacks/earth_pilllar.tscn')
+var prison_instance = load('res://attacks/water_prison.tscn')
 var dust_instance = load('res://dash.tres')
 
-const movement_speed = 125
+const movement_speed = 200
 const dash_speed = 450
 
 var attack_direction
+var quick_cast = 'fireball'
+
+var current_combinations = []
+var attack_combinations = {
+	'fireball': [KEY_1, KEY_2],
+	'earth_pillar': [KEY_1, KEY_3],
+	'water_prison': [KEY_2, KEY_3]
+}
 
 var is_dashing = false
 var is_stunned = false
@@ -28,7 +38,7 @@ var is_attacking = false
 var last_ghost_pos = Vector2()
 
 func _physics_process(delta):
-	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direction = Input.get_vector('left', 'right', 'up', 'down')
 	var speed = dash_speed if is_dashing else movement_speed
 	velocity = direction * speed if !is_stunned else Vector2.ZERO 
 	
@@ -54,7 +64,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func _input(event):
-	if (Input.is_action_just_pressed('dash') and !is_dashing and velocity != Vector2.ZERO):
+	if (Input.is_action_just_pressed('base_skill') and !is_dashing and velocity != Vector2.ZERO):
 		is_dashing = true
 		bump_detection.disabled = false
 		dash_timer.start()
@@ -88,21 +98,52 @@ func _input(event):
 				
 				world.add_child(ghost)
 				
-	if (Input.is_action_just_pressed('shoot')):
-		is_attacking = true
-		attack_timer.start()
+	elif (Input.is_action_just_pressed('quick_cast')):
+		cast_attack(quick_cast)
 		
-		await get_tree().create_timer(0.2).timeout
+	elif event is InputEventKey and event.pressed:
+		if event.keycode in [KEY_1, KEY_2, KEY_3, KEY_4, KEY_5, KEY_6, KEY_7, KEY_8, KEY_9]:
+			current_combinations.append(event.keycode)
+			
+			cast_attack(find_combinations())
+		else:
+			current_combinations = []
+			return
+			
+func cast_attack(attack_name):
+	is_attacking = true
+	attack_timer.start()
 		
-		var pillar = pillar_instance.instantiate()
-		pillar.global_position = global_position
-		world.add_child(pillar)
-		pillar.init(attack_direction)
-		
-#		var bullet = bullet_instance.instantiate()
-#		bullet.transform = muzzle.transform
-#		bullet.global_position = global_position
-#		world.add_child(bullet)
+	await get_tree().create_timer(0.2).timeout
+
+	match (attack_name):
+		'fireball': 
+			var fireball = fireball_instance.instantiate()
+			fireball.global_position = global_position
+			world.add_child(fireball)
+			fireball.init(attack_direction, self)
+			
+		'earth_pillar':
+			if (!raycast.is_colliding()):
+				var pillar = pillar_instance.instantiate()
+				pillar.global_position = global_position
+				world.add_child(pillar)
+				pillar.init(attack_direction)
+				
+		'water_prison':
+			var prison = prison_instance.instantiate()
+			prison.global_position = global_position
+			world.add_child(prison)
+			prison.init(attack_direction)
+			
+		_:
+			return
+			
+	current_combinations = []
+
+func find_combinations():
+	var index = attack_combinations.values().find(current_combinations)
+	return attack_combinations.keys()[index] if index != -1 else null
 
 func _on_dash_timer_timeout():
 	is_dashing = false

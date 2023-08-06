@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caoolmoqjxpte"
-path="res://.godot/imported/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.ctex"
+uid="uid://3ledghbg1dxr"
+path="res://.godot/imported/Water Blast - End.png-fc874a4983085a97a1c0820b807344a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tile.png"
-dest_files=["res://.godot/imported/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.ctex"]
+source_file="res://effects/water_prison/Water Blast - End.png"
+dest_files=["res://.godot/imported/Water Blast - End.png-fc874a4983085a97a1c0820b807344a0.ctex"]
 
 [params]
 

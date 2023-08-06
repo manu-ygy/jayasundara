@@ -1,0 +1,89 @@
+[gd_scene load_steps=14 format=3 uid="uid://dsv5b05caexjt"]
+
+[ext_resource type="Shader" path="res://glow.gdshader" id="1_o6b6e"]
+[ext_resource type="Texture2D" uid="uid://bxryr0xahwumr" path="res://effects/super-buffing.png" id="2_r8jh3"]
+
+[sub_resource type="Environment" id="Environment_jxcll"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_28qpt"]
+shader = ExtResource("1_o6b6e")
+shader_parameter/color1 = null
+shader_parameter/color2 = null
+shader_parameter/threshold = null
+shader_parameter/intensity = null
+shader_parameter/opacity = null
+shader_parameter/glow_color = null
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bnju"]
+atlas = ExtResource("2_r8jh3")
+region = Rect2(0, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aq6mq"]
+atlas = ExtResource("2_r8jh3")
+region = Rect2(72, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snbdp"]
+atlas = ExtResource("2_r8jh3")
+region = Rect2(144, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5232"]
+atlas = ExtResource("2_r8jh3")
+region = Rect2(216, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mj53l"]
+atlas = ExtResource("2_r8jh3")
+region = Rect2(288, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svt0j"]
+atlas = ExtResource("2_r8jh3")
+region = Rect2(360, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6paw7"]
+atlas = ExtResource("2_r8jh3")
+region = Rect2(432, 0, 72, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8u86"]
+atlas = ExtResource("2_r8jh3")
+region = Rect2(504, 0, 72, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1xe07"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bnju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aq6mq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snbdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5232")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mj53l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svt0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6paw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8u86")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="SuperBuffing" type="Node2D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jxcll")
+
+[node name="Effect" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_28qpt")
+sprite_frames = SubResource("SpriteFrames_1xe07")
+frame_progress = 0.470985

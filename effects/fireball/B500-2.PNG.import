@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caoolmoqjxpte"
-path="res://.godot/imported/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.ctex"
+uid="uid://dafm1i5q8o6ir"
+path="res://.godot/imported/B500-2.PNG-c3bc2787e6d06b9ec6976de477cc2361.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tile.png"
-dest_files=["res://.godot/imported/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.ctex"]
+source_file="res://effects/fireball/B500-2.PNG"
+dest_files=["res://.godot/imported/B500-2.PNG-c3bc2787e6d06b9ec6976de477cc2361.ctex"]
 
 [params]
 

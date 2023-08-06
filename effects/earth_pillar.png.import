@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caoolmoqjxpte"
-path="res://.godot/imported/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.ctex"
+uid="uid://dt5pjdk5a2mwp"
+path="res://.godot/imported/earth_pillar.png-6833b0bf5e4c51601364179ea3105542.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tile.png"
-dest_files=["res://.godot/imported/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.ctex"]
+source_file="res://effects/earth_pillar.png"
+dest_files=["res://.godot/imported/earth_pillar.png-6833b0bf5e4c51601364179ea3105542.ctex"]
 
 [params]
 

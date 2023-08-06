@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caoolmoqjxpte"
-path="res://.godot/imported/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.ctex"
+uid="uid://cbs2b18qw3oc"
+path="res://.godot/imported/Smoke VFX A7.png-28e129292623bb8fb81c9ac0c869f1f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tile.png"
-dest_files=["res://.godot/imported/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.ctex"]
+source_file="res://effects/smoke/VFX 1 Separated Frames/Smoke VFX A7.png"
+dest_files=["res://.godot/imported/Smoke VFX A7.png-28e129292623bb8fb81c9ac0c869f1f9.ctex"]
 
 [params]
 

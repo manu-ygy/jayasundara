@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://caoolmoqjxpte"
-path="res://.godot/imported/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.ctex"
+uid="uid://bxryr0xahwumr"
+path="res://.godot/imported/super-buffing.png-f4597dc041e319482054c32ba364e0a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tile.png"
-dest_files=["res://.godot/imported/tile.png-b6edd167b3cc7ec58612b18f9a6dce92.ctex"]
+source_file="res://effects/super-buffing.png"
+dest_files=["res://.godot/imported/super-buffing.png-f4597dc041e319482054c32ba364e0a4.ctex"]
 
 [params]
 
