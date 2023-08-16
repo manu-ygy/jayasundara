@@ -1,0 +1,34 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://57s6nqgbwss4"]
+
+[ext_resource type="FontFile" uid="uid://5punbxm32rcb" path="res://ui/fonts/monogram.ttf" id="1_2knfb"]
+[ext_resource type="StyleBox" uid="uid://g7gw7db2exk6" path="res://scenes/button.tres" id="2_jmkki"]
+[ext_resource type="Texture2D" uid="uid://bjc2q0i705nt1" path="res://ui/button-pressed.png" id="3_xrtjc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sgb7w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sfanq"]
+texture = ExtResource("3_xrtjc")
+texture_margin_left = 3.0
+texture_margin_top = 5.0
+texture_margin_right = 3.0
+texture_margin_bottom = 5.0
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+region_rect = Rect2(0, 0, 32, 16)
+
+[resource]
+Button/colors/font_color = Color(0.6, 0.529412, 0.431373, 1)
+Button/colors/font_disabled_color = Color(0.6, 0.529412, 0.431373, 1)
+Button/colors/font_focus_color = Color(0.6, 0.529412, 0.431373, 1)
+Button/colors/font_hover_color = Color(0.6, 0.529412, 0.431373, 1)
+Button/colors/font_hover_pressed_color = Color(0.6, 0.529412, 0.431373, 1)
+Button/colors/font_outline_color = Color(0.6, 0.529412, 0.431373, 1)
+Button/colors/font_pressed_color = Color(0.6, 0.529412, 0.431373, 1)
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 8
+Button/fonts/font = ExtResource("1_2knfb")
+Button/styles/disabled = ExtResource("2_jmkki")
+Button/styles/focus = SubResource("StyleBoxEmpty_sgb7w")
+Button/styles/hover = ExtResource("2_jmkki")
+Button/styles/normal = ExtResource("2_jmkki")
+Button/styles/pressed = SubResource("StyleBoxTexture_sfanq")
