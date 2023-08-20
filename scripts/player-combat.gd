@@ -27,11 +27,11 @@ var hp = 100
 
 var game_ended = false
 
-const movement_speed = 125
-const dash_speed = 450
+var movement_speed = 125
+var dash_speed = 450
 
-var attack_direction
-var quick_cast = 'ice_shard'
+var attack_direction = Vector2.ZERO
+var quick_cast = 'earth_pillar'
 
 var current_combinations = []
 var attack_combinations = {
@@ -52,12 +52,12 @@ func _physics_process(delta):
 	var speed = dash_speed if is_dashing else movement_speed
 	velocity = direction * speed if !is_stunned else Vector2.ZERO 
 	
+	attack_direction = global_position.direction_to(enemy.global_position)
+	
 	if (!is_attacking):
 		if (velocity == Vector2.ZERO):
 			animation.play('idle')
-		else:
-			attack_direction = global_position.direction_to(enemy.global_position)
-			
+		else:			
 			animation.flip_h = velocity.x <= 0
 			muzzle.rotation = attack_direction.angle()
 			# indicator.rotation = attack_direction.angle()

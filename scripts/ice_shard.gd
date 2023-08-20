@@ -1,11 +1,11 @@
-extends Area2D
+extends Node2D
 
 @onready var player = $/root/Loader/World/TileMap/Player
-@onready var collision = $Collision
+@onready var collision = $ShardCollision/Collision
 @onready var animation = $Animation
-@onready var freeze_radius = $FreezeRadius
+@onready var freeze_collision = $FreezeCollision/Collision
 
-var speed = 250
+var speed = 300
 var is_destroyed = false
 var target_body
 var is_body_inside = false
@@ -19,6 +19,8 @@ func _ready():
 	set_physics_process(false)
 
 func init(dir, send):
+	set_physics_process(true)
+	
 	direction = dir
 	sender = send
 	
@@ -28,13 +30,11 @@ func init(dir, send):
 	animation.play('enterance')
 	await animation.animation_finished
 	animation.play('loop')
-	
-	set_physics_process(true)
 
 func _physics_process(delta):
 	position += direction * speed * delta
 	
-func _on_body_entered(body):
+func _on_shard_collision_body_entered(body):
 	if (body != sender and !is_destroyed):
 		destroy(body)
 
@@ -43,22 +43,24 @@ func destroy(body):
 	
 	if (!is_destroyed):
 		is_destroyed = true
-		is_body_inside = true
-		target_body = body
 		
 		set_physics_process(false)
 		
-		animation.play('end')
-		await animation.animation_finished
-		
 		if (is_instance_valid(body) and (body.is_in_group('enemy') or body == player)):
+			body.movement_speed -= 35
+			
+			animation.play('end')
+			await animation.animation_finished
+			
+			freeze_collision.set_deferred('disabled', false)
+			target_body = body
+			
 			animation.rotation = 0
 			global_position = body.global_position - Vector2(4, 0)
 			animation.play('crystal_enterance')
 			await animation.animation_finished
 			
-			freeze_radius.set_deferred('disabled', false)
-			connect('body_exited', _on_body_exited)
+			body.movement_speed += 35
 			
 			if (is_body_inside):
 				body.get_node('Animation').modulate = Color.BLUE
@@ -72,15 +74,21 @@ func destroy(body):
 			body.is_stunned = false
 			await animation.animation_finished
 			
+		else:
+			animation.play('end')
+			await animation.animation_finished
+			
 		queue_free()
-	else:
-		is_body_inside = true
-
-func _on_body_exited(body):
-	if (body == target_body):
-		is_body_inside = false
 	
-func _on_area_entered(area):
+func _on_shard_collision_area_entered(area):
 	if (area.is_in_group('destroyable_particle') and area.sender != sender):
 		destroy(area)
 		area.destroy(self)
+
+func _on_freeze_collision_body_entered(body):
+	if (body == target_body):
+		is_body_inside = true
+
+func _on_freeze_collision_body_exited(body):
+	if (body == target_body):
+		is_body_inside = false

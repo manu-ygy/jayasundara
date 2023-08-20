@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://cx2mggqm1w4gl"]
+[gd_scene load_steps=64 format=3 uid="uid://cx2mggqm1w4gl"]
 
 [ext_resource type="Script" path="res://scripts/ice_shard.gd" id="1_s5ffg"]
 [ext_resource type="Texture2D" uid="uid://b51k3d3r0v67x" path="res://assets/effects/ice/Ice VFX 2/Ice VFX 2 Ending.png" id="2_ewb4a"]
@@ -139,10 +139,6 @@ region = Rect2(192, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_n0yni"]
 atlas = ExtResource("5_uqv42")
 region = Rect2(224, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6o0px"]
-atlas = ExtResource("5_uqv42")
-region = Rect2(256, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wfr4p"]
 atlas = ExtResource("2_qlvmn")
@@ -335,13 +331,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_n0yni")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6o0px")
 }],
 "loop": false,
 "name": &"crystal_enterance",
-"speed": 12.0
+"speed": 18.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -367,7 +360,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"end",
-"speed": 12.0
+"speed": 18.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -423,30 +416,37 @@ animations = [{
 size = Vector2(25, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1yvsm"]
-size = Vector2(30, 25)
+size = Vector2(30, 16)
 
-[node name="IceShard" type="Area2D"]
-z_index = 10
-disable_mode = 1
-collision_layer = 3
-collision_mask = 3
+[node name="IceShard" type="Node2D"]
 script = ExtResource("1_s5ffg")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 z_index = 1
 z_as_relative = false
 sprite_frames = SubResource("SpriteFrames_7mwfa")
-animation = &"loop"
-frame_progress = 0.0708796
+animation = &"crystal_enterance"
 
-[node name="Collision" type="CollisionShape2D" parent="."]
+[node name="ShardCollision" type="Area2D" parent="."]
+z_index = 10
+disable_mode = 1
+collision_layer = 3
+collision_mask = 3
+
+[node name="Collision" type="CollisionShape2D" parent="ShardCollision"]
 position = Vector2(2.5, 0)
 shape = SubResource("RectangleShape2D_w22uo")
 
-[node name="FreezeRadius" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
-shape = SubResource("RectangleShape2D_1yvsm")
+[node name="FreezeCollision" type="Area2D" parent="."]
+collision_mask = 3
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="replacing_by" from="." to="." method="_on_replacing_by"]
+[node name="Collision" type="CollisionShape2D" parent="FreezeCollision"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_1yvsm")
+disabled = true
+
+[connection signal="area_entered" from="ShardCollision" to="." method="_on_shard_collision_area_entered"]
+[connection signal="body_entered" from="ShardCollision" to="." method="_on_shard_collision_body_entered"]
+[connection signal="replacing_by" from="ShardCollision" to="ShardCollision" method="_on_replacing_by"]
+[connection signal="body_entered" from="FreezeCollision" to="." method="_on_freeze_collision_body_entered"]
+[connection signal="body_exited" from="FreezeCollision" to="." method="_on_freeze_collision_body_exited"]

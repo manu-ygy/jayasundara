@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://bibkx5wfkedne"]
+[gd_scene load_steps=58 format=3 uid="uid://bibkx5wfkedne"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_7ueud"]
 [ext_resource type="TileSet" uid="uid://ci8nj8rc17d2p" path="res://tileset.tres" id="2_3pi1m"]
@@ -590,8 +590,6 @@ states/walk/position = Vector2(413.333, 211.333)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_qn3sx"), "Start", "walk", SubResource("AnimationNodeStateMachineTransition_w74rh"), "Start", "dash", SubResource("AnimationNodeStateMachineTransition_6w0sk")]
 graph_offset = Vector2(-436.944, 0)
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_nri0e"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0mn2"]
 size = Vector2(17, 8)
 
@@ -827,7 +825,6 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_kjhfn")
 anim_player = NodePath("../Animation")
 active = true
-parameters/playback = SubResource("AnimationNodeStateMachinePlayback_nri0e")
 parameters/dash/blend_position = Vector2(0, 0)
 parameters/idle/blend_position = Vector2(0.00232017, 0.0174419)
 parameters/walk/blend_position = Vector2(0, 0)
