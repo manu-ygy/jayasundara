@@ -1,9 +1,9 @@
 extends Node2D
 
 @onready var player = $/root/Loader/World/TileMap/Player
-@onready var collision = $ShardCollision/Collision
+@onready var collision = $FreezeCollision/Collision
 @onready var animation = $Animation
-@onready var freeze_collision = $FreezeCollision/Collision
+@onready var freeze_collision = $ShardCollision/Collision
 
 var speed = 300
 var is_destroyed = false
@@ -34,7 +34,7 @@ func init(dir, send):
 func _physics_process(delta):
 	position += direction * speed * delta
 	
-func _on_shard_collision_body_entered(body):
+func _on_freeze_collision_body_entered(body):
 	if (body != sender and !is_destroyed):
 		destroy(body)
 
@@ -80,15 +80,15 @@ func destroy(body):
 			
 		queue_free()
 	
-func _on_shard_collision_area_entered(area):
+func _on_freeze_collision_area_entered(area):
 	if (area.is_in_group('destroyable_particle') and area.sender != sender):
 		destroy(area)
 		area.destroy(self)
 
-func _on_freeze_collision_body_entered(body):
+func _on_shard_collision_body_entered(body):
 	if (body == target_body):
 		is_body_inside = true
 
-func _on_freeze_collision_body_exited(body):
+func _on_shard_collision_body_exited(body):
 	if (body == target_body):
 		is_body_inside = false

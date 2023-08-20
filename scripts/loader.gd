@@ -24,8 +24,6 @@ func _ready():
 	await animation.animation_finished
 	transition.hide()
 	
-	start_battle()
-	
 func start_battle():
 	transition.show()
 	animation.play('transition')

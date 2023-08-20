@@ -57,7 +57,7 @@ func _physics_process(delta):
 	if (!is_attacking):
 		if (velocity == Vector2.ZERO):
 			animation.play('idle')
-		else:			
+		else:
 			animation.flip_h = velocity.x <= 0
 			muzzle.rotation = attack_direction.angle()
 			# indicator.rotation = attack_direction.angle()
@@ -70,6 +70,7 @@ func _physics_process(delta):
 			else:
 				animation.play('walk')
 	else:
+		animation.flip_h = attack_direction.x <= 0
 		animation.play('attack')
 	
 	move_and_slide()

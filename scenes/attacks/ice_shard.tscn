@@ -416,7 +416,7 @@ animations = [{
 size = Vector2(25, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1yvsm"]
-size = Vector2(30, 16)
+size = Vector2(20, 16)
 
 [node name="IceShard" type="Node2D"]
 script = ExtResource("1_s5ffg")
@@ -425,28 +425,32 @@ script = ExtResource("1_s5ffg")
 z_index = 1
 z_as_relative = false
 sprite_frames = SubResource("SpriteFrames_7mwfa")
-animation = &"crystal_enterance"
+animation = &"crystal_active"
+frame = 7
+frame_progress = 1.0
 
-[node name="ShardCollision" type="Area2D" parent="."]
+[node name="FreezeCollision" type="Area2D" parent="."]
 z_index = 10
 disable_mode = 1
 collision_layer = 3
 collision_mask = 3
 
-[node name="Collision" type="CollisionShape2D" parent="ShardCollision"]
+[node name="Collision" type="CollisionShape2D" parent="FreezeCollision"]
 position = Vector2(2.5, 0)
 shape = SubResource("RectangleShape2D_w22uo")
 
-[node name="FreezeCollision" type="Area2D" parent="."]
+[node name="ShardCollision" type="Area2D" parent="."]
+disable_mode = 1
+collision_layer = 3
 collision_mask = 3
 
-[node name="Collision" type="CollisionShape2D" parent="FreezeCollision"]
+[node name="Collision" type="CollisionShape2D" parent="ShardCollision"]
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_1yvsm")
 disabled = true
 
-[connection signal="area_entered" from="ShardCollision" to="." method="_on_shard_collision_area_entered"]
-[connection signal="body_entered" from="ShardCollision" to="." method="_on_shard_collision_body_entered"]
-[connection signal="replacing_by" from="ShardCollision" to="ShardCollision" method="_on_replacing_by"]
+[connection signal="area_entered" from="FreezeCollision" to="." method="_on_freeze_collision_area_entered"]
 [connection signal="body_entered" from="FreezeCollision" to="." method="_on_freeze_collision_body_entered"]
-[connection signal="body_exited" from="FreezeCollision" to="." method="_on_freeze_collision_body_exited"]
+[connection signal="replacing_by" from="FreezeCollision" to="FreezeCollision" method="_on_replacing_by"]
+[connection signal="body_entered" from="ShardCollision" to="." method="_on_shard_collision_body_entered"]
+[connection signal="body_exited" from="ShardCollision" to="." method="_on_shard_collision_body_exited"]

@@ -1,11 +1,12 @@
-[gd_scene load_steps=58 format=3 uid="uid://bibkx5wfkedne"]
+[gd_scene load_steps=62 format=3 uid="uid://bibkx5wfkedne"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_7ueud"]
 [ext_resource type="TileSet" uid="uid://ci8nj8rc17d2p" path="res://tileset.tres" id="2_3pi1m"]
 [ext_resource type="FontFile" uid="uid://5punbxm32rcb" path="res://ui/fonts/monogram.ttf" id="2_pon2p"]
 [ext_resource type="Texture2D" uid="uid://dn0j75q2mrd1f" path="res://icon.svg" id="2_xsmg7"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="3_0hvos"]
-[ext_resource type="Texture2D" uid="uid://x2ls4mbjsnv0" path="res://assets/player/shadow.png" id="4_dd2u7"]
+[ext_resource type="Texture2D" uid="uid://x2ls4mbjsnv0" path="res://player/shadow.png" id="4_dd2u7"]
+[ext_resource type="Script" path="res://scripts/daycircle.gd" id="5_0j4i6"]
 [ext_resource type="Texture2D" uid="uid://7bw0vu3wpi0o" path="res://assets/player/movement.png" id="5_v8eqp"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="6_2n2j5"]
 [ext_resource type="Texture2D" uid="uid://ct0s6tuevklbj" path="res://assets/npc/shadow.png" id="7_gddey"]
@@ -13,6 +14,44 @@
 [ext_resource type="Texture2D" uid="uid://btic7scxyld75" path="res://ui/dialog.png" id="8_a0l03"]
 [ext_resource type="Texture2D" uid="uid://c1udlb0kqtcuo" path="res://assets/npc/outline-blue.png" id="8_l6aj6"]
 [ext_resource type="Script" path="res://scripts/npc.gd" id="10_dd33n"]
+
+[sub_resource type="Animation" id="Animation_bs1wi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Color:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.454902, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pq6wg"]
+resource_name = "animation"
+length = 60.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Color:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 58.7274, 58.9274, 59.3274, 59.7274),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.454902, 0, 1), Color(1, 0.454902, 0, 0), Color(1, 0.454902, 0, 0), Color(0.858824, 0.360784, 0, 1), Color(0, 0, 0.286275, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a4rtm"]
+_data = {
+"RESET": SubResource("Animation_bs1wi"),
+"animation": SubResource("Animation_pq6wg")
+}
 
 [sub_resource type="Animation" id="Animation_yfaka"]
 length = 0.001
@@ -654,6 +693,23 @@ size = Vector2(26, 16)
 
 [node name="World" type="Node2D" groups=["destroyable_particle", "enemy", "particle"]]
 script = ExtResource("1_7ueud")
+
+[node name="DayCircle" type="CanvasLayer" parent="."]
+script = ExtResource("5_0j4i6")
+
+[node name="Color" type="ColorRect" parent="DayCircle"]
+modulate = Color(1, 1, 1, 0.286275)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.454902, 0, 1)
+
+[node name="Animation" type="AnimationPlayer" parent="DayCircle"]
+libraries = {
+"": SubResource("AnimationLibrary_a4rtm")
+}
 
 [node name="UI" type="CanvasLayer" parent="."]
 offset = Vector2(144, 81)
