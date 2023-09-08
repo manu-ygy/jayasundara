@@ -11,8 +11,14 @@ signal battle_ended
 @onready var dialog_name = $UI/Dialog/Wrapper/ProfileWrapper/Name
 @onready var dialog_picture = $UI/Dialog/Wrapper/ProfileWrapper/Picture
 @onready var dialog_content = $UI/Dialog/Wrapper/Text/Margin/Content
-@onready var dialog_choices_container = $UI/Choices/Wrapper
+@onready var dialog_choices_container = $UI/Dialog/Wrapper/ProfileWrapper/Choices/Wrapper
 
+@onready var information = $UI/Information
+
+@onready var inventory_background = $UI/Inventory/Bg
+@onready var inventory_container = $UI/Inventory/Margin/Grid
+
+var is_in_dialog = false
 var is_typing = false
 var is_choice = false
 var dialog_choices = []
@@ -22,22 +28,12 @@ func _ready():
 
 func dialog(name, content, choices = []):
 	dialog_container.show()
+	information.hide()
+	inventory_background.hide()
+	inventory_container.hide()
 	dialog_name.text = name
 	is_choice = choices.size() > 0
-	
-	if (is_choice):
-		choices = choices
-		
-		for child in dialog_choices_container.get_children():
-			child.queue_free()
-			
-		for choice in choices:
-			var choice_button = Button.new()
-			choice_button.text = choice.keys()[0]
-			choice_button.pressed.connect(submit_choice.bind(choice.values()[0]))
-			dialog_choices_container.add_child(choice_button)
-		
-		dialog_choices_container.show()
+	is_in_dialog = true
 	
 	dialog_content.text = ''
 	is_typing = true
@@ -52,9 +48,25 @@ func dialog(name, content, choices = []):
 	is_typing = false
 	
 	if (is_choice):
+		choices = choices
+		
+		for child in dialog_choices_container.get_children():
+			child.queue_free()
+			
+		var choice_count = 0
+		for choice in choices:
+			choice_count += 1
+			var choice_button = Button.new()
+			choice_button.text = choice.keys()[0]
+			choice_button.pressed.connect(submit_choice.bind(choice.values()[0]))
+			dialog_choices_container.add_child(choice_button)
+		
+		dialog_choices_container.show()
+	
+	if (is_choice):
 		return await choice_answered
 	else:
-		await dialog_finished
+		await dialog_finished 
 	
 func submit_choice(value):
 	dialog_choices_container.hide()
@@ -65,13 +77,20 @@ func start_battle():
 	emit_signal('battle_started')
 	loader.battle_ended.connect(emit_signal.bind('battle_ended'))
 	
+func add_inventory():
+	pass
+	
 func _input(event):
-	if (event is InputEventMouseButton and event.pressed):
+	if ((event is InputEventMouseButton and event.pressed) or Input.is_key_pressed(KEY_ENTER) or Input.is_key_pressed(KEY_SPACE)):
 		if (is_typing):
 			is_typing = false
 		else:
-			if (!is_choice):
+			if (!is_choice and is_in_dialog):
+				is_in_dialog = false
 				dialog_container.hide()
+				inventory_container.show()
+				inventory_background.show()
+				information.show()
 				emit_signal('dialog_finished')
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

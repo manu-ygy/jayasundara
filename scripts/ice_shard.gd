@@ -41,6 +41,9 @@ func _on_freeze_collision_body_entered(body):
 func destroy(body):
 	collision.set_deferred('disabled', true) 
 	
+	if ((body is CharacterBody2D or body.is_in_group('enemy')) and body != sender):
+		body.attacked(15)
+	
 	if (!is_destroyed):
 		is_destroyed = true
 		
@@ -62,7 +65,7 @@ func destroy(body):
 			
 			body.movement_speed += 35
 			
-			if (is_body_inside):
+			if (is_body_inside and !(body == player and body.is_levitating)):
 				body.get_node('Animation').modulate = Color.BLUE
 				body.is_stunned = true
 				

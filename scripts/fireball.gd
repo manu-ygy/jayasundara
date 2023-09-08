@@ -40,8 +40,8 @@ func destroy(body):
 	if (is_visible.is_on_screen()):
 		player.camera.shake_for(0.2)
 		
-	if (body.is_in_group('enemy')):
-		body.attacked(10)
+	if ((body is CharacterBody2D or body.is_in_group('enemy')) and body != sender):
+		body.attacked(25)
 		
 	await get_tree().create_timer(0.5).timeout
 	

@@ -18,17 +18,21 @@ extends CharacterBody2D
 
 var fireball_instance = load('res://scenes/attacks/fireball.tscn')
 var pillar_instance = load('res://scenes/attacks/earth_pilllar.tscn')
-var prison_instance = load('res://scenes/attacks/water_prison.tscn')
 var shard_instance = load('res://scenes/attacks/ice_shard.tscn')
-var dust_instance = load('res://dash.tres')
+var summoning_instance = load('res://scenes/attacks/summoning.tscn')
+var tracking_instance = load('res://scenes/attacks/tracking.tscn')
+var lantern_instance = load('res://scenes/attacks/lantern.tscn')
+# var dust_instance = load('res://dash.tres')
 
 var mp = 100
 var hp = 100
 
 var game_ended = false
 
-var movement_speed = 125
+var default_speed = 125
+var movement_speed = default_speed
 var dash_speed = 450
+var is_levitating = false
 
 var attack_direction = Vector2.ZERO
 var quick_cast = 'earth_pillar'
@@ -37,8 +41,11 @@ var current_combinations = []
 var attack_combinations = {
 	'fireball': [KEY_1, KEY_2],
 	'earth_pillar': [KEY_1, KEY_3],
-	'water_prison': [KEY_2, KEY_3],
-	'ice_shard': [KEY_1, KEY_4]
+	'summoning': [KEY_2, KEY_3],
+	'ice_shard': [KEY_1, KEY_4],
+	'levitation': [KEY_3, KEY_2],
+	'tracking': [KEY_4, KEY_2],
+	'lantern': [KEY_4, KEY_3]
 }
 
 var is_dashing = false
@@ -68,7 +75,10 @@ func _physics_process(delta):
 			if (is_dashing):
 				animation.play('dash')
 			else:
-				animation.play('walk')
+				if (!is_levitating):
+					animation.play('walk')
+				else:
+					animation.play('dash')
 	else:
 		animation.flip_h = attack_direction.x <= 0
 		animation.play('attack')
@@ -100,7 +110,8 @@ func _input(event):
 				ghost.frame = animation.frame
 				ghost.animation = animation.animation
 				ghost.flip_h = animation.flip_h
-				ghost.z_index = 0
+				ghost.z_index = 1
+				ghost.z_as_relative = false
 				
 				var tween = get_tree().create_tween()
 				tween.tween_property(ghost, 'modulate', Color(1, 1, 1, 0), 0.2)
@@ -122,60 +133,92 @@ func _input(event):
 			current_combinations = []
 			return
 			
+func attacked(damage):
+	hp -= damage
+	ui.update_hp_bar(hp)
+			
 func cast_attack(attack_name):
 	mp -= 2
-	# mp_bar.value = mp
+	mp_bar.value = mp
 
 	is_attacking = true
 	attack_timer.start()
 		
 	await get_tree().create_timer(0.2).timeout
 
-	match (attack_name):
-		'fireball': 
-			var fireball = fireball_instance.instantiate()
-			fireball.global_position = global_position
-			world.add_child(fireball)
-			fireball.init(attack_direction, self)
-			
-		'earth_pillar':
-			if (!raycast.is_colliding()):
-				var pillar = pillar_instance.instantiate()
-				pillar.global_position = global_position
-				world.add_child(pillar)
-				pillar.init(attack_direction, self)
-				# pillar.add_to_group('particle')
-				
-		'water_prison':
-			var prison = prison_instance.instantiate()
-			prison.global_position = global_position
-			world.add_child(prison)
-			prison.init(attack_direction)
-			# prison.add_to_group('particle')
-			
-		'ice_shard':
-			var shard = shard_instance.instantiate()
-			shard.global_position = global_position
-			world.add_child(shard)
-			shard.init(attack_direction, self)
-			
-		'meteor':
-			await get_tree().create_timer(1).timeout
-			
-			for x in range(5):
-				await get_tree().create_timer(0.5).timeout
-				
-				var firing_position = global_position - Vector2(0, 64)
+	if (!is_levitating):
+		match (attack_name):
+			'fireball': 
 				var fireball = fireball_instance.instantiate()
-				
-				fireball.global_position = firing_position
+				fireball.global_position = global_position
 				world.add_child(fireball)
-				fireball.init(firing_position.direction_to(enemy.global_position), self)
+				fireball.init(attack_direction, self)
+				
+			'earth_pillar':
+				if (!raycast.is_colliding()):
+					var pillar = pillar_instance.instantiate()
+					pillar.global_position = global_position
+					world.add_child(pillar)
+					pillar.init(attack_direction, self)
+					# pillar.add_to_group('particle')
+				
+			'ice_shard':
+				var shard = shard_instance.instantiate()
+				shard.global_position = global_position
+				world.add_child(shard)
+				shard.init(attack_direction, self)
+				
+			'meteor':
+				await get_tree().create_timer(1).timeout
+				
+				for x in range(5):
+					await get_tree().create_timer(0.5).timeout
+					
+					var firing_position = global_position - Vector2(0, 64)
+					var fireball = fireball_instance.instantiate()
+					
+					fireball.global_position = firing_position
+					world.add_child(fireball)
+					fireball.init(firing_position.direction_to(enemy.global_position), self)
+				
+			'levitation':
+				is_levitating = true
+
+				animation.position.y = -4
+				movement_speed = default_speed * 2
 			
-		_:
-			return
+			'tracking':
+				var positions = [Vector2(0, -16), Vector2(16, -8), Vector2(-16, -8), Vector2(16, 8), Vector2(-16, 8)]
+				
+				for x in range(5):
+					var tracking = tracking_instance.instantiate()
+					tracking.global_position = global_position + positions[x]
+					world.add_child(tracking)
+					
+					tracking.init(attack_direction, self, enemy)
+					
+			'lantern':
+				var lantern = lantern_instance.instantiate()
+				lantern.global_position = global_position
+				world.add_child(lantern)
+				lantern.init(attack_direction, self)
 			
-	current_combinations = []
+			'summoning':
+				var summoning = summoning_instance.instantiate()
+				summoning.global_position = global_position
+				world.add_child(summoning)
+				summoning.init(attack_direction, self)
+			
+			_:
+				return
+				
+		current_combinations = []
+	else:
+		if (attack_name == 'levitation'):
+			is_levitating = false
+			
+			animation.position.y = 0
+			movement_speed = default_speed
 
 func find_combinations():
 	var index = attack_combinations.values().find(current_combinations)

@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsyt8emeq42kx"]
+
+[ext_resource type="Texture2D" uid="uid://dabgbgxf13y11" path="res://assets/effects/tracking.png" id="2_8gdef"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hodt1"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_w7ndl"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.184028, 1), 0.0, 0.0, 0, 0, Vector2(0.538194, 1), 0.0, 0.0, 0, 0, Vector2(0.753472, 0.582822), 0.0, 0.0, 0, 0, Vector2(0.982639, 0), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="Gradient" id="Gradient_o7fq5"]
+offsets = PackedFloat32Array(0.00980392, 0.715686, 0.848039, 1)
+colors = PackedColorArray(0.858105, 0.718541, 0.355128, 1, 0.991653, 0.970335, 0.400866, 1, 1, 0.986072, 0.403725, 1, 1, 1, 1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w22uo"]
+size = Vector2(8, 8)
+
+[node name="Tracking" type="CharacterBody2D"]
+
+[node name="Tracking" type="Area2D" parent="."]
+z_index = 10
+collision_mask = 3
+
+[node name="Trail" type="CPUParticles2D" parent="Tracking"]
+material = SubResource("CanvasItemMaterial_hodt1")
+lifetime = 0.5
+randomness = 0.5
+texture = ExtResource("2_8gdef")
+direction = Vector2(0, -1)
+spread = 25.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 32.0
+initial_velocity_max = 32.0
+angular_velocity_min = 32.0
+angular_velocity_max = 32.0
+scale_amount_curve = SubResource("Curve_w7ndl")
+color = Color(1, 1, 1, 0.207843)
+color_ramp = SubResource("Gradient_o7fq5")
+
+[node name="Sprite" type="Sprite2D" parent="Tracking"]
+texture = ExtResource("2_8gdef")
+
+[node name="Collision" type="CollisionShape2D" parent="Tracking"]
+shape = SubResource("RectangleShape2D_w22uo")
+
+[connection signal="area_entered" from="Tracking" to="Tracking" method="_on_area_entered" flags=18]
+[connection signal="body_entered" from="Tracking" to="Tracking" method="_on_body_entered" flags=18]

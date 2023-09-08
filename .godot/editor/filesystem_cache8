@@ -1,0 +1,254 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1694143292
+dash.tres::SpriteFrames::6094021285773790476::1693020836::0::1::::<><>::uid://p2ycww8mqde1
+Earth Wall.png::CompressedTexture2D::8555708414242585923::1691291627::1691291740::1::::<><>::
+explosion.png::CompressedTexture2D::5856551980030662809::1691291627::1691291740::1::::<><>::
+glitch.gdshader::Shader::-1::1691291627::0::1::::<><>::
+glow.gdshader::Shader::-1::1691291627::0::1::::<><>::
+icon.svg::CompressedTexture2D::8123931662225913389::1691291627::1691291740::1::::<><>::
+mirror.gdshader::Shader::-1::1693020836::0::1::::<><>::
+progress.gdshader::Shader::-1::1693020836::0::1::::<><>::
+thunder.gdshader::Shader::-1::1694063213::0::1::::<><>::
+tileset.tres::TileSet::5403283735084649425::1694062521::0::1::::<><>::uid://b3eg3xxq43b2k::::res://assets/tiles/ground.png<>uid://2wino1rqt3qk::::res://assets/tiles/props.png<>uid://07frjbjx0eyf::::res://assets/tiles/grass.png<>uid://daf32ia0awxvq::::res://assets/tiles/wall.png
+transparency.gdshader::Shader::-1::1693020836::0::1::::<><>::
+wind.gdshader::Shader::-1::1693020836::0::1::::<><>::
+::res://assets/::1693565693
+::res://assets/compliments/::1693630152
+emoji.png::CompressedTexture2D::8790143542388825528::1648010156::1693565700::1::::<><>::
+item2.png::CompressedTexture2D::9064730486534925082::1693630151::1693630152::1::::<><>::
+::res://assets/effects/::1693672690
+Earth Bump.png::CompressedTexture2D::1040139974479075260::1693020836::1693026973::1::::<><>::
+earth_pillar.png::CompressedTexture2D::8555708414242585923::1693020836::1693026973::1::::<><>::
+lantern.png::CompressedTexture2D::1830572134780971243::1693671164::1693671166::1::::<><>::
+light.png::CompressedTexture2D::865538742777902849::1693670373::1693670378::1::::<><>::
+super-buffing.png::CompressedTexture2D::4037347424134138201::1693020836::1693026973::1::::<><>::
+tracking.png::CompressedTexture2D::7161692867517520078::1693490803::1693490857::1::::<><>::
+::res://assets/effects/fireball/::1693026974
+B500-2.PNG::CompressedTexture2D::7170359441706912797::1693020836::1693026974::1::::<><>::
+B500-3.PNG::CompressedTexture2D::8706010335943692987::1693020836::1693026974::1::::<><>::
+B500-4.PNG::CompressedTexture2D::6501873861610790227::1693020836::1693026974::1::::<><>::
+FB500-1.png::CompressedTexture2D::7818549097507520435::1693020836::1693026974::1::::<><>::
+FB500-2.png::CompressedTexture2D::1236138083672761695::1693020836::1693026974::1::::<><>::
+FB500-3.png::CompressedTexture2D::4977038407506848270::1693020836::1693026974::1::::<><>::
+FB500-4.png::CompressedTexture2D::3183017851963777347::1693020836::1693026974::1::::<><>::
+FB500-5.png::CompressedTexture2D::2160081815026749964::1693020836::1693026974::1::::<><>::
+::res://assets/effects/ice/::1693020836
+::res://assets/effects/ice/Ice VFX 1/::1693026974
+Ice VFX 1 Hit.png::CompressedTexture2D::8736244455312556451::1693020836::1693026974::1::::<><>::
+Ice VFX 1 Start.png::CompressedTexture2D::6572316036039721308::1693020836::1693026974::1::::<><>::
+IceVFX 1 Repeatable.png::CompressedTexture2D::724930289184089469::1693020836::1693026974::1::::<><>::
+::res://assets/effects/ice/Ice VFX 1/Separated Frames/::1693026974
+VFX 1 Hit1.png::CompressedTexture2D::5124029860610233866::1693020836::1693026974::1::::<><>::
+VFX 1 Hit2.png::CompressedTexture2D::550671555926731854::1693020836::1693026974::1::::<><>::
+VFX 1 Hit3.png::CompressedTexture2D::6293422718900236219::1693020836::1693026974::1::::<><>::
+VFX 1 Hit4.png::CompressedTexture2D::1608556309346914160::1693020836::1693026974::1::::<><>::
+VFX 1 Hit5.png::CompressedTexture2D::5812879165662937146::1693020836::1693026974::1::::<><>::
+VFX 1 Hit6.png::CompressedTexture2D::3949511535655714207::1693020836::1693026974::1::::<><>::
+VFX 1 Hit7.png::CompressedTexture2D::4029158198711023852::1693020836::1693026974::1::::<><>::
+VFX 1 Hit8.png::CompressedTexture2D::3680575769057893575::1693020836::1693026974::1::::<><>::
+VFX 1 Repeatable1.png::CompressedTexture2D::7967754156398371181::1693020836::1693026974::1::::<><>::
+VFX 1 Repeatable2.png::CompressedTexture2D::5106060867940324662::1693020836::1693026974::1::::<><>::
+VFX 1 Repeatable3.png::CompressedTexture2D::4440287685012113283::1693020836::1693026974::1::::<><>::
+VFX 1 Repeatable4.png::CompressedTexture2D::8784788920684692000::1693020836::1693026974::1::::<><>::
+VFX 1 Repeatable5.png::CompressedTexture2D::7727701503289334336::1693020836::1693026973::1::::<><>::
+VFX 1 Repeatable6.png::CompressedTexture2D::3880893073043449391::1693020836::1693026973::1::::<><>::
+VFX 1 Repeatable7.png::CompressedTexture2D::9122038486059676976::1693020836::1693026973::1::::<><>::
+VFX 1 Repeatable8.png::CompressedTexture2D::9147578443599889548::1693020836::1693026973::1::::<><>::
+VFX 1 Repeatable9.png::CompressedTexture2D::1905845435110662726::1693020836::1693026973::1::::<><>::
+VFX 1 Repeatable10.png::CompressedTexture2D::5539982703602722988::1693020836::1693026973::1::::<><>::
+VFX 1 Start1.png::CompressedTexture2D::6572650414856939942::1693020836::1693026973::1::::<><>::
+VFX 1 Start2.png::CompressedTexture2D::7138958135261362240::1693020836::1693026973::1::::<><>::
+VFX 1 Start3.png::CompressedTexture2D::1077544892272916814::1693020836::1693026973::1::::<><>::
+::res://assets/effects/ice/Ice VFX 2/::1693026974
+Ice VFX 2 Active.png::CompressedTexture2D::6440453422803929230::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending.png::CompressedTexture2D::4546417188227875499::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Start.png::CompressedTexture2D::5658674896022044167::1693020836::1693026974::1::::<><>::
+::res://assets/effects/ice/Ice VFX 2/Separated Frames/::1693026974
+Ice VFX 2 Active1.png::CompressedTexture2D::2716975262588674284::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Active2.png::CompressedTexture2D::6001900674181220651::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Active3.png::CompressedTexture2D::2496824739355848027::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Active4.png::CompressedTexture2D::3208794521778185168::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Active5.png::CompressedTexture2D::5662796115869220676::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Active6.png::CompressedTexture2D::8891753753509225671::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Active7.png::CompressedTexture2D::4260485112675049638::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Active8.png::CompressedTexture2D::4724193636489064748::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Active9.png::CompressedTexture2D::1156914234664532356::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending1.png::CompressedTexture2D::6020290144075807816::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending2.png::CompressedTexture2D::6119263628419957048::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending3.png::CompressedTexture2D::5614569257162564806::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending4.png::CompressedTexture2D::9146861199475042575::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending5.png::CompressedTexture2D::5558140694430762865::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending6.png::CompressedTexture2D::5280979211896802589::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending7.png::CompressedTexture2D::8252041704773997045::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending8.png::CompressedTexture2D::4315526687580859620::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending9.png::CompressedTexture2D::749604237179362344::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending10.png::CompressedTexture2D::4085705635785442609::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending11.png::CompressedTexture2D::6751873317975834814::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending12.png::CompressedTexture2D::4617665891632414846::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending13.png::CompressedTexture2D::5200233477404491007::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending14.png::CompressedTexture2D::8161053623218542067::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending15.png::CompressedTexture2D::7360621221515734760::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending16.png::CompressedTexture2D::8674910458366942364::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending17.png::CompressedTexture2D::5319886739315188269::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Ending18.png::CompressedTexture2D::3801062604723085710::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Start1.png::CompressedTexture2D::7588351994831782124::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Start2.png::CompressedTexture2D::1409953431662816801::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Start3.png::CompressedTexture2D::4966643824800263675::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Start4.png::CompressedTexture2D::1086139194606180576::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Start5.png::CompressedTexture2D::6042576280576996918::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Start6.png::CompressedTexture2D::1986718646805686322::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Start7.png::CompressedTexture2D::8226309772848045574::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Start8.png::CompressedTexture2D::7913025855390427690::1693020836::1693026974::1::::<><>::
+Ice VFX 2 Start9.png::CompressedTexture2D::7136399798037840071::1693020836::1693026974::1::::<><>::
+::res://assets/effects/smoke/::1693026973
+Smoke VFX3.png::CompressedTexture2D::4173307385907166855::1693020836::1693026973::1::::<><>::
+Smoke VFX 1.png::CompressedTexture2D::1110032824359742478::1693020836::1693026973::1::::<><>::
+Smoke VFX 2.png::CompressedTexture2D::7460001590068402404::1693020836::1693026973::1::::<><>::
+::res://assets/effects/smoke/VFX 1 Separated Frames/::1693026974
+Smoke VFX A1.png::CompressedTexture2D::6464836289851619163::1693020836::1693026974::1::::<><>::
+Smoke VFX A2.png::CompressedTexture2D::8503679215791436086::1693020836::1693026974::1::::<><>::
+Smoke VFX A3.png::CompressedTexture2D::9069654169946391626::1693020836::1693026974::1::::<><>::
+Smoke VFX A4.png::CompressedTexture2D::2089628633117287436::1693020836::1693026974::1::::<><>::
+Smoke VFX A5.png::CompressedTexture2D::536331672796478471::1693020836::1693026974::1::::<><>::
+Smoke VFX A6.png::CompressedTexture2D::4461282505573601051::1693020836::1693026974::1::::<><>::
+Smoke VFX A7.png::CompressedTexture2D::143583281545265950::1693020836::1693026974::1::::<><>::
+Smoke VFX A8.png::CompressedTexture2D::1757786315353266506::1693020836::1693026973::1::::<><>::
+Smoke VFX A9.png::CompressedTexture2D::4164997913154208218::1693020836::1693026973::1::::<><>::
+::res://assets/effects/smoke/VFX 2 Separated frames/::1693026973
+Smoke VFX B1.png::CompressedTexture2D::7416185431995436993::1693020836::1693026973::1::::<><>::
+Smoke VFX B2.png::CompressedTexture2D::1378084822763603722::1693020836::1693026973::1::::<><>::
+Smoke VFX B3.png::CompressedTexture2D::6888086170886966612::1693020836::1693026973::1::::<><>::
+Smoke VFX B4.png::CompressedTexture2D::1224080652964174056::1693020836::1693026973::1::::<><>::
+Smoke VFX B5.png::CompressedTexture2D::6563969496756001434::1693020836::1693026973::1::::<><>::
+Smoke VFX B6.png::CompressedTexture2D::4273044237340716489::1693020836::1693026973::1::::<><>::
+Smoke VFX B7.png::CompressedTexture2D::6992227076731303014::1693020836::1693026973::1::::<><>::
+Smoke VFX B8.png::CompressedTexture2D::1044423576894435301::1693020836::1693026973::1::::<><>::
+Smoke VFX B9.png::CompressedTexture2D::7349658627780088858::1693020836::1693026973::1::::<><>::
+Smoke VFX B10.png::CompressedTexture2D::1291283104475944896::1693020836::1693026973::1::::<><>::
+Smoke VFX B11.png::CompressedTexture2D::7046968353728840250::1693020836::1693026973::1::::<><>::
+Smoke VFX B12.png::CompressedTexture2D::6622220103234693004::1693020836::1693026973::1::::<><>::
+::res://assets/effects/smoke/VFX 3 Seprated Frames/::1693026973
+Smoke VFX C1.png::CompressedTexture2D::9041551916681044322::1693020836::1693026973::1::::<><>::
+Smoke VFX C2.png::CompressedTexture2D::4500920088692760777::1693020836::1693026973::1::::<><>::
+Smoke VFX C3.png::CompressedTexture2D::197833446161269250::1693020836::1693026973::1::::<><>::
+Smoke VFX C4.png::CompressedTexture2D::2969014505188904098::1693020836::1693026973::1::::<><>::
+Smoke VFX C5.png::CompressedTexture2D::8557025098194884481::1693020836::1693026973::1::::<><>::
+Smoke VFX C6.png::CompressedTexture2D::2272375998898274473::1693020836::1693026973::1::::<><>::
+Smoke VFX C7.png::CompressedTexture2D::1695794316099965245::1693020836::1693026973::1::::<><>::
+Smoke VFX C8.png::CompressedTexture2D::4100828565937666036::1693020836::1693026973::1::::<><>::
+::res://assets/effects/summoning/::1693528449
+::res://assets/effects/summoning/eagle/::1693528513
+Projectile 2 w blur.png::CompressedTexture2D::6781769680847626929::1623781296::1693528513::1::::<><>::
+Projectile 2 wo blur.png::CompressedTexture2D::6397043519379780355::1623781325::1693528513::1::::<><>::
+::res://assets/effects/summoning/explode/::1693528342
+Thunder hit w blur.png::CompressedTexture2D::4458576388664067303::1623780943::1693528342::1::::<><>::
+Thunder hit wo blur.png::CompressedTexture2D::8346640883702338478::1623780957::1693528342::1::::<><>::
+::res://assets/effects/water_prison/::1693026973
+Water Blast - End.png::CompressedTexture2D::1988244328520556219::1693020836::1693026973::1::::<><>::
+Water Blast - Startup and Infinite.png::CompressedTexture2D::2671488852857882126::1693020836::1693026973::1::::<><>::
+::res://assets/npc/::1693740116
+blacksmith-sheet.png::CompressedTexture2D::1520732288118386853::1693565420::1693565429::1::::<><>::
+blacksmith.png::CompressedTexture2D::5848445694208428481::1693724613::1693740116::1::::<><>::
+NPC Merchant-interacting-rest.png::CompressedTexture2D::1314895883580690451::1693020836::1693026973::1::::<><>::
+outline-blue.png::CompressedTexture2D::6639240743387438806::1693020836::1693026973::1::::<><>::
+outline-red.png::CompressedTexture2D::7928683775054860572::1693487458::1693487462::1::::<><>::
+outline.png::CompressedTexture2D::6116920068345806634::1693020836::1693026973::1::::<><>::
+popup.png::CompressedTexture2D::1368201470325461094::1693566173::1693566174::1::::<><>::
+shadow.png::CompressedTexture2D::6159188134891111543::1693020836::1693026973::1::::<><>::
+::res://assets/player/::1693487138
+Back ConsecutiveSlash.png::CompressedTexture2D::2891443048852544835::1693020836::1693026973::1::::<><>::
+Back Dash.png::CompressedTexture2D::2277340939988585453::1693020836::1693026973::1::::<><>::
+Back Movement.png::CompressedTexture2D::3479607443732615760::1693020836::1693026973::1::::<><>::
+fire.png::CompressedTexture2D::3492279719887035245::1693020836::1693026973::1::::<><>::
+Front ConsecutiveSlash.png::CompressedTexture2D::3291887498605169799::1693020836::1693026973::1::::<><>::
+Front DashnRoll.png::CompressedTexture2D::4310209330703383980::1693020836::1693026973::1::::<><>::
+Front Movement.png::CompressedTexture2D::1119281257927790277::1693020836::1693026973::1::::<><>::
+indicator.png::CompressedTexture2D::5404854084182763211::1693020836::1693026973::1::::<><>::
+movement.png::CompressedTexture2D::2249488928048212952::1693020836::1693026973::1::::<><>::
+outline.png::CompressedTexture2D::227000677430268914::1693487097::1693487098::1::::<><>::
+shadow.png::CompressedTexture2D::1670783176018070871::1693487153::1693487138::1::::<><>::
+Side ConsecutiveSlash.png::CompressedTexture2D::819533883681404033::1693020836::1693026973::1::::<><>::
+Side Dash.png::CompressedTexture2D::2578922601363084736::1693020836::1693026973::1::::<><>::
+Side Movement.png::CompressedTexture2D::6017818782709143839::1693020836::1693026973::1::::<><>::
+::res://assets/tiles/::1693745201
+altar.png::CompressedTexture2D::3616060320605953130::1693020836::1693537666::1::::<><>::
+grass.png::CompressedTexture2D::1821115597236536285::1693745199::1693745201::1::::<><>::
+ground.png::CompressedTexture2D::4360381365094560788::1691291627::1693537665::1::::<><>::
+props.png::CompressedTexture2D::1941024816365464914::1693620365::1693537665::1::::<><>::
+wall.png::CompressedTexture2D::7171332653406073990::1691291627::1693537665::1::::<><>::
+::res://scenes/::1694062594
+arena.tscn::PackedScene::7274982244584330219::1693570057::0::1::::<><>::res://scripts/ui.gd<>res://scripts/arena.gd<>uid://c7ee3juspttdt
+button.tres::StyleBoxTexture::487598424843932159::1693542705::0::1::::<><>::uid://bfrsdhpjtwedg
+enemy.tscn::PackedScene::4201912949032010093::1693570057::0::1::::<><>::res://scripts/enemy.gd<>uid://cplbbtkreyuy8
+loader.tscn::PackedScene::7806355753490985575::1693492080::0::1::::<><>::res://scripts/loader.gd
+prologue.tscn::PackedScene::4483255184844760415::1693570056::0::1::::<><>::uid://ci8nj8rc17d2p
+title_screen.tscn::PackedScene::5528608695519270231::1693491634::0::1::::<><>::uid://ba4mktjha754o
+world.tscn::PackedScene::2950645663665800234::1694062594::0::1::::<><>::res://scripts/world.gd<>uid://ci8nj8rc17d2p::::res://tileset.tres<>uid://5punbxm32rcb::::res://ui/fonts/monogram.ttf<>uid://dn0j75q2mrd1f::::res://icon.svg<>res://scripts/player.gd<>res://scripts/daycircle.gd<>uid://g7gw7db2exk6::::res://scenes/button.tres<>uid://7bw0vu3wpi0o::::res://assets/player/movement.png<>res://scripts/camera.gd<>uid://bjc2q0i705nt1::::res://ui/button-pressed.png<>uid://ct0s6tuevklbj::::res://assets/npc/shadow.png<>uid://cplbbtkreyuy8::::res://assets/npc/blacksmith.png<>uid://btic7scxyld75::::res://ui/dialog.png<>uid://c1udlb0kqtcuo::::res://assets/npc/outline-blue.png<>uid://d2fa10qamgv35::::res://assets/compliments/item2.png<>uid://dh7wyg03t81c::::res://assets/player/outline.png<>uid://dv47jqfv3yfii::::res://ui/inventory-bg.png<>res://scripts/npc.gd
+::res://scenes/attacks/::1694062594
+earth_pilllar.tscn::PackedScene::9002405890792612398::1693020836::0::1::::<><>::res://scripts/earth-pilllar.gd<>uid://dt5pjdk5a2mwp
+fireball.tscn::PackedScene::4116965190069747615::1694062594::0::1::::<><>::res://scripts/fireball.gd<>uid://cpo7s5dyywqdd::::res://explosion.png
+ice_shard.tscn::PackedScene::6443662629535027611::1693399089::0::1::::<><>::res://scripts/ice_shard.gd<>uid://b51k3d3r0v67x
+lantern.tscn::PackedScene::6533507154972087021::1694062594::0::1::::<><>::res://scripts/lantern.gd<>uid://1c0ixqqyqo6v::::res://assets/effects/lantern.png<>uid://mljkc6am6prl::::res://assets/effects/light.png
+summoning.tscn::PackedScene::5985161616089209332::1693669744::0::1::::<><>::res://scripts/summoning.gd<>uid://dh7wyg03t81c
+super_buffing.tscn::PackedScene::7079832811064302428::1693493551::0::1::::<><>::res://glow.gdshader<>uid://bxryr0xahwumr
+tracking.tscn::PackedScene::8473419085558093119::1693530796::0::1::::<><>::res://scripts/tracking.gd<>uid://dabgbgxf13y11
+water_prison.tscn::PackedScene::7070647842840326737::1693020836::0::1::::<><>::uid://3ledghbg1dxr
+::res://scripts/::1693671977
+arena.gd::GDScript::-1::1693020836::0::1::::<>Node2D<>::
+camera.gd::GDScript::-1::1691291627::0::1::::<>Camera2D<>::
+daycircle.gd::GDScript::-1::1693020836::0::1::::<>CanvasLayer<>::
+earth-pilllar.gd::GDScript::-1::1693020836::0::1::::<>Area2D<>::
+enemy.gd::GDScript::-1::1693570055::0::1::::<>StaticBody2D<>::
+fireball.gd::GDScript::-1::1693569949::0::1::::<>Area2D<>::
+ice_shard.gd::GDScript::-1::1693569794::0::1::::<>Node2D<>::
+lantern.gd::GDScript::-1::1693671977::0::1::::<>Area2D<>::
+loader.gd::GDScript::-1::1693540824::0::1::::<>Node2D<>::
+npc.gd::GDScript::-1::1693541618::0::1::::<>CharacterBody2D<>::
+player-combat.gd::GDScript::-1::1693670811::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1693488451::0::1::::<>CharacterBody2D<>::
+summoning.gd::GDScript::-1::1693570660::0::1::::<>CharacterBody2D<>::
+title_screen.gd::GDScript::-1::1693485893::0::1::::<>Node2D<>::
+tracking.gd::GDScript::-1::1693671367::0::1::::<>Area2D<>::
+ui.gd::GDScript::-1::1693569624::0::1::::<>CanvasLayer<>::
+water-prison.gd::GDScript::-1::1693020836::0::1::::<>Area2D<>::
+wind.gd::GDScript::-1::1693020836::0::1::::<>TileMap<>::
+world.gd::GDScript::-1::1693669743::0::1::::<>Node2D<>::
+::res://story/::1693020836
+story.md::TextFile::-1::1693020836::0::1::::<><>::
+::res://ui/::1693630902
+All.png::CompressedTexture2D::887812031474582489::1693020836::1693026973::1::::<><>::
+background.png::CompressedTexture2D::8612486997016598450::1693027110::1693027162::1::::<><>::
+button-hover.png::CompressedTexture2D::6464441013597723276::1693020836::1693026973::1::::<><>::
+button-pressed.png::CompressedTexture2D::3023918290381410644::1693020836::1693026973::1::::<><>::
+button.png::CompressedTexture2D::2773557978224486076::1693020836::1693026973::1::::<><>::
+cloud-back.png::CompressedTexture2D::6568520466196394235::1693027127::1693027162::1::::<><>::
+cloud-front.png::CompressedTexture2D::5889232852870717732::1693027160::1693027162::1::::<><>::
+cloud-mid.png::CompressedTexture2D::3864714822694637800::1693027148::1693027162::1::::<><>::
+dialog.png::CompressedTexture2D::3736703263826119330::1693020836::1693026973::1::::<><>::
+hp-decrease.png::CompressedTexture2D::8758417163205677072::1693020836::1693026973::1::::<><>::
+hp-frame.png::CompressedTexture2D::9205585822855976573::1693020836::1693026973::1::::<><>::
+hp-inner.png::CompressedTexture2D::8685841217730956020::1693020836::1693026973::1::::<><>::
+hp-progress.png::CompressedTexture2D::2859801317570741060::1693020836::1693026973::1::::<><>::
+hp-sheet.png::CompressedTexture2D::5118099847905317472::1693020836::1693026973::1::::<><>::
+hp-tip.png::CompressedTexture2D::3335847901437819811::1693020836::1693026973::1::::<><>::
+hp-under.png::CompressedTexture2D::7027435249464771597::1693020836::1693026973::1::::<><>::
+hp-yellow.png::CompressedTexture2D::7363037834177588977::1693020836::1693026973::1::::<><>::
+hp.png::CompressedTexture2D::1016459623971424163::1693020836::1693026973::1::::<><>::
+inventory-bg.png::CompressedTexture2D::8695054587349522700::1693630901::1693630902::1::::<><>::
+inventory.png::CompressedTexture2D::6156779257261356309::1693630785::1693630787::1::::<><>::
+latin.png::CompressedTexture2D::2265188867367124889::1693020836::1693026973::1::::<><>::
+mana-frame.png::CompressedTexture2D::6837813368359849230::1693020836::1693026973::1::::<><>::
+mana-progress.png::CompressedTexture2D::5456629443066781387::1693020836::1693026973::1::::<><>::
+mana-under.png::CompressedTexture2D::1185455059515433830::1693020836::1693026973::1::::<><>::
+placeholder.svg::CompressedTexture2D::5399853141313279862::1693020836::1693026973::1::::<><>::
+progress-sheet.png::CompressedTexture2D::7847140404411380751::1693020836::1693026973::1::::<><>::
+progress.png::CompressedTexture2D::7691499481765623941::1693020836::1693026973::1::::<><>::
+select.png::CompressedTexture2D::8388977511527612914::1693567871::1693567873::1::::<><>::
+sundanese.png::CompressedTexture2D::1918540036507051645::1693020836::1693026973::1::::<><>::
+sword.png::CompressedTexture2D::2447035112579314944::1693020836::1693026973::1::::<><>::
+title_screen.tres::Theme::2172874370546990025::1693541128::0::1::::<><>::uid://5punbxm32rcb
+::res://ui/branding/::1693020836
+::res://ui/fonts/::1693026972
+Abaddon-Bold.ttf::FontFile::2070093679121263928::1693020836::1693026972::1::::<><>::
+Abaddon-Light.ttf::FontFile::8800784372685176171::1693020836::1693026972::1::::<><>::
+monogram.ttf::FontFile::2137868619265536225::1693020836::1693026972::1::::<><>::

@@ -1,0 +1,8 @@
+res://scenes/world.tscn
+res://tileset.tres
+res://thunder.gdshader
+res://scenes/attacks/fireball.tscn
+res://scenes/attacks/lantern.tscn
+res://scripts/world.gd
+res://scenes/title_screen.tscn
+res://ui/title_screen.tres

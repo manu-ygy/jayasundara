@@ -1,7 +1,7 @@
 extends CanvasLayer
 
-@onready var under_bar = $UnderBar
-@onready var hp_bar = $HPBar
+@onready var under_bar = $Wrapper/Status/Player/HP/UnderBar
+@onready var hp_bar = $Wrapper/Status/Player/HP/HPBar
 
 func update_hp_bar(value):
 	var tween = get_tree().create_tween()

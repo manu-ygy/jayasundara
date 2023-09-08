@@ -16,16 +16,17 @@ func _input(event):
 		is_in_dialog = true
 		
 		await ui.dialog('Om-om', 'Halo deck.')
-		var do_sparring = await ui.dialog('Om-om', 'Mau sparring?', [{'Boleh': 'accept'}, {'Nggak dulu': 'reject'}])
-		await ui.dialog('Om-om', 'Hmmm ...')
+		var do_sparring = await ui.dialog('Om-om', 'Mau sparring?', [{'Boleh': 'accept'}, {'Nggak dulu': 'reject'}, {'Riil kah min?': 'real'}])
 
 		if (do_sparring == 'accept'):
 			ui.start_battle()
 			await ui.battle_ended
 			
 			await ui.dialog('Om-om', 'GG juga ...')
-		else:
+		elif (do_sparring == 'reject'):
 			await ui.dialog('Om-om', 'Yahaha takut :P')
+		else:
+			await ui.dialog('Om-om', 'Rill dek.')
 
 		is_in_dialog = false
 

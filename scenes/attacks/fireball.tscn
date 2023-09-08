@@ -1,16 +1,13 @@
 [gd_scene load_steps=21 format=3 uid="uid://bywj2ymaeu6f0"]
 
 [ext_resource type="Script" path="res://scripts/fireball.gd" id="1_rlrx7"]
-[ext_resource type="Texture2D" uid="uid://bp0xlpj67p0hd" path="res://assets/player/fire.png" id="2_kbj17"]
 [ext_resource type="Texture2D" uid="uid://cpo7s5dyywqdd" path="res://explosion.png" id="3_8yka5"]
-[ext_resource type="Texture2D" uid="uid://djnmmjx1p2ku2" path="res://assets/effects/fireball/FB500-1.png" id="4_pf4ww"]
-[ext_resource type="Texture2D" uid="uid://ru2ap07l8ypj" path="res://assets/effects/fireball/FB500-2.png" id="5_45hdd"]
-[ext_resource type="Texture2D" uid="uid://cc56dikjqei6q" path="res://assets/effects/fireball/FB500-3.png" id="6_skq7x"]
-[ext_resource type="Texture2D" uid="uid://bll43r4fk7qwx" path="res://assets/effects/fireball/FB500-4.png" id="7_u2wxa"]
-[ext_resource type="Texture2D" uid="uid://51mh5cwo7381" path="res://assets/effects/fireball/FB500-5.png" id="8_3h6no"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q0n54"]
 blend_mode = 1
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aiu4d"]
+load_path = "res://.godot/imported/fire.png-a4c585a765d3c5c986dbd91409ca2058.ctex"
 
 [sub_resource type="Curve" id="Curve_cekkw"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.184028, 1), 0.0, 0.0, 0, 0, Vector2(0.538194, 1), 0.0, 0.0, 0, 0, Vector2(0.753472, 0.582822), 0.0, 0.0, 0, 0, Vector2(0.982639, 0), 0.0, 0.0, 0, 0]
@@ -30,24 +27,39 @@ particles_anim_loop = false
 offsets = PackedFloat32Array(0, 0.229508, 0.516393, 0.737705, 1)
 colors = PackedColorArray(1, 0.187881, 0.138683, 1, 0.862745, 0.568627, 0, 1, 0.28, 0.28, 0.28, 1, 0.339095, 0.339095, 0.339095, 0.516393, 1, 1, 1, 0)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0xa2x"]
+load_path = "res://.godot/imported/FB500-1.png-8649faa9d34dc293d111c19736553612.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_hp6eb"]
-atlas = ExtResource("4_pf4ww")
+atlas = SubResource("CompressedTexture2D_0xa2x")
 region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m605y"]
+load_path = "res://.godot/imported/FB500-2.png-2afe2e0e344568d134fc376bf9828656.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bfdbi"]
-atlas = ExtResource("5_45hdd")
+atlas = SubResource("CompressedTexture2D_m605y")
 region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vownb"]
+load_path = "res://.godot/imported/FB500-3.png-b95f074142e0d424d77024f5746f0a98.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8wh7s"]
-atlas = ExtResource("6_skq7x")
+atlas = SubResource("CompressedTexture2D_vownb")
 region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tcp6e"]
+load_path = "res://.godot/imported/FB500-4.png-a48b2426fd508717638036d644f19802.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lm0hl"]
-atlas = ExtResource("7_u2wxa")
+atlas = SubResource("CompressedTexture2D_tcp6e")
 region = Rect2(0, 0, 512, 512)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yqtan"]
+load_path = "res://.godot/imported/FB500-5.png-7ed156a01267761fa2c4fe24a07fcd12.ctex"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_v6efn"]
-atlas = ExtResource("8_3h6no")
+atlas = SubResource("CompressedTexture2D_yqtan")
 region = Rect2(0, 0, 512, 512)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7mwfa"]
@@ -74,7 +86,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w22uo"]
-size = Vector2(10, 10)
+size = Vector2(8, 8)
 
 [node name="Fireball" type="Area2D"]
 z_index = 10
@@ -87,7 +99,7 @@ emitting = false
 amount = 16
 lifetime = 0.3
 randomness = 0.5
-texture = ExtResource("2_kbj17")
+texture = SubResource("CompressedTexture2D_aiu4d")
 direction = Vector2(0, -1)
 gravity = Vector2(0, 0)
 initial_velocity_min = 32.0

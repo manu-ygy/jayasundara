@@ -63,7 +63,8 @@ func _input(event):
 				ghost.vframes = sprite.vframes
 				ghost.frame = sprite.frame
 				ghost.flip_h = sprite.flip_h
-				ghost.z_index = 0
+				ghost.z_index = 1
+				ghost.z_as_relative = false
 				
 				var tween = get_tree().create_tween()
 				tween.tween_property(ghost, 'modulate', Color(1, 1, 1, 0), 0.2)

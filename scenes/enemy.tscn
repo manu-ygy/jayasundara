@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b04o5ltplddsv"]
+[gd_scene load_steps=7 format=3 uid="uid://b04o5ltplddsv"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_a5m0e"]
 [ext_resource type="Texture2D" uid="uid://cplbbtkreyuy8" path="res://assets/npc/blacksmith.png" id="2_2hvnq"]
+[ext_resource type="Texture2D" uid="uid://ct0s6tuevklbj" path="res://assets/npc/shadow.png" id="2_2kwld"]
+[ext_resource type="Texture2D" uid="uid://dk7yi7p5eagrc" path="res://assets/npc/outline-red.png" id="3_yqtvl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkmay"]
 size = Vector2(22, 22)
@@ -19,6 +21,12 @@ shape = SubResource("RectangleShape2D_mkmay")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_oym5w")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+texture = ExtResource("2_2kwld")
+
+[node name="OutlineCircle" type="Sprite2D" parent="."]
+texture = ExtResource("3_yqtvl")
 
 [node name="Animation" type="Sprite2D" parent="."]
 position = Vector2(0, 1.49012e-08)
