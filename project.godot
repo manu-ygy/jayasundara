@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Game Sunda"
-run/main_scene="res://scenes/title_screen.tscn"
+config/name="Project Jayasundara"
+run/main_scene="res://scenes/prologue.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -23,7 +23,7 @@ window/size/window_width_override=1152
 window/size/window_height_override=648
 window/energy_saving/keep_screen_on=false
 window/stretch/aspect="ignore"
-window/stretch/scale=4.0
+window/stretch/scale=3.0
 window/per_pixel_transparency/allowed=true
 
 [input]

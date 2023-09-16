@@ -19,8 +19,8 @@ func init(dir, send):
 	for x in range(3):
 		var pillar_pos = direction * 32 * x + (Vector2(32, 32) * direction)
 		raycast.target_position = pillar_pos + Vector2(32, 32) * direction
-		
-		if (!raycast.is_colliding()):
+
+		if (!raycast.is_colliding() or raycast.get_collider().is_in_group('enemy')):
 			explosion.position = pillar_pos - Vector2(0, -12)
 			explosion.emitting = true
 			
@@ -49,6 +49,7 @@ func init(dir, send):
 func _on_body_entered(body):
 	if (body.is_in_group('enemy')):
 		body.attacked(5)
+		body.knockup(body.global_position + (direction * 24))
 
 func _on_area_entered(area):
 	if (area.is_in_group('destroyable_particle') and area.sender != sender):

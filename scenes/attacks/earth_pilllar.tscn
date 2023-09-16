@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://d1i3kscsu0r6e"]
 
 [ext_resource type="Script" path="res://scripts/earth-pilllar.gd" id="1_h3384"]
-[ext_resource type="Texture2D" uid="uid://dt5pjdk5a2mwp" path="res://assets/effects/earth_pillar.png" id="2_ti87b"]
+[ext_resource type="Texture2D" uid="uid://dt5pjdk5a2mwp" path="res://Earth Wall.png" id="2_ti87b"]
 [ext_resource type="Texture2D" uid="uid://dejxevr5tr4qy" path="res://assets/effects/smoke/Smoke VFX 2.png" id="3_2cwp1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cgsp8"]

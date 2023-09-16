@@ -9,7 +9,11 @@ var player_inside = false
 var is_in_dialog = false
 
 func _ready():
-	animation.play('default')
+	animation.play('walk_front')
+	
+func _physics_process(delta):
+	velocity = Vector2(0, 1) * 50
+	move_and_slide()
 
 func _input(event):
 	if (Input.is_action_just_released('interact') and player_inside and !is_in_dialog):
@@ -19,7 +23,7 @@ func _input(event):
 		var do_sparring = await ui.dialog('Om-om', 'Mau sparring?', [{'Boleh': 'accept'}, {'Nggak dulu': 'reject'}, {'Riil kah min?': 'real'}])
 
 		if (do_sparring == 'accept'):
-			ui.start_battle()
+			ui.start_battle('Riani', 'Om-om')
 			await ui.battle_ended
 			
 			await ui.dialog('Om-om', 'GG juga ...')

@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://ck1dm3mj6f3x8"]
+[gd_scene load_steps=15 format=3 uid="uid://ck1dm3mj6f3x8"]
 
 [ext_resource type="Texture2D" uid="uid://ba4mktjha754o" path="res://ui/sword.png" id="1_enenp"]
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_tmdxm"]
 [ext_resource type="Texture2D" uid="uid://2lmcrwninasr" path="res://ui/sundanese.png" id="2_62htn"]
+[ext_resource type="Texture2D" uid="uid://bvcdj2qy0c2vs" path="res://ui/cloud-mid.png" id="2_t6g1r"]
 [ext_resource type="Texture2D" uid="uid://7jjlheomw31f" path="res://ui/latin.png" id="3_cqito"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="3_w3mb0"]
 [ext_resource type="Theme" uid="uid://57s6nqgbwss4" path="res://ui/title_screen.tres" id="6_k0ye2"]
@@ -359,6 +360,11 @@ color = Color(0.372549, 0.803922, 0.894118, 1)
 
 [node name="Title" type="Node2D" parent="."]
 scale = Vector2(0.6, 0.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Title"]
+position = Vector2(241.111, 168.889)
+scale = Vector2(0.998264, 0.998264)
+texture = ExtResource("2_t6g1r")
 
 [node name="Sword" type="Sprite2D" parent="Title"]
 position = Vector2(238.333, 71.6666)

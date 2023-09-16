@@ -24,7 +24,7 @@ func _ready():
 	await animation.animation_finished
 	transition.hide()
 	
-func start_battle():
+func start_battle(player_name, enemy_name):
 	transition.show()
 	animation.play('transition')
 	await animation.animation_finished
@@ -36,6 +36,8 @@ func start_battle():
 	call_deferred('add_child', arena)
 	
 	await get_tree().process_frame 
+	
+	arena.initiate_battle(player_name, enemy_name)
 	
 	animation.play_backwards('transition')
 	await animation.animation_finished

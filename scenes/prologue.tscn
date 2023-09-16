@@ -1,6 +1,7 @@
-[gd_scene load_steps=54 format=3 uid="uid://b44ys76avcrsx"]
+[gd_scene load_steps=55 format=3 uid="uid://b44ys76avcrsx"]
 
 [ext_resource type="TileSet" uid="uid://ci8nj8rc17d2p" path="res://tileset.tres" id="1_fmk1s"]
+[ext_resource type="Script" path="res://scripts/prologue.gd" id="1_r5nf2"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_ly2vp"]
 [ext_resource type="Texture2D" uid="uid://dh7wyg03t81c" path="res://assets/player/outline.png" id="3_de1dm"]
 [ext_resource type="Texture2D" uid="uid://ct0s6tuevklbj" path="res://assets/npc/shadow.png" id="4_fpaxu"]
@@ -649,6 +650,7 @@ size = Vector2(8, 8)
 size = Vector2(26, 16)
 
 [node name="Prologue" type="Node2D"]
+script = ExtResource("1_r5nf2")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -679,19 +681,18 @@ layer_3/y_sort_origin = 0
 layer_3/z_index = 0
 layer_3/tile_data = PackedInt32Array(-786443, 131072, 0, -786442, 131072, 0, -786441, 131072, 0, -786440, 131072, 0, -786439, 131072, 0, -786438, 131072, 0, -786437, 131072, 0, -786436, 131072, 0, -786435, 131072, 0, -786434, 131072, 0, -786433, 131072, 0, -851968, 131072, 0, -851967, 131072, 0, -851966, 131072, 0, -851965, 131072, 0, -851964, 131072, 0, -851963, 131072, 0, -851962, 131072, 0, -851961, 131072, 0, -851960, 131072, 0, -851959, 131072, 0, -851958, 131072, 0, -851957, 131072, 0, -851956, 131072, 0, -851955, 131072, 0, -851954, 131072, 0, 1048565, 131072, 4, 1048566, 131072, 4, 1048567, 131072, 4, 1048568, 131072, 4, 1048569, 131072, 4, 1048570, 131072, 4, 1048571, 131072, 4, 1048572, 131072, 4, 1048573, 131072, 4, 1048574, 131072, 4, 1048575, 131072, 4, 983040, 131072, 4, 983041, 131072, 4, 983042, 131072, 4, 983043, 131072, 4, 983044, 131072, 4, 983045, 131072, 4, 983046, 131072, 4, 983047, 131072, 4, 983048, 131072, 4, 983049, 131072, 4, 983050, 131072, 4, 983051, 131072, 4, 983052, 131072, 4, 983053, 131072, 4, 983054, 131072, 4, 917519, 262144, 2, 851983, 262144, 2, 786447, 262144, 2, 720911, 262144, 2, 655375, 262144, 2, 589839, 262144, 2, 524303, 262144, 2, 458767, 262144, 2, 393231, 262144, 2, 327695, 262144, 2, 262159, 262144, 2, 196623, 262144, 2, 131087, 262144, 2, 65551, 262144, 2, 15, 262144, 2, -65521, 262144, 2, -131057, 262144, 2, -196593, 262144, 2, -262129, 262144, 2, -327665, 262144, 2, -393201, 262144, 2, -458737, 262144, 2, -524273, 262144, 2, -589809, 262144, 2, -655345, 262144, 2, -720881, 262144, 2, -786417, 262144, 2, -720908, 0, 2, -655372, 0, 2, -589836, 0, 2, -524300, 0, 2, -458764, 0, 2, -393228, 0, 2, -327692, 0, 2, -262156, 0, 2, -196620, 0, 2, -131084, 0, 2, -65548, 0, 2, -12, 0, 2, 65524, 0, 2, 131060, 0, 2, 196596, 0, 2, 262132, 0, 2, 327668, 0, 2, 393204, 0, 2, 458740, 0, 2, 524276, 0, 2, 589812, 0, 2, 655348, 0, 2, 720884, 0, 2, 786420, 0, 2, 851956, 0, 2, 917492, 0, 2, 983028, 0, 2)
 
-[node name="Player" type="CharacterBody2D" parent="TileMap"]
+[node name="Riani" type="CharacterBody2D" parent="TileMap"]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(-32, 0)
 collision_layer = 2
 script = ExtResource("2_ly2vp")
 
-[node name="Animation" type="AnimationPlayer" parent="TileMap/Player"]
+[node name="Animation" type="AnimationPlayer" parent="TileMap/Riani"]
 libraries = {
 "": SubResource("AnimationLibrary_vu6ke")
 }
 
-[node name="AnimationTree" type="AnimationTree" parent="TileMap/Player"]
+[node name="AnimationTree" type="AnimationTree" parent="TileMap/Riani"]
 tree_root = SubResource("AnimationNodeStateMachine_rctrm")
 anim_player = NodePath("../Animation")
 active = true
@@ -699,43 +700,44 @@ parameters/dash/blend_position = Vector2(0, 0)
 parameters/idle/blend_position = Vector2(0.00232017, 0.0174419)
 parameters/walk/blend_position = Vector2(0, 0)
 
-[node name="DashTimer" type="Timer" parent="TileMap/Player"]
+[node name="DashTimer" type="Timer" parent="TileMap/Riani"]
 wait_time = 0.2
 one_shot = true
 
-[node name="GlitchTimer" type="Timer" parent="TileMap/Player"]
+[node name="GlitchTimer" type="Timer" parent="TileMap/Riani"]
 wait_time = 5.0
 
-[node name="Area2D" type="Area2D" parent="TileMap/Player"]
+[node name="Area2D" type="Area2D" parent="TileMap/Riani"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Player/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Riani/Area2D"]
 position = Vector2(-1.5, 6)
 shape = SubResource("RectangleShape2D_pl3wg")
 disabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Riani"]
 position = Vector2(-1.5, 6)
 shape = SubResource("RectangleShape2D_p1e6y")
 
-[node name="OutlineCircle" type="Sprite2D" parent="TileMap/Player"]
+[node name="OutlineCircle" type="Sprite2D" parent="TileMap/Riani"]
 self_modulate = Color(1, 1, 1, 0.588235)
 z_as_relative = false
 texture = ExtResource("3_de1dm")
 
-[node name="Shadow" type="Sprite2D" parent="TileMap/Player"]
+[node name="Shadow" type="Sprite2D" parent="TileMap/Riani"]
 self_modulate = Color(1, 1, 1, 0.588235)
 z_as_relative = false
 texture = ExtResource("4_fpaxu")
 
-[node name="Sprite" type="Sprite2D" parent="TileMap/Player"]
+[node name="Sprite" type="Sprite2D" parent="TileMap/Riani"]
 texture = ExtResource("5_y2pxs")
 hframes = 6
 vframes = 9
+frame = 38
 
-[node name="Camera2D" type="Camera2D" parent="TileMap/Player"]
+[node name="Camera2D" type="Camera2D" parent="TileMap/Riani"]
 script = ExtResource("6_jaqsb")
 
-[node name="ShakeTimer" type="Timer" parent="TileMap/Player/Camera2D"]
+[node name="ShakeTimer" type="Timer" parent="TileMap/Riani/Camera2D"]
 one_shot = true
 
 [node name="NPC" type="CharacterBody2D" parent="TileMap"]
@@ -768,9 +770,9 @@ collision_mask = 3
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_dp3ua")
 
-[connection signal="timeout" from="TileMap/Player/DashTimer" to="TileMap/Player" method="_on_dash_timer_timeout"]
-[connection signal="timeout" from="TileMap/Player/GlitchTimer" to="TileMap/Player" method="_on_glitch_timer_timeout"]
-[connection signal="body_entered" from="TileMap/Player/Area2D" to="TileMap/Player" method="_on_area_2d_body_entered"]
-[connection signal="timeout" from="TileMap/Player/Camera2D/ShakeTimer" to="TileMap/Player/Camera2D" method="_on_shake_timer_timeout"]
+[connection signal="timeout" from="TileMap/Riani/DashTimer" to="TileMap/Riani" method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="TileMap/Riani/GlitchTimer" to="TileMap/Riani" method="_on_glitch_timer_timeout"]
+[connection signal="body_entered" from="TileMap/Riani/Area2D" to="TileMap/Riani" method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="TileMap/Riani/Camera2D/ShakeTimer" to="TileMap/Riani/Camera2D" method="_on_shake_timer_timeout"]
 [connection signal="body_entered" from="TileMap/NPC/InteractionArea" to="TileMap/NPC" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="TileMap/NPC/InteractionArea" to="TileMap/NPC" method="_on_interaction_area_body_exited"]

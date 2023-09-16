@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var animation = $Animation
 @onready var dash_timer = $DashTimer
 @onready var attack_timer = $AttackTimer
+@onready var regen_timer = $RegenTimer
 @onready var bump_detection = $Area2D/CollisionShape2D
 @onready var muzzle = $Muzzle
 @onready var raycast = $Muzzle/RayCast2D
@@ -13,6 +14,7 @@ extends CharacterBody2D
 
 @onready var ui = $/root/Loader/World/UI
 @onready var mp_bar = $/root/Loader/World/UI/Wrapper/Status/Player/MPBar
+@onready var base_skill_progress = $/root/Loader/World/UI/Stat/BaseSkill
 
 @onready var camera = $Camera2D
 
@@ -24,7 +26,7 @@ var tracking_instance = load('res://scenes/attacks/tracking.tscn')
 var lantern_instance = load('res://scenes/attacks/lantern.tscn')
 # var dust_instance = load('res://dash.tres')
 
-var mp = 100
+var mp = 150
 var hp = 100
 
 var game_ended = false
@@ -34,8 +36,13 @@ var movement_speed = default_speed
 var dash_speed = 450
 var is_levitating = false
 
+var allow_regen = false
+
 var attack_direction = Vector2.ZERO
 var quick_cast = 'earth_pillar'
+
+var event_key = [KEY_1, KEY_2, KEY_3, KEY_4, KEY_5, KEY_6, KEY_7, KEY_8, KEY_9]
+var keybind = [KEY_COMMA, KEY_PERIOD, KEY_SLASH, KEY_L, KEY_SEMICOLON, KEY_APOSTROPHE, KEY_O, KEY_P, KEY_BRACKETLEFT]
 
 var current_combinations = []
 var attack_combinations = {
@@ -49,8 +56,11 @@ var attack_combinations = {
 }
 
 var is_dashing = false
-var is_stunned = false
+var is_stunned = true
 var is_attacking = false
+
+var base_skill_cooldown = 2
+var is_base_skill_cooldown = false
 
 var last_ghost_pos = Vector2()
 
@@ -86,7 +96,10 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func _input(event):
-	if (Input.is_action_just_pressed('base_skill') and !is_dashing and velocity != Vector2.ZERO and !game_ended):
+	if (Input.is_action_just_pressed('base_skill') and !is_dashing and !is_base_skill_cooldown and velocity != Vector2.ZERO and !game_ended):
+		is_base_skill_cooldown = true
+		base_skill_progress.value = 0
+		
 		is_dashing = true
 		bump_detection.disabled = false
 		dash_timer.start()
@@ -121,26 +134,33 @@ func _input(event):
 				
 				world.add_child(ghost)
 				
+		var tween = get_tree().create_tween()
+		tween.tween_property(base_skill_progress, 'value', 100, base_skill_cooldown)
+		tween.tween_callback(set_not_cooldown)
+				
 	elif (Input.is_action_just_pressed('quick_cast') and !game_ended):
 		cast_attack(quick_cast)
 		
 	elif (event is InputEventKey and event.pressed and !game_ended):
-		if event.keycode in [KEY_1, KEY_2, KEY_3, KEY_4, KEY_5, KEY_6, KEY_7, KEY_8, KEY_9]:
-			current_combinations.append(event.keycode)
+		if event.keycode in keybind:
+			current_combinations.append(event_key[keybind.find(event.keycode)])
 			
 			cast_attack(find_combinations())
 		else:
 			current_combinations = []
 			return
 			
+func set_not_cooldown():
+	is_base_skill_cooldown = false
+			
 func attacked(damage):
+	allow_regen = false
+	regen_timer.start()
+	
 	hp -= damage
 	ui.update_hp_bar(hp)
 			
 func cast_attack(attack_name):
-	mp -= 2
-	mp_bar.value = mp
-
 	is_attacking = true
 	attack_timer.start()
 		
@@ -154,6 +174,9 @@ func cast_attack(attack_name):
 				world.add_child(fireball)
 				fireball.init(attack_direction, self)
 				
+				mp -= 20
+				ui.update_mp_bar(mp)
+				
 			'earth_pillar':
 				if (!raycast.is_colliding()):
 					var pillar = pillar_instance.instantiate()
@@ -161,12 +184,18 @@ func cast_attack(attack_name):
 					world.add_child(pillar)
 					pillar.init(attack_direction, self)
 					# pillar.add_to_group('particle')
+					
+					mp -= 30
+					ui.update_mp_bar(mp)
 				
 			'ice_shard':
 				var shard = shard_instance.instantiate()
 				shard.global_position = global_position
 				world.add_child(shard)
 				shard.init(attack_direction, self)
+				
+				mp -= 15
+				ui.update_mp_bar(mp)
 				
 			'meteor':
 				await get_tree().create_timer(1).timeout
@@ -248,3 +277,18 @@ func _on_glitch_timer_timeout():
 #	await get_tree().create_timer(2).timeout
 #	glitch.hide()
 	pass
+
+func _on_regen_timer_timeout():
+	allow_regen = true
+
+func _on_regen_tick_timeout():
+	if (allow_regen):
+		hp += 5
+		
+	if (!is_levitating):
+		mp += 10
+	else:
+		mp -= 5
+		
+	ui.update_mp_bar(mp)
+	ui.update_hp_bar(hp)
