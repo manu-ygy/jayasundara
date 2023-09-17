@@ -12,6 +12,7 @@ signal arrived_at_path
 @onready var state_machine = $AnimationTree.get('parameters/playback')
 @onready var animation = $AnimationTree
 @onready var sprite = $Sprite
+@onready var glitch = $Glitch
 
 var movement_speed = 125
 var dash_speed = 450
@@ -36,7 +37,7 @@ func _physics_process(delta):
 			velocity = global_position.direction_to(current_path[path_index]) * movement_speed
 		else:
 			velocity = Vector2.ZERO
-			if (current_path.size() > path_index):
+			if (current_path.size() -1 > path_index):
 				path_index += 1
 			else:
 				emit_signal('arrived_at_path')
@@ -100,8 +101,19 @@ func set_not_cooldown():
 func move_along_path(path):
 	current_path = path
 	current_point = path[0]
+	path_index = 0
 	
 	await arrived_at_path
+
+func align(direction):
+	animation.set('parameters/walk/blend_position', direction)
+	animation.set('parameters/idle/blend_position', direction)
+	
+func move(x_or_vector, y = null):
+	if (y == null):
+		global_position = x_or_vector
+	else:
+		global_position = Vector2(x_or_vector, y)
 
 func _on_dash_timer_timeout():
 	is_dashing = false

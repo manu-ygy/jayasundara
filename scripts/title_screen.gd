@@ -18,8 +18,9 @@ func shake_impact():
 
 func _on_play_pressed():
 	animation.play('transition')
-	await animation.animation_finished
+	await get_tree().create_timer(0.5)
 	get_tree().change_scene_to_file('res://scenes/loader.tscn')
+	await animation.animation_finished
 
 func resize_camera():
 	var zoom_size = get_viewport_rect().size.x / base_viewport.x

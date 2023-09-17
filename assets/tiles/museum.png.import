@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7bw0vu3wpi0o"
-path="res://.godot/imported/movement.png-6f6f5a12ceda25dc17f51fcad2f22ce3.ctex"
+uid="uid://bk56j65wk5fu4"
+path="res://.godot/imported/museum.png-b77564e3f5c17daf07c9d2ff90001c52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/movement.png"
-dest_files=["res://.godot/imported/movement.png-6f6f5a12ceda25dc17f51fcad2f22ce3.ctex"]
+source_file="res://assets/tiles/museum.png"
+dest_files=["res://.godot/imported/museum.png-b77564e3f5c17daf07c9d2ff90001c52.ctex"]
 
 [params]
 

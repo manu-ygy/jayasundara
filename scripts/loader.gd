@@ -15,7 +15,6 @@ func _ready():
 	animation.play('transition')
 	await animation.animation_finished
 	
-	world.connect('battle_started', start_battle)
 	add_child(world)
 	
 	await get_tree().process_frame

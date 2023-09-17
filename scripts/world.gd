@@ -73,8 +73,8 @@ func submit_choice(value):
 	dialog_container.hide()
 	emit_signal('choice_answered', value)
 	
-func start_battle():
-	emit_signal('battle_started')
+func start_battle(name, enemy):
+	loader.start_battle(name, enemy)
 	loader.battle_ended.connect(emit_signal.bind('battle_ended'))
 	
 func add_inventory():
@@ -90,7 +90,7 @@ func _input(event):
 				dialog_container.hide()
 				inventory_container.show()
 				inventory_background.show()
-				information.show()
+				# information.show()
 				emit_signal('dialog_finished')
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
