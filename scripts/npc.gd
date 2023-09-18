@@ -17,6 +17,9 @@ var current_path = []
 var path_index = 0
 var current_point = Vector2.ZERO
 
+func _ready():
+	state_machine.travel('idle')
+
 func _physics_process(delta):
 	if (current_path.size() != 0):
 		if (global_position.distance_to(current_path[path_index]) > 2):

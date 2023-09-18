@@ -32,15 +32,23 @@ var current_point = null
 var path_index = 0
 
 func _physics_process(delta):
-	if (is_stunned and current_point):
+	if (is_stunned and current_path.size() != 0):
 		if (global_position.distance_to(current_path[path_index]) > 2):
-			velocity = global_position.direction_to(current_path[path_index]) * movement_speed
+			var direction = global_position.direction_to(current_path[path_index])
+			velocity = direction * movement_speed
+			
+			animation.set('parameters/walk/blend_position', direction)
+			animation.set('parameters/idle/blend_position', direction)
+			
+			state_machine.travel('walk')
 		else:
 			velocity = Vector2.ZERO
 			if (current_path.size() -1 > path_index):
 				path_index += 1
 			else:
+				current_path = []
 				emit_signal('arrived_at_path')
+				state_machine.travel('idle')
 	else:
 		var direction = Input.get_vector('left', 'right', 'up', 'down')
 		var speed = dash_speed if is_dashing else movement_speed
