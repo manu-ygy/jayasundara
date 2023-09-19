@@ -8,8 +8,8 @@ extends Node
 func _ready():
 	TranslationServer.set_locale('id')
 	
-	await get_tree().create_timer(0.2).timeout
-	action('transfered')
+	#await get_tree().create_timer(0.2).timeout
+	#action('transfered')
 	
 func npc(name):
 	return $/root/Loader/World/TileMap.get_node(name)
@@ -18,11 +18,11 @@ func show_overlay(duration):
 	overlay.show()
 	
 	var tween = get_tree().create_tween()
-	tween.tween_property(overlay_color, 'color', Color(1, 1, 1, 1), 0.5)
+	tween.tween_property(overlay_color, 'color', Color(0, 0, 0, 0), 0.5)
 	await get_tree().create_timer(duration).timeout
 	
 	tween = get_tree().create_tween()
-	tween.tween_property(overlay_color, 'color', Color(1, 1, 1, 0), 0.5)
+	tween.tween_property(overlay_color, 'color', Color(0, 0, 0, 0), 0.5)
 	await tween.finished
 
 func action(name):

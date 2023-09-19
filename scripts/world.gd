@@ -31,7 +31,11 @@ func dialog(name, content, choices = []):
 	information.hide()
 	inventory_background.hide()
 	inventory_container.hide()
-	dialog_name.text = name
+	if (name != null):
+		dialog_name.show()
+		dialog_name.text = name
+	else:
+		dialog_name.hide()
 	is_choice = choices.size() > 0
 	is_in_dialog = true
 	

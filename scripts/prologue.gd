@@ -58,7 +58,7 @@ func _ready():
 
 	riani.move(144, 81)
 	
-	await get_tree().create_timer(7.5).timeout
+	await get_tree().create_timer(7.9).timeout
 	get_tree().change_scene_to_file('res://scenes/loader.tscn')
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

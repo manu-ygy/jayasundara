@@ -362,8 +362,8 @@ color = Color(0.372549, 0.803922, 0.894118, 1)
 scale = Vector2(0.6, 0.6)
 
 [node name="Sprite2D" type="Sprite2D" parent="Title"]
-position = Vector2(241.111, 168.889)
-scale = Vector2(0.998264, 0.998264)
+position = Vector2(260, 178.333)
+scale = Vector2(1.4974, 1.4974)
 texture = ExtResource("2_t6g1r")
 
 [node name="Sword" type="Sprite2D" parent="Title"]
