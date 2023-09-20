@@ -19,7 +19,7 @@ func _process(delta):
 	pass
 
 func _input(event):
-	if (Input.is_action_just_released('interact')):
+	if (is_player_inside and Input.is_action_just_released('interact')):
 		overlay.show()
 		var tween = get_tree().create_tween()
 		tween.tween_property(overlay_color, 'color', Color(0, 0, 0, 1), 0.5)
