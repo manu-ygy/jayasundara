@@ -1,231 +1,148 @@
-,id,su,en
-LINE_SANJAYA_1,"Riani lihat! Museum ini sangat keren, banyak hal yang dapat kita pelajari disini","Riani! neang kadieu, museum ieu keren pisan! Aya loba anu urang bisa palajari di dieu","Riani, look! This museum is amazing! There's so many things we can learn here"
+Line ID,id,su
+LINE_SANJAYA_1,"Riani lihat! Museum ini sangat keren, banyak hal yang dapat kita pelajari disini","Riani! neang kadieu, museum ieu keren pisan! Aya loba anu urang bisa palajari di dieu"
 LINE_RIANI_1,"Iya. Ada banyak sekali koleksi bersejarah, aku ingin menyentuh semua barang disini
 
-","Iya, aya loba pisan koleksi sajarah, kuring hayang pegang sagalana","Yeah! There's a lot of historical relics here, I want to touch every single on of them!"
-LINE_SANJAYA_2,Ayo kita lihat lagi koleksi lainnya.,"Hayuk, neangan koleksi laenna",Let's look for other stuffs 
-LINE_RIANI_2,"Lihat pedang ini, sangat keren, mungkin aku bisa membelah bungkus so nice dengan sangat mudah, atau aku bisa menghajar orang-orang jahat diluar sana!","Ningali pedang ieu! Tiis pisan, maranehna bisa nyarengkir bungkus so nice ku sangat gampang, atanapi… maranehna bisa ngalibas jalma jahat di luar aya ieu!","Look at this sword, it's so cool, maybe i can cut a ""so nice"" packaging effortlessly with this, or maybe i can beat some bad guys out there!"
+","Iya, aya loba pisan koleksi sajarah, kuring hayang pegang sagalana"
+LINE_SANJAYA_2,Ayo kita lihat lagi koleksi lainnya.,"Hayuk, neangan koleksi laenna"
+LINE_RIANI_2,"Lihat pedang ini, sangat keren, mungkin aku bisa membelah bungkus so nice dengan sangat mudah, atau aku bisa menghajar orang-orang jahat diluar sana!","Ningali pedang ieu! Tiis pisan, maranehna bisa nyarengkir bungkus so nice ku sangat gampang, atanapi… maranehna bisa ngalibas jalma jahat di luar aya ieu!"
 LINE_SANJAYA_2,"Jangan sentuh Riani, ini adalah salah satu benda paling berharga disini. Kita akan mendapatkan masalah jika menyentuhnya.","Tong ngarampa Riani, ieu mangrupikeun salah sahiji barang anu paling berharga di dieu. Urang bakal kasulitan upami urang nyabak.
-",Don't touch that Riani! That's one of the most valuable relics here. We'll get into trouble if you touch it.
-LINE_RIANI_3,Yah … gak asik.,Ah … teu asik anjeun mah,Awww....no fun....
-LINE_RIANI_4,Wahh….,Wahh…,Woahhhh
-LINE_SANJAYA_3,Lihat batu itu! Bentuknya aneh sekali…,Ningali batu ieu! Wujudna aneh tenget!,That rock! it looks so weird.....
-LINE_RIANI_5,"Wah, batu itu sepertinya berkilau...","Wow, batu ieu saeutik pumay.","Woah, It's shining so brightly....."
-LINE_RIANI_6,aku ingin menyentuhnya…,Abdi hayang noel…,I want to touch it.
-LINE_SANJAYA_4,Riani! Jangan!,Entong Riani!,"RIANI, DON'T!"
-LINE_PLAYER_1,Di-dimana aku? Jelas ini bukan di museum!,Dimana abdi? eces ieu lain musium,W-WHERE AM I? THIS IS CLEARLY NOT THE MUSEUM!!!!
-LINE_PLAYER_2,Aku mendengar sesuatu. Apakah itu suara [ Player 2 ]?,Kuring ngadenge hal. eta teh sora [ Player 2 ]?,
-LINE_BIANTARA_1,"Saya, Bara Majaputra, menghadiri pertemuan ini untuk menyampaikan pesan penting kepada seluruh rakyat saya. Sebagai seorang pemimpin, saya memahami bahwa kekuasaan adalah suatu pengabdian yang harus dilakukan untuk kepentingan rakyat. Keadilan dan kebijakan yang bijaksana harus selalu menjadi panduan dalam setiap keputusan yang diambil demi kesejahteraan bersama.","Abdi, Bara Majaputra, ngahadiran rapat ieu pikeun nepikeun pesen penting ka sadaya umat kuring. Salaku pamimpin, kuring ngarti yen kakawasaan mangrupikeun jasa anu kedah dilakukeun pikeun kapentingan rahayat. Kaadilan sareng kabijakan anu wijaksana kedah salawasna nungtun unggal kaputusan anu dicandak pikeun kapentingan umum.",
-LINE_BIANTARA_2,"Persatuan adalah kunci dari kekuatan sebuah negara. Oleh karena itu, saya mengajak seluruh rakyat saya untuk bersatu dan bekerja sama, tanpa memandang perbedaan sosial, etnis, atau agama. Hanya dengan persatuan, kita dapat mencapai perdamaian, kemajuan, dan stabilitas yang kita semua harapkan.","Persatuan mangrupakeun konci pikeun kakuatan hiji nagara. Kumargi kitu, sim kuring ngajak ka sakumna bangsa urang sangkan ngahiji jeung gawe bareng, teu paduli bedana sosial, etnis atawa agama. Ngan ku persatuan urang tiasa ngahontal katengtreman, kamajuan sareng stabilitas anu urang ngarepkeun.",
-LINE_BIANTARA_3,"Selain itu, Kita semua harus terus belajar dan berkembang agar kita dapat mengambil keputusan yang tepat demi kepentingan bersama. Dengan pandangan yang luas dan pengetahuan yang mendalam, kita dapat menghadapi tantangan apapun dengan lebih baik.","Salaku tambahan, urang sadayana kedah terus diajar sareng mekar supados urang tiasa nyandak kaputusan anu leres pikeun kapentingan umum. Kalayan pandangan anu lega sareng pangaweruh anu jero, urang tiasa langkung hade nyanghareupan tantangan naon wae. Dina mungkas biantara, sim kuring ngingetan yen urang oge boga tanggung jawab pikeun ngajaga alam jeung lingkungan. Ngajaga lingkungan mangrupikeun kawajiban urang pikeun generasi anu bakal datang, supados aranjeunna oge tiasa nikmati kaendahan alam ieu. Hayu urang babarengan ngajaga sareng miara bumi urang supados tetep hejo sareng lestari. Hatur nuhun kasadayana kana kaprihatinan anjeun. Mugi Gusti ngaberkahan urang sareng nagara ieu.",
-LINE_RAJA_1,"Dalam mengakhiri pidato ini, saya ingin mengingatkan bahwa kita juga memiliki tanggung jawab untuk menjaga alam dan lingkungan kita. Perlindungan lingkungan adalah tugas kita untuk generasi mendatang, agar mereka juga dapat menikmati keindahan alam ini. Mari bersama-sama menjaga dan merawat bumi kita agar tetap hijau dan lestari.","Dina mungkas biantara, sim kuring ngingetan yen urang oge boga tanggung jawab pikeun ngajaga alam jeung lingkungan. Ngajaga lingkungan mangrupikeun kawajiban urang pikeun generasi anu bakal datang, supados aranjeunna oge tiasa nikmati kaendahan alam ieu. Hayu urang babarengan ngajaga sareng miara bumi urang supados tetep hejo sareng lestari. ",
-LINE_RAJA_2,Terima kasih atas perhatian Anda semua. Semoga Tuhan memberkati kita dan negeri ini.,Hatur nuhun kasadayana kana kaprihatinan anjeun. Mugi Gusti ngaberkahan urang sareng nagara ieu.,
-LINE_RAJA_3,Siapa disana!,Saha nu aya disana?!,
-LINE_PLAYER_5,A%$^^B….D!((@)I…,A%$^^B….D!((@)I…,
-LINE_RAJA_4,"Mahamantri, bukankah ini kasus ""itu”?","Mahamantri, sanes kasus ""itu""?",
-LINE_MAHAMANTRI_1,Sepertinya begitu Yang Mulia,"Sigana kitu, Nu Maha Agung",
-LINE_PLAYER_56,"Kasus ""itu""?",Kasus Itu”?,
-LINE_MAHAMANTRI_2,"Iya, kami pernah lihat hal yang mirip sekali dengan ini dibuku. Ayo, ikut aku. Aku akan menjelaskannya di perpustakaan.","nuhun, urang geus katempo hal pisan sarupa ieu dina buku. Hayu tuturkeun kuring. Kuring ge ngajelaskeun eta di perpustakaan.",
-LINE_MAHAMANTRI_3,"Sebelumnya, izinkan aku untuk memperkenalkan diri. Namaku Suryakancana. Aku adalah Mahamantri dari kerajaan Jayasundara.","Oke… Kahiji, idin kuring ngenalkeun diri. Nami abdi Suryakancana. Abdi teh Mahamantri ti karajaan Jayasundara.",
-LINE_PLAYER_7,Jayasundara? Aku belum pernah mendengar nama kerajaan ini sebelumnya.,Jayasundara? Abdi henteu kantos nguping nami karajaan ieu sateuacanna.,
-LINE_MAHAMANTRI_4,"Mungkin, nama kerajaan kami terdengar asing di telingamu. Itu dikarenakan kerajaan kami tak ada di duniamu.",Sugan… ngaran karajaan urang kadenge asing di ceuli anjeun. eta sabab karajaan kami henteu aya di dunya anjeun.,
-LINE_MAHAMANTRI_5,"Hmmm, ini memang sedikit rumit…","Hmmm, ieu rada rumit ...",
-LINE_MAHAMANTRI_6,"Sebelumnya kamu menyentuh batu seperti ini bukan? Batu ini adalah batu yang terlempar dari duniaku ke dunia mu... maka batu ini merupakan sebuah anomali di dunia kalian, saat menyentuh ini kalian berkontraksi dengan dunia kami dan kalian terlempar. Pada dasarnya, tak hanya ada satu dunia dalam alam semesta. Ada banyak sekali dunia yang tak terhitung jumlahnya. Dunia-dunia tersebut berjalan beriringan, dengan variasi yang berbeda-beda. Hal tersebut disebut sebagai dunia paralel. Kejadian ini biasanya kami menyebut hal ini dengan sebutan “itu”, atau “Lintasdunya”.","Anjeun keuna batu kawas ieu samemehna, katuhu? Batu ieu mangrupikeun batu anu dialungkeun ti dunya kuring ka dunya anjeun ... teras batu ieu mangrupikeun anomali di dunya anjeun, nalika anjeun nyabak ieu anjeun kontrak sareng dunya urang sareng anjeun dialungkeun. Dasarna, teu ngan hiji dunya di jagat raya. Aya dunya countless. Dunya ieu babarengan, kalayan variasi anu beda. Ieu katelah dunya paralel. Urang biasana nyebut kajadian ieu salaku ""eta"", atawa ""Crossroads"".",
-LINE_PLAYER_8,"Aku mulai mengerti. Jadi, ini seperti cerminan dari duniaku, namun dengan perbedaan?","Kuring mimiti ngarti. Janten, eta sapertos gambar eunteung dunya kuring, tapi kalayan bedana?",
-LINE_MAHAMANTRI_7,Tepat. Kau ternyata sangat cepat belajar ya.,"Pantes. Anjeun leres-leres diajar gancang, sanes?",
-LINE_MAHAMANTRI_8,Lalu... mengapa aku bisa terdampar disini?,Teras... naha kuring terdampar di dieu?,
-LINE_PLAYER_9,"Aku sendiri tak yakin. Tapi, aku menduga bahwa ada celah di garis waktu antara duniaku dan duniamu yang menyebabkan kau terdampar disini.","Kuring teu yakin sorangan. Nanging, kuring curiga aya jurang timeline antara dunya kuring sareng anjeun anu nyababkeun anjeun terdampar di dieu.",
-LINE_PLAYER_10,A-apakah aku bisa kembali ke duniaku?,Dupi abdi tiasa balik ka dunya abdi?,
-LINE_MAHAMANTRI_9,"Akan cukup sulit untuk kembali ke duniamu. Namun, itu tidak mustahil.","Bakal rada hese uih deui ka dunya anjeun, namun henteu mustahil.",
-LINE_MAHAMANTRI_10,"AHA! Sepertinya, ini jawabannya.",AH! Sigana ieu jawabanana!,
-LINE_MAHAMANTRI_11,"Tertulis disini, untuk membuka kembali celah waktu tersebut, kau harus mengumpulkan ketiga prasasti lalu mengaktifkan portal. Ketiga prasasti itu adalah [Prasasti 1], [Prasasti 2], dan [Prasasti 3]. Ketiga prasasti tersebut tersebar di seluruh kerajaan Jayasundara.","Ieu ditulis di dieu, pikeun muka deui sela waktu, Anjeun kudu ngumpulkeun tilu prasasti lajeng ngaktipkeun portal. Tilu prasasti nyaeta [Prasasti 1], [Prasasti 2], jeung [Prasasti 3]. Tilu prasasti ieu sumebar di sakuliah karajaan Jayasundara.",
-LINE_PLAYER_11,Dimana aku bisa menemukan ketiga prasasti tersebut?,Dimana abdi tiasa mendakan tilu prasasti ieu?,
-LINE_MAHAMANTRI_12,Aku kurang tahu pasti. Beri aku sedikit waktu untuk mencari tahu dahulu.,Kuring henteu weruh pasti. Pasihan abdi waktos sakedik kanggo terang heula.,
-LINE_PLAYER_12,Baiklah. Aku akan pergi sekarang.,Oke. Abdi bade angkat ayeuna.,
-LINE_MAHAMANTRI_13,"Sebelum kau pergi, aku harus memberitahumu sesuatu.","Sateuacan anjeun angkat, kuring kedah nyarioskeun ka anjeun.",
-LINE_MAHAMANTRI_14,"Di kerajaan Jayasundara, segala masalah baku hantam akan diselesaikan di arena khusus untuk mengurangi kerusakan pada lingkungan. Aku akan mengajarimu sedikit teknik dasar, agar kau dapat bertahan disini.","Di karajaan Jayasundara, sagala masalah adu tinju bakal direngsekeun dina arena husus pikeun ngurangan karuksakan lingkungan. Kuring bakal ngajarkeun anjeun sababaraha teknik dasar, supados anjeun tiasa salamet di dieu.",
-LINE_MAHAMANTRI_15,"Baiklah, sepertinya kau bisa pergi sekarang. Tolong ingat hal ini-","Muhun, sigana anjeun tiasa angkat ayeuna. Mangga emut ieu-",
-LINE_PENJAGA_1,"Yang Terhormat Mahamantri, kami baru saja menemukan seorang anak yang terdampar di kebun belakang istana.","Nu Mahamantri, urang karek manggihan budak nu katembong di kebon tukangeun karaton.",
-LINE_PLAYER_13,[Player 2]!,[Player 2]!,
-LINE_PLAYER2_1,[Player]!,[Player]!,
-LINE_MAHAMANTRI_16,"Jadi, kau tak terkirim sendirian kesini ya? Menarik…","Janten, anjeun sanes dikirim ka dieu nyalira, huh? Menarik…",
-LINE_PLAYER_14,"Apakah kau terkirim juga karena ledakan prasasti itu, [player 2]?","Naha anjeun dikirim jauh kusabab ledakan prasasti oge, [player 2]?",
-LINE_PLAYER2_2,Sepertinya begitu…,Sigana kitu…,
-LINE_PLAYER_15,"Ah, aku menjadi sedikit lega.","Ah, kuring rada lega.",
-LINE_PLAYER_16,"Baiklah, Pak Mahamantri. Kami izin pamit.",Muhun Mahamantri. Urang beunang pamit.,
-LINE_MAHAMANTRI_17,Sampai jumpa lagi.,ati-ati di jalan,
-LINE_PATIH_1,"Sepertinya, waktu untuk melaksanakan rencanaku sudah tepat…","Sigana, waktosna pikeun ngalaksanakeun rencana kuring leres ...",
-LINE_PENJAGA_2,"Ah, aku sudah mencari kalian ke seluruh kota. Yang Terhormat Mahamantri mencari kalian.","Ah, abdi parantos milarian anjeun di sakuliah kota. Nu Mulia Mahamantri milarian anjeun.",
-LINE_PLAYER2_3,Pasti Mahamantri sudah menemukan dimana artefak itu berada.,Mahamantri pasti mendakan dimana artefakna.,
-LINE_MAHAMANTRI_18,"Selamat datang. Jadi, aku sudah menemukan bagaimana kalian bisa mendapatkan artefak-artefak itu.","Wilujeung. Janten, kuring parantos terang kumaha anjeun tiasa kengingkeun artefak eta.",
-LINE_MAHAMANTRI_19,"Kalian harus membuat sebuah alat bernama [alat pencari artefak]. Kalian memerlukan beberapa bahan, seperti [bahan 1] yang ada di hutan, [bahan 2] ada di sekitaran desa, dan yang terakhir [bahan 3] berada dipegang oleh seorang dukun yang tinggal di [lokasi]. Tolong kalian carikan bahan-bahan itu, dan akan kubuatkan alat pencarinya.","Anjeun kudu nyieun alat disebut [alat pilarian artefak]. Anjeun peryogi sababaraha bahan, sapertos [bahan 1] anu aya di leuweung, [bahan 2] anu aya di sabudeureun kampung, sareng anu terakhir [bahan 3] anu dicekel ku dukun anu cicing di [lokasi]. Mangga manggihan bahan, sarta kuring baris nyieun alat pilarian.",
-LINE_MAHAMANTRI_20,"Sayang sekali, saat ini aku masih tidak bisa membantu kalian karena aku sedang cukup sibuk saat ini. Tapi, kalau kalian ingin bertanya tentang sesuatu, aku akan selalu berada di Istana.","Hanjakalna, kuring masih teu tiasa ngabantosan anjeun ayeuna kusabab kuring rada sibuk ayeuna. Tapi, lamun rek nanya ngeunaan hiji hal, abdi bakal salawasna aya di Istana.",
-LINE_PLAYER_17,"Baiklah, terima kasih. Kami akan mencari barang-barang tersebut.",Oke. Hatur nuhun. Urang bakal neangan eta barang.,
-LINE_PLAYER2_4,"baiklah, kami sudah siap","Oke, kami geus siap",
-LINE_PLAYER_18,Sepertinya aku melihat sesuatu yang mengkilap disana…,Jigana kuring ningali anu ngagurilap di dinya...,
-LINE_PLAYER2_5,Bukankah ini [bahan 1]? Itu yang kita cari!,Sanes ieu [bahan 1]? eta naon urang pilari!,
-LINE_PLAYER_19,Iya! Ini ternyata tak sesulit yang kupikirkan.,Sumuhun! Ieu tetela teu jadi hese sakumaha Abdi sangka.,
-LINE_PETERNAK_1,Duh… beberapa ayamku kabur. Apakah kalian melihat ayam-ayamku?,Duh... sakadang hayam mah kabur. Dupi anjeun ningali hayam kuring?,
-LINE_PLAYER_20,"Biarkan kami bantu untuk mengumpulkan ayam-ayam Anda, Pak.","Hayu urang mantuan Anjeun ngumpulkeun hayam Anjeun, Pak.",
-LINE_PETERNAK_2,"Terima kasih, anak baik.","hatur nuhun, budak nu bageur.",
-LINE_PETERNAK_3,Kalian hebat sekali. Apa yang bisa aku lakukan tanpa bantuan kalian?,Anjeun guys hebat. Naon anu bisa kuring pigawe tanpa pitulung anjeun?,
-LINE_PETERNAK_4,Ambilah barang ini sebagai tanda terima kasih.,Candak item ieu salaku token nuhun.,
-LINE_PLAYER2_5,Bukankah ini [bahan 2]? Barang yang kita cari?,Sanes ieu [bahan 2]? Naon anu urang pilari?,
-LINE_PLAYER_21,Iya. Ini barang yang kita cari. Bagaimana Anda bisa memilikinya?,Sumuhun Ieu mangrupikeun barang anu urang milarian. Kumaha anjeun tiasa gaduh eta?,
-LINE_PETERNAK_6,Aku menemukan barang ini di halaman belakangku. Aku pun menyimpannya karena bentuknya bagus.,Kuring mendakan barang ieu di buruan tukang kuring. Kuring nahan eta sabab Sigana alus.,
-LINE_PLAYER_22,"Ini kebetulan yang luar biasa, terima kasih.","Ieu kabeneran endah, hatur nuhun.",
-LINE_DUKUN_1,"Ssst, anak muda… aku tahu kenapa kalian disini, coba kemari","Ssst, para nonoman... Kuring terang kunaon anjeun ka dieu, kadieu",
-LINE_PLAYER2_6,"(Jangan mudah tertipu, [player]. dia terlihat mencurigakan.)","(Ulah gampang katipu, [player]. Anjeunna Sigana curiga.)",
-LINE_PLAYER_23,Benarkah? Coba buktikan.,Naha leres? Buktikeun.,
-LINE_DUKUN_2,"Kalian pasti mencari [bahan 3], kan? Kebetulan, aku mempunyai barang itu.","Anjeun kedah milarian [bahan 3], leres? Kabeneran kuring gaduh barang eta.",
-LINE_DUKUN_3,"Tapi, aku hanya akan memberikannya jika kita melakukan perjanjian…","Tapi, kuring ngan bakal masihan upami urang ngadamel perjanjian ...",
-LINE_PLAYER_24,Perjanjian seperti apa?,Jenis perjangjian?,
-LINE_DUKUN_4,"Hahahaha. Mudah saja. Berikan aku 1 tumbal, dan aku akan memberikannya kepadamu secara langsung.","Ha ha ha. gampil. Pasihan abdi 1 kurban, sarta kuring bakal masihan langsung ka anjeun.",
-LINE_PLAYER2_7,(Tidak mungkin kita akan melakukannya!),(Teu aya cara urang ngalakukeun eta!),
-LINE_PLAYER_25,"(Iya, aku tahu.)",(Leres abdi terang.),
-LINE_PLAYER_26,Aku tidak mau mengorbankan orang yang tidak bersalah!,Abdi henteu hoyong ngorbankeun jalma anu teu bersalah!,
-LINE_DUKUN_5,"Baiklah… kalau begitu, bagaimana jika kita bertarung? Jika kau kalah, kau yang akan jadi tumbalku. Dan jika kau menang, aku akan memberikan [bahan 3].","Muhun ... teras, kumaha upami urang gelut? Upami anjeun eleh, anjeun bakal janten pangorbanan kuring. Tur upami Anjeun salah ngelehkeun , Kuring ge masihan anjeun [bahan 3].",
-LINE_PLAYER2_8,(Hati-hati [player]. Kita tidak tahu seberapa kuat dia.),(Ati-ati [pamaen]. Kami henteu terang kumaha kuatna anjeunna.),
-LINE_DUKUN_6,"Argh. Aku tak menyangka kau sekuat itu. Baiklah, janji adalah janji. Ambil ini dan pergi dari sini.","Argh. Abdi henteu nyangka anjeun kuat. Tah, jangji teh jangji. Candak ieu sareng angkat ti dieu.",
-LINE_PLAYER2_8,Kita sudah berhasil mengumpulkan semua bahannya. Ayo kita bawa ke Mahamantri!,Kami geus junun ngumpulkeun kabeh bahan. Hayu urang bawa ka Mahamantri!,
-LINE_MAHAMANTRI_21,"Ah, kalian sudah membawa bahan-bahannya, ya.","Ah, anjeun geus mawa bahan, enya.",
-LINE_MAHAMANTRI_22,"Tunggu sebentar, aku akan membuat alat itu terlebih dahulu.","Antosan sakedap, abdi bade ngadamel alat heula.",
-LINE_MAHAMANTRI_23,Ini dia alat pelacaknya.,Ieu alat palacakna.,
-LINE_PLAYER2__9,"Aha, ini sudah berfungsi!","Aha, eta jalan!",
-LINE_PLAYER_27,"Baiklah, Mahamantri. Terima kasih banyak.","Muhun, Mahamantri. Hatur nuhun pisan.",
-LINE_MAHAMANTRI_24,Bukan masalah besar.,Henteu masalah ,
-LINE_PLAYER_28,"“Prasasti pertama dipegang oleh seorang pendeta wanita bernama Dewi, sang Pendeta Bulan.”, itu kata alat pelacaknya.","""prasasti pertama dipegang ku imam wanita namina dewi, sang Pendeta Bulan"". itu nu dikatakeun ku alat palacaknya.",
-LINE_PLAYER2_10,"Pendeta, harusnya dia berada di kuil, bukan?","Imam, anjeunna kedah di kuil, leres?",
-LINE_PLAYER_29,Sepertinya begitu. Aku akan mencarinya.,Sigana kitu. Abdi bade milarianana.,
-LINE_KUIL_1,Selamat datang di kuil [nama kuil]. Kuil ini adalah tempat berkumpulnya berbagai pendeta terhebat dari penjuru negeri. Adakah hal yang bisa saya bantu?,Wilujeng sumping di [ngaran kuil] kuil. Kuil ieu mangrupikeun tempat ngumpulna para imam pangageungna ti sakumna nagara. Aya nanaon abdi tiasa mantuan Anjeun?,
-LINE_PLAYER_30,Kami ingin bertemu dengan pendeta bulan.,Simkuring hoyong papanggih imam bulan.,
-LINE_KUIL_2,"Ah, Sayangnya pendeta bulan sedang tidak ada sekarang. Beliau sedang melaksanakan suatu misi, dan baru akan kembali besok.","Ah, hanjakal pandita bulan teu aya ayeuna. Anjeunna ngalaksanakeun misi, sarta ngan bakal balik isukan.",
-LINE_PLAYER_31,"Oh begitu, terima kasih.","Oh leres, nuhun.",
-LINE_KUIL_3,"Kau yang kemarin datang, ya. Pendeta bulan sudah kembali. Ayo, aku akan mengantarmu ke pendeta bulan.","Anjeun nu datang kamari, hehehe. Pandita bulan deui. Hayu, abdi bakal mawa anjeun ka pandita bulan.",
-LINE_KUIL_4,"Permisi, Pendeta Bulan. Mereka ingin bertemu dengan Anda.","Hapunten abdi, Moon Priestess. Aranjeunna hoyong pendak sareng anjeun.",
-LINE_PENDETA_1,"Ah, apakah mereka orang yang kau maksud kemarin?","Ah, eta jelema nu dimaksud kamari teh?",
-LINE_KUIL_5,"Betul, pendeta bulan. Kalau begitu, saya izin kembali ke depan.","Leres, pandita bulan. Lamun kitu, kuring balik deui ka hareup.",
-LINE_PENDETA_2,Baiklah. Terima kasih.,Oke. Hatur nuhun.,
-LINE_PENDETA_3,"Ah, ada perlu apa kalian datang kemari?","Ah, naon nu kudu datang ka dieu?",
-LINE_PLAYER_32,"Anda pasti pemilik dari [prasasti 1], bukan? Saya membutuhkan prasasti tersebut.","Anjeun pasti nu boga [prasasti 1], bener? Abdi peryogi prasasti.",
-LINE_PENDETA_4,Untuk apa kau memerlukan prasasti itu?,Naon anu anjeun peryogikeun prasasti?,
-LINE_PLAYER_33,Untuk kembali ke duniaku.,Pikeun mulang ka dunya kuring.,
-LINE_PENDETA_5,… apa yang terjadi pada kalian?,... naon anu lumangsung ka anjeun?,…
-LINE_PLAYER_34,"kami bukan berasal dari dunia ini,Kami tidak sengaja terjatuh ke dunia ini, di buku ini tertulis bahwa [ prasasti 1 ] memiliki kekuatan dari kesucian cahaya bulan, hal ini akan membantu kami kembali","urang lain ti dunya ieu, urang ngahaja murag ka dunya ieu, dina buku ieu ditulis yen [prasasti 1] boga kakuatan purity cahaya bulan, ieu bakal nulungan urang balik.",
-LINE_PENDETA_6,"Mengesankan… sebelum itu saya akan menguji apakah kalian layak untuk mendapatkan [prasasti 1] atau tidak… bertarunglah dengan ku, tunjukan kelayakan kalian penjelajah asing…","Geuning... samemeh eta kuring baris nguji naha anjeun pantes meunang [prasasti 1] atawa henteu... tarung jeung kuring, tunjukkeun kasatiaan anjeun salaku penjelajah asing...",
-LINE_PLAYER2_11,Tidak mungkin,Mustahil,
-LINE_PLAYER2_12,Kami tidak mungkin bisa menang,Urang teu mungkin meunang,
-LINE_PENDETA_7,"Mengapa? Sayangnya [ prasasti 1 ] ini merupakan benda yang suci dan kudus dari cahaya bulan, hanya seseorang yang memiliki kesaktian dan tekad layaknya sinar bulan ditengah malam yang boleh memilikinya","Naha? Hanjakalna [prasasti 1] ieu barang anu suci tur suci tina cahaya bulan, ngan hiji jalma anu boga kakuatan jeung tekad kawas cahaya bulan di tengah peuting bisa mibanda eta.",
-LINE_PLAYER_35,Namun…,Namun…,
-LINE_PENDETA_8,"Tunjukkanlah kelayakanmu anak muda, sinar pada dirimu masih redup.","Tembongkeun harga anjeun, lalaki ngora, lampu anjeun masih taram.",
-LINE_PLAYER_36,Baiklah,Baiklah,
-LINE_PENDETA_9,"Mengesankan, tekad dan kesaktianmu sudah mulai terang seperti sinar bulan… saya rasa anda sudah layak memilikinya","Hebat, tekad anjeun sarta kakuatan supranatural mimiti caang kawas cahaya bulan ... Jigana anjeun pantes boga aranjeunna.",
-LINE_PLAYER2_13,Benarkah?,Benarkah?,
-LINE_PENDETA_10,"Ambilah, biarkan sinar bulan mengkudusi jalanmu penjelajah asing dan bintang-bintang akan membimbing jalanmu","Candak, hayu caang bulan sanctify jalur anjeun ngajajah alien jeung bentang bakal pituduh jalan Anjeun",
-LINE_PLAYER2_14,Terimakasih Tante…,Hatur nuhun Tante…,
-LINE_PLAYER_37,Baiklah.,Baiklah.,
-LINE_PLAYER_38,Artefak selanjutnya dipegang oleh seorang Pedagang bernama Wijaya.,Artefak satuluyna dicepeng ku padagang nu ngaranna Wijaya.,
-LINE_PLAYER2_14,Pedangang ya… Harusnya dia berada di pasar.,Tukang dagang... Nya kudu di pasar.,
-LINE_PLAYER_39,Sepertinya begitu. Bagaimana jika kita pergi ke pasar bersama? Aku juga ingin melihat-lihat kondisi pasar disini.,Sigana kitu. Kumaha lamun urang ka pasar babarengan? Abdi oge hoyong ningali kaayaan pasar di dieu.,
-LINE_PLAYER2_15,Ide bagus. Ayo kita berangkat.,gagasan hebat. Hayu angkat.,
-LINE_PLAYER2_16,"(Hey, [player 1]. Lihat, bukankah itu pedagang yang kita cari?)","(Hei, [player 1]. Tingali, sanes eta padagang anu urang milarian?)",
-LINE_PLAYER_40,(Sepertinya begitu.),(Sigana kitu.),
-LINE_GARONG_1,"Berikan pendapatanmu hari ini! Jika kamu masih mau berjualan disini, maka bayar, jangan lupa kami penguasa daerah disini.","Bagikeun pendapatan anjeun ayeuna! Mun masih keneh rek ngajual kadieu bayar, tong hilap we urang daerah di dieu.",
-LINE_PEDAGANG_1,Jangan berani-berani kau! Ini adalah daerah kerajaan. Aku sudah membayar pajak pada kerajaan. Aku tak mau lagi membayar padamu.,Ulah wani! Ieu wewengkon karajaan. Kuring geus mayar pajeg ka pamarentah. Abdi henteu hoyong mayar anjeun deui.,
-LINE_GARONG_2,Lalu? Cepat berikan uangnya!,Janten? Gancang pasihan abdi artos!,
-LINE_PEDAGANG_2,PENJAGA!,PENJAGA!,
-LINE_GARONG_3,"Penjaga? Maksudmu, orang-orang yang tertidur itu? Aku tahu kau akan memanggil mereka, jadi aku telah membuat mereka “sedikit” mengantuk. HAHAHA.","Penjaga? Maksudna, jalma sare? Kuring terang anjeun bakal nyauran aranjeunna, janten kuring ngajantenkeun aranjeunna ""saeutik"" bobo. HA HA HA.",
-LINE_PEDAGANG_3,Sialan. Dasar kau preman licik!,Sialan anjeun!. Dasar preman licik!,
-LINE_GARONG_4,"Ahh. Kalau bukan karena uangmu yang banyak, aku takkan rela menghabiskan waktuku di tempat kotor ini.","Ah. Mun teu ku jumlah badag duit anjeun, abdi moal daek meakkeun waktu kuring di tempat kotor ieu.",
-LINE_GARONG_5,"Cepat serahkan uangmu, sebelum ada yang terluka.","Gancang serahkeun artos anjeun, sateuacan aya anu cilaka.",
-LINE_PLAYER_41,"Hey, preman bau bawang! Kalau kau mau memalak bapak itu, kalahkan kami dulu!","He, preman bau bawang! Lamun hayang ngahina ka bapa, keok we heula!",
-LINE_PLAYER2_17,"(Hey, apa yang kau lakukan?)","(Hey, naon anu urang kudu lakukeun?)",
-LINE_PLAYER_42,(Sebaiknya kau membantu dia. Dia adalah pemegang prasasti. Kita akan kesulitan jika dia berada dalam masalah.),(Leuwih hade anjeun mantuan manehna. Manehna nu nyekel prasasti. Urang bakal kasulitan lamun manehna kasusah.),
-LINE_PLAYER2_18,(Haduh…),(Haduh…),
-LINE_PLAYER2_19,"Iya, hadapi kami dulu","Enya, nyanghareupan urang heula",
-LINE_GARONG_6,"HAHAHA. Lucu sekali kalian. Kalian beruntung, suasana hatiku sedang bagus. Aku akan bermain-main dengan kalian dulu sebentar…","HA HA HA. Kalian lucu pisan. Anjeun lalaki untung, kuring dina wanda alus. Abdi bade maen sareng anjeun sakedap ...",
-LINE_GARONG_7,Ugh- Aku hanya menggunakan 1 persen kekuatanku tadi. Kalian! Kalian masuk daftar hitamku.,Ugh- Kuring ngan ukur nganggo 1 persen kakuatan kuring ayeuna. Maraneh! Anjeun dina daptar hideung kuring.,
-LINE_GARONG_8,"Lain kali, kalian tak akan lolos! Kau juga, [pedagang]. Lain kali, aku akan mengambil semua uangmu!","Waktos salajengna, anjeun moal kabur! Anjeun oge, [pedagang]. waktos salajengna, abdi bakal nyandak sakabeh duit anjeun!",
-LINE_PLAYER_43,"Mudah sekali, aku sampai mengantuk…","Gampang pisan, kuring bobo...",
-LINE_PEDAGANG_4,Keren.,Keren.,
-LINE_PEDAGANG_5,"Ah, terima kasih banyak! Kalian sudah membantuku.","Ah, hatur nuhun pisan! Anjeun parantos ngabantosan abdi.",
-LINE_PLAYER2_20,"Bukan hal sulit. Ngomong-ngomong, apakah benar bahwa Anda memiliki barang bernama [prasasti 2]?","Teu hese. Ku jalan kitu, naha leres anjeun gaduh barang anu disebut [prasasti 2]?",
-LINE_PEDAGANG_6,Tentu… tentu… Benda itu sangatlah langka. Aku harus menjelajah ke penjuru negeri untuk mendapatkannya. Apakah kau ingin memilikinya?,Tangtos... tangtosna... eta hal langka pisan. Kuring kungsi ngarambat sakuliah nagara pikeun meunangkeun eta. Naha anjeun hoyong gaduhna?,
-LINE_PLAYER_44,Iya. Bagaimana aku bisa mendapatkannya?,Sumuhun Kumaha carana abdi tiasa?,
-LINE_PEDAGANG_7,"Harganya murah… Cukup 10 batang emas. Karena kau sudah menolongku tadi, aku akan memberimu diskon 1 batang.","Hargana murah... Ngan 10 batang emas. Kusabab anjeun mantuan kuring tadi, abdi bakal masihan anjeun diskon 1 iteuk.",
-LINE_PLAYER_45,10 batang emas? Itu jumlah yang sangat banyak!,10 batang emas? eta mahal pisan!,
-LINE_PEDAGANG_22,"Ini adalah barang langka, wajar harganya selangit.","Ieu barang langka, jadi hargana satinggi langit.",
-LINE_PLAYER2_21,Apakah ada cara lain supaya kami bisa mendapatkan benda itu?,Naha aya cara sanes pikeun urang kengingkeun eta?,
-LINE_PEDAGANG_23,Hmmm…,Hmmm…,Hmmm…
-LINE_PEDAGANG_24,"Salah satu barang paling berhargaku telah dicuri oleh Garong, preman yang tadi menggangguku. Ia memang sudah sering datang ke pasar ini dan mengganggu para pedagang. Aku sudah berusaha untuk memberi tahu kerajaan, tapi tampaknya mereka tidak terlalu peduli.","Salah sahiji barang anu paling berharga kuring dipaling ku Garong, preman anu ngaganggu kuring tadi. Anjeunna sering datang ka pasar ieu sareng ngaganggu para padagang. Kuring geus nyoba ngawartosan karajaan, tapi aranjeunna henteu paduli pisan.",
-LINE_PEDAGANG_25,"Kalau kau bisa membawa barangku yang dicuri itu, dan bisa membuat Garong tidak menggangguku lagi, maka aku akan memberikan [prasasti 2] kepadamu.","Mun anjeun bisa mawa kuring barang dipaling, sarta bisa ngajadikeun Garong eureun ngaganggu kuring, lajeng abdi bakal masihan [prasasti 2] ka anjeun.",
-LINE_PLAYER2_22,Sepertinya ini tidak akan terlalu sulit…,Sigana mah ieu moal sesah teuing...,
-LINE_PEDAGANG_26,Garong dan “geng”-nya biasanya berkumpul di sebelah timur hutan pada waktu malam. Kau bisa menyergapnya disana.,"Garong jeung ""gorombolan""na biasana ngumpul di wetan leuweung peuting. Anjeun tiasa nyerang anjeunna di dinya.",
-LINE_PLAYER_46,Tunggu dulu… Apa Garong tidak sendiri?,Sakedap... Garong teu nyalira?,
-LINE_PEDAGANG_27,"Iya. Garong memiliki kemampuan untuk memanggil makhluk dari alam lain dan menjadikan mahluk-mahluk itu sebagai bawahannya. Memang, kemampuannya secara individu tidak terlalu kuat. Namun, jika dia bersama dengan “geng”-nya, ia tak terkalahkan.","Sumuhun Garong boga kamampuh pikeun manggil mahluk ti alam sejen sarta ngajadikeun mahluk ieu bawahan na. Memang, kamampuan individuna henteu kuat pisan. Nanging, upami anjeunna sareng ""geng"" na, anjeunna teu tiasa dielehkeun.",
-LINE_PLAYER2_23,Kutarik kata-kataku sebelumnya. Ini tak akan terlalu mudah…,Kuring nyokot deui kecap kuring samemehna. Ieu moal gampang teuing ...,
-LINE_PEDAGANG_28,"Semoga kalian berhasil!
-","""Mudah-mudahan anjeun sukses!""",
-LINE_PLAYER_47,Kita tak bisa melawannya dengan tangan kosong. Kita harus memata-matainya terlebih dahulu.,Urang teu bisa ngalawan eta ku leungeun bulistir. Urang kudu nenjo heula manehna.,
-LINE_PLAYER2_24,"Aku setuju. Tapi, bukankah akan terlalu beresiko jika kita memata-matainya secara langsung.","Abdi satuju. Tapi, naha teu picilakaeun teuing upami urang nenjo anjeunna langsung?",
-LINE_PLAYER_48,"Aku tahu. Oleh karena itu, kita memerlukan alat ini.","Abdi terang. Ku alatan eta, urang peryogi alat ieu.",
-LINE_PLAYER2_25,Alat apa ini?,Alat naon ieu?,
-LINE_PLAYER_49,"Alat penyadap. Alat ini dapat merekam kejadian di suatu tempat dan memproyeksikannya di sebuah kristal, seperti CCTV.","Alat nguping. Alat ieu tiasa ngarekam kajadian di hiji tempat sareng ngajantenkeunana dina kristal, sapertos CCTV.",
-LINE_PLAYER2_26,Wah! Darimana kau bisa mengetahui tentang alat ini?,Wow! Kumaha anjeun terang ngeunaan alat ieu?,
-LINE_PLAYER_50,"Selama kau pergi mencari [artefak 1], aku berkeliling di kota dan mempelajari banyak hal. Salah satunya ini. Aku mengetahui alat ini dari seorang mekanik di kota.","Bari anjeun jauh pilari [artefak 1], abdi wandered sabudeureun kota jeung diajar loba hal. Salah sahijina nyaeta ieu. Kuring manggihan ngeunaan alat ieu ti montir di kota.",
-LINE_PLAYER2_27,Keren sekali.,Keren pisan.,
-LINE_PLAYER_51,"Hehe :3. Kalau begitu, untuk membuat alat ini, kita memerlukan beberapa bahan, seperti [bahan 1], [bahan 2], dan [bahan 3].","heuheu :3. Saterusna, pikeun nyieun alat ieu, urang butuh sababaraha bahan, saperti [bahan 1], [bahan 2], jeung [bahan 3].",
-LINE_PLAYER2_28,Dimana aku bisa mendapatkan bahan-bahan itu?,Dimana abdi tiasa kengingkeun bahan?,
-LINE_PLAYER_52,Aku juga kurang tak tahu pasti. Aku akan menanyakan tentang bahan-bahannya pada mekanik di kota besok.,Kuring oge henteu terang pasti. Abdi bade naroskeun ka montir di kota ngeunaan bahan isukan.,
-LINE_PLAYER2_29,Baiklah.,Baiklah.,
-LINE_PLAYER2_29,[player 1]! Aku sudah mendapatkan bahan-bahannya!,[player 1]! Abdi ngagaduhan bahan!,
-LINE_PLAYER_53,Cepat sekali.,Gancang pisan.,
-LINE_PLAYER2_30,Iya. Mekanik itu berbaik hati memberikan beberapa bahan sisanya di gudang. Yang perlu aku lakukan sekarang adalah membuat alat ini.,Sumuhun Mekanik eta bageur pikeun nyayogikeun sababaraha bahan sesana di gudang. Anu kuring kedah laksanakeun ayeuna nyaeta ngadamel alat ieu.,
-LINE_PLAYER_54,Baiklah.,Baiklah.,
-LINE_PLAYER_55,"Ini dia, alat mata-mata buatanku! Sekarang, tugasmu untuk meletakkan alat ini di markas Garong.","Ieu, alat nenjo homemade kuring! Ayeuna, tugas anjeun pikeun nempatkeun alat ieu di markas Garong.",
-LINE_PLAYER2_31,Baiklah.,Baiklah.,
-LINE_PLAYER_56,Kerja bagus. Sekarang kita hanya perlu memata-matai kondisi markas Garong.,Hade gawe. Ayeuna urang kudu nenjo kaayaan pangkalan Garong.,
-LINE_GARONG_9,"Baiklah, anak-anakku. Kali ini, kita akan berpesta sebentar. Setelah berpesta, kita akan mencegat sebuah kereta yang memiliki muatan emas! HAHAHA. Apakah kalian siap?","Muhun, barudak. Waktos ieu, urang bade pesta sakedap. Saatos pesta, urang bakal nyegat kareta anu dieusi emas! HA HA HA. Anjeun siap?",
-LINE_MENYAN_1,Bos… Kami ingin menyan,Bos… Kami hoyong tuang kemenyan...,
-LINE_MENYAN_2,"Iya bos. Kami sudah lama tidak dapat menyan.
-",Enya bos. Geus lila urang teu bisa ngaroko menyan.,
-LINE_GARONG_10,Iya… iya. Aku akan memberi kalian menyan jika misi kali ini berhasil. Apakah kalian siap?,Enya enya. Kuring bakal masihan anjeun eupan balik lamun misi ieu sukses. Anjeun siap?,
-LINE_MENYAN_3,SIAP!,SIAP!,
-LINE_GARONG_11,HAHAHAHA.,HAHAHAHA.,HAHAHAHA.
-LINE_PLAYER2_32,Ba-banyak sekali hantu yang menjadi bawahannya.,Seueur hantu anu bawahanna.,
-LINE_PLAYER_57,Iya. Kita akan babak belur dahulu jika kita langsung menyerangnya.,Sumuhun Urang bakal dipukul heula lamun langsung nyerang manehna.,
-LINE_PLAYER2_33,Hmm… Aku bingung bagaimana caranya kita dapat mendekatinya tanpa diketahui hantu-hantu itu.,Hmm... Bingung kumaha cara urang ngadeukeutkeunana tanpa nyaho hantu.,
-LINE_PLAYER_58,Bagaimana jika kita memakai menyan untuk mengalihkan mereka?,Kumaha upami urang nganggo menyan pikeun ngaganggu aranjeunna?,
-LINE_PLAYER2_34,"Ide bagus. Tapi, apa kau tau dimana kita bisa mendapatkan menyan?","gagasan hebat. Tapi, naha anjeun terang dimana urang tiasa kengingkeun menyan?",
-LINE_PLAYER_59,"Tenang saja, aku tahu seseorang yang memilikinya.","Tong hariwang, kuring terang saha wae anu gaduhna.",
-LINE_DUKUN_20,Kau lagi! Apa yang mau kau lakukan? Kau ingin membuatku kalah lagi?,Anjeun deui! Anjeun bade kumaha? Rek nyieun kuring leungit deui?,
-LINE_PLAYER_60,Bukan. Apakah aku boleh meminta sedikit menyan?,Bukan. Dupi abdi tiasa menta Saeutik menyan?,
-LINE_DUKUN_21,Huh. Cepat ambil disana.,Huh. Buru-buru angkat ka ditu.,
-LINE_PLAYER2_35,"Baiklah, terima kasih banyak.","OKe, hatur nuhun pisan.",
-LINE_PLAYER_61,"Sekarang, yang perlu kau lakukan adalah meletakkan menyan-menyan ini di dekat markas Garong. Lalu, kita tunggu. Setelah situasi aman, langsung saja kita serbu markasnya!","Ayeuna, anu anjeun kedah laksanakeun nyaeta nempatkeun menyan ieu caket pangkalan Garong. Lajeng, urang antosan. Saatos kaayaan aman, hayu urang langsung nyerang pangkalan!",
-LINE_PLAYER2_36,Baiklah.,Baiklah.,
-LINE_PLAYER_62,Sudah malam. Saatnya kita melihat apakah rencana kita berhasil atau tidak.,eta telat. Geus waktuna pikeun urang ningali naha rencana urang jalan atanapi henteu.,
-LINE_GARONG_12,"Anak-anakku, ayo berkumpul sebentar.","Barudak, ngumpul sakedap.",
-LINE_GARONG_13,"Hey, mengapa kalian tidak mendengarkanku?","Hei, naha anjeun henteu ngadangukeun kuring?",
-LINE_PLAYER2_37,Rencananya berhasil. Para hantu itu sibuk menyantap menyan!,Rencanana jalan. Nu hantu riweuh dahar ngeunah!,
-LINE_PLAYER_62,Iya. Ayo kita datangi Garong.,Sumuhun Hayu urang ka Garong.,
-LINE_GARONG_14,"Ah, kalian anak-anak kecil. Apakah kalian datang lagi untuk bermain denganku? Kali ini, aku akan menggunakan 100% kekuatanku.","Ah, barudak leutik. Dupi anjeun datang deui maen sareng abdi? Waktos ieu, kuring bakal ngagunakeun 100% kakuatan kuring.",
-LINE_PLAYER2_38,Kami tidak takut!,Kami henteu sieun!,
-LINE_GARONG_15,Bagus… bagus. Aku suka anak pemberani. HAHAHA.,"Alus, alus. Abdi resep budak kawani. HA HA HA.",
-LINE_GARONG_16,"To-tolong, ampuni aku. Aku akan melakukan apapun yang kalian minta.",Punten hampura abdi. Kuring bakal ngalakukeun naon wae anu anjeun pikahoyong.,
-LINE_PLAYER_63,"Pertama, kembalikan barang milik [pedagang]. Lalu, jangan ganggu lagi pedagang-pedagang disini.","Kahiji, balikkeun barang-barang [pedagang]. Teras, tong ngaganggu tukang dagang di dieu deui.",
-LINE_GARONG_17,Baiklah. Ini barangnya.,Oke. Ieu barangna.,
-LINE_PLAYER2_39,Ini cuma boneka usang! Sepertinya dia berbohong [player 1].,Ieu ngan hiji boneka heubeul! Sigana anjeunna bohong [player 1].,
-LINE_GARONG_18,"Tunggu dulu, jangan serang aku lagi. Memang itu barangnya. Kalau tidak percaya, berikan saja ke pedagang itu!","Antosan sakedap, tong nyerang kuring deui. eta hal sabenerna. Mun teu percaya, bikeun ka tukang dagang!",
-LINE_PLAYER2_40,"Baiklah. Tapi, jangan coba-coba untuk kabur. Kami dapat dengan mudah mencarimu.","Oke. Tapi, ulah coba kabur. Urang bisa kalayan gampang manggihan anjeun.",
-LINE_GARONG_19,I-iya.,I-iya.,I-iya.
-LINE_PEDAGANG_30,Bagaimana? Kalian berhasil mengalahkan Garong?,Kumaha? Naha anjeun hasil ngelehkeun Garong?,
-LINE_PLAYER_64,Tentu saja. Apakah benar ini barang berharga yang diambil Garong?,Tangtosna. Naha ieu mangrupikeun barang berharga anu dicandak ku Garong?,
-LINE_PEDAGANG_31,Iya. Terima kasih banyak. Boneka ini adalah hadiah dari Ibuku.,Sumuhun Hatur nuhun pisan. Boneka ieu hadiah ti indung kuring.,
-LINE_PLAYER2_41,"Ahh, semua menjadi masuk akal.","Ah, eta sadayana masuk akal.",
-LINE_PEDAGANG_32,Tunggu sebentar.,Antosan sakedap.,
-LINE_PEDAGANG_33,"Ini dia [prasasti 2], benda yang kalian cari.","Ieu [prasasti 2], item nu Anjeun keur pilari.",
-LINE_PLAYER_65,Terima kasih.,Hatur nuhun.,
-LINE_PEDAGANG_34,"Harusnya aku yang berterima kasih pada kalian. Kini, hidupku menjadi sedikit lebih tenang tanpa adanya gangguan dari Garong.","Abdi anu kedah ngahatur nuhun. Ayeuna, hirup kuring geus rada tenang tanpa gangguan ti Garong.",
-LINE_PEDAGANG_35,Senang berbisnis dengan kalian. Jangan ragu datang jika kalian memiliki keperluan lain.,Seneng ngalakonan bisnis jeung anjeun guys. Tong sungkan datang upami aya pangabutuh sanes.,
-LINE_PLAYER_66,Iya. Sampai jumpa lagi!,Sumuhun Ningali deui!,
+"
+LINE_RIANI_3,Yah … gak asik.,Ah … teu asik anjeun mah
+LINE_RIANI_4,Wahh….,Wahh…
+LINE_SANJAYA_3,Lihat batu itu! Bentuknya aneh sekali…,Ningali batu ieu! Wujudna aneh tenget!
+LINE_RIANI_5,"Wah, batu itu sepertinya berkilau...","Wow, batu ieu saeutik pumay."
+LINE_RIANI_6,aku ingin menyentuhnya…,Abdi hayang noel…
+LINE_SANJAYA_4,Riani! Jangan!,Entong Riani!
+LINE_PLAYER_1,Di-dimana aku? Jelas ini bukan di museum!,Dimana abdi? eces ieu lain musium
+LINE_PLAYER_2,Aku mendengar sesuatu. Apakah itu suara [ Player 2 ]?,Kuring ngadenge hal. eta teh sora [ Player 2 ]?
+LINE_BIANTARA_1,"Saya, Bara Majaputra, menghadiri pertemuan ini untuk menyampaikan pesan penting kepada seluruh rakyat saya. Sebagai seorang pemimpin, saya memahami bahwa kekuasaan adalah suatu pengabdian yang harus dilakukan untuk kepentingan rakyat. Keadilan dan kebijakan yang bijaksana harus selalu menjadi panduan dalam setiap keputusan yang diambil demi kesejahteraan bersama.","Abdi, Bara Majaputra, ngahadiran rapat ieu pikeun nepikeun pesen penting ka sadaya umat kuring. Salaku pamimpin, kuring ngarti yen kakawasaan mangrupikeun jasa anu kedah dilakukeun pikeun kapentingan rahayat. Kaadilan sareng kabijakan anu wijaksana kedah salawasna nungtun unggal kaputusan anu dicandak pikeun kapentingan umum."
+LINE_BIANTARA_2,"Persatuan adalah kunci dari kekuatan sebuah negara. Oleh karena itu, saya mengajak seluruh rakyat saya untuk bersatu dan bekerja sama, tanpa memandang perbedaan sosial, etnis, atau agama. Hanya dengan persatuan, kita dapat mencapai perdamaian, kemajuan, dan stabilitas yang kita semua harapkan.","Persatuan mangrupakeun konci pikeun kakuatan hiji nagara. Kumargi kitu, sim kuring ngajak ka sakumna bangsa urang sangkan ngahiji jeung gawe bareng, teu paduli bedana sosial, etnis atawa agama. Ngan ku persatuan urang tiasa ngahontal katengtreman, kamajuan sareng stabilitas anu urang ngarepkeun."
+LINE_BIANTARA_3,"Selain itu, Kita semua harus terus belajar dan berkembang agar kita dapat mengambil keputusan yang tepat demi kepentingan bersama. Dengan pandangan yang luas dan pengetahuan yang mendalam, kita dapat menghadapi tantangan apapun dengan lebih baik.","Salaku tambahan, urang sadayana kedah terus diajar sareng mekar supados urang tiasa nyandak kaputusan anu leres pikeun kapentingan umum. Kalayan pandangan anu lega sareng pangaweruh anu jero, urang tiasa langkung hade nyanghareupan tantangan naon wae. Dina mungkas biantara, sim kuring ngingetan yen urang oge boga tanggung jawab pikeun ngajaga alam jeung lingkungan. Ngajaga lingkungan mangrupikeun kawajiban urang pikeun generasi anu bakal datang, supados aranjeunna oge tiasa nikmati kaendahan alam ieu. Hayu urang babarengan ngajaga sareng miara bumi urang supados tetep hejo sareng lestari. Hatur nuhun kasadayana kana kaprihatinan anjeun. Mugi Gusti ngaberkahan urang sareng nagara ieu."
+LINE_RAJA_1,"Dalam mengakhiri pidato ini, saya ingin mengingatkan bahwa kita juga memiliki tanggung jawab untuk menjaga alam dan lingkungan kita. Perlindungan lingkungan adalah tugas kita untuk generasi mendatang, agar mereka juga dapat menikmati keindahan alam ini. Mari bersama-sama menjaga dan merawat bumi kita agar tetap hijau dan lestari.","Dina mungkas biantara, sim kuring ngingetan yen urang oge boga tanggung jawab pikeun ngajaga alam jeung lingkungan. Ngajaga lingkungan mangrupikeun kawajiban urang pikeun generasi anu bakal datang, supados aranjeunna oge tiasa nikmati kaendahan alam ieu. Hayu urang babarengan ngajaga sareng miara bumi urang supados tetep hejo sareng lestari. "
+LINE_RAJA_2,Terima kasih atas perhatian Anda semua. Semoga Tuhan memberkati kita dan negeri ini.,Hatur nuhun kasadayana kana kaprihatinan anjeun. Mugi Gusti ngaberkahan urang sareng nagara ieu.
+LINE_RAJA_3,Siapa disana!,Saha nu aya disana?!
+LINE_PLAYER_5,A%$^^B….D!((@)I…,A%$^^B….D!((@)I…
+LINE_RAJA_4,"Mahamantri, bukankah ini kasus ""itu”?","Mahamantri, sanes kasus ""itu""?"
+LINE_MAHAMANTRI_1,Sepertinya begitu Yang Mulia,"Sigana kitu, Nu Maha Agung"
+LINE_PLAYER_6,"Kasus ""itu""?",Kasus Itu”?
+LINE_MAHAMANTRI_2,"Iya, kami pernah lihat hal yang mirip sekali dengan ini dibuku. Ayo, ikut aku. Aku akan menjelaskannya di perpustakaan.","nuhun, urang geus katempo hal pisan sarupa ieu dina buku. Hayu tuturkeun kuring. Kuring ge ngajelaskeun eta di perpustakaan."
+LINE_MAHAMANTRI_3,"Sebelumnya, izinkan aku untuk memperkenalkan diri. Namaku Suryakancana. Aku adalah Mahamantri dari kerajaan Jayasundara.","Oke… Kahiji, idin kuring ngenalkeun diri. Nami abdi Suryakancana. Abdi teh Mahamantri ti karajaan Jayasundara."
+LINE_PLAYER_7,Jayasundara? Aku belum pernah mendengar nama kerajaan ini sebelumnya.,Jayasundara? Abdi henteu kantos nguping nami karajaan ieu sateuacanna.
+LINE_MAHAMANTRI_4,"Mungkin, nama kerajaan kami terdengar asing di telingamu. Itu dikarenakan kerajaan kami tak ada di duniamu.",Sugan… ngaran karajaan urang kadenge asing di ceuli anjeun. eta sabab karajaan kami henteu aya di dunya anjeun.
+LINE_MAHAMANTRI_5,"Hmmm, ini memang sedikit rumit…","Hmmm, ieu rada rumit ..."
+LINE_MAHAMANTRI_6,"Sebelumnya kamu menyentuh batu seperti ini bukan? Batu ini adalah batu yang terlempar dari duniaku ke dunia mu... maka batu ini merupakan sebuah anomali di dunia kalian, saat menyentuh ini kalian berkontraksi dengan dunia kami dan kalian terlempar. Pada dasarnya, tak hanya ada satu dunia dalam alam semesta. Ada banyak sekali dunia yang tak terhitung jumlahnya. Dunia-dunia tersebut berjalan beriringan, dengan variasi yang berbeda-beda. Hal tersebut disebut sebagai dunia paralel. Kejadian ini biasanya kami menyebut hal ini dengan sebutan “itu”, atau “Lintasdunya”.","Anjeun keuna batu kawas ieu samemehna, katuhu? Batu ieu mangrupikeun batu anu dialungkeun ti dunya kuring ka dunya anjeun ... teras batu ieu mangrupikeun anomali di dunya anjeun, nalika anjeun nyabak ieu anjeun kontrak sareng dunya urang sareng anjeun dialungkeun. Dasarna, teu ngan hiji dunya di jagat raya. Aya dunya countless. Dunya ieu babarengan, kalayan variasi anu beda. Ieu katelah dunya paralel. Urang biasana nyebut kajadian ieu salaku ""eta"", atawa ""Crossroads""."
+LINE_PLAYER_8,"Aku mulai mengerti. Jadi, ini seperti cerminan dari duniaku, namun dengan perbedaan?","Kuring mimiti ngarti. Janten, eta sapertos gambar eunteung dunya kuring, tapi kalayan bedana?"
+LINE_MAHAMANTRI_7,Tepat. Kau ternyata sangat cepat belajar ya.,"Pantes. Anjeun leres-leres diajar gancang, sanes?"
+LINE_MAHAMANTRI_8,Lalu... mengapa aku bisa terdampar disini?,Teras... naha kuring terdampar di dieu?
+LINE_PLAYER_9,"Aku sendiri tak yakin. Tapi, aku menduga bahwa ada celah di garis waktu antara duniaku dan duniamu yang menyebabkan kau terdampar disini.","Kuring teu yakin sorangan. Nanging, kuring curiga aya jurang timeline antara dunya kuring sareng anjeun anu nyababkeun anjeun terdampar di dieu."
+LINE_PLAYER_10,A-apakah aku bisa kembali ke duniaku?,Dupi abdi tiasa balik ka dunya abdi?
+LINE_MAHAMANTRI_9,"Akan cukup sulit untuk kembali ke duniamu. Namun, itu tidak mustahil.","Bakal rada hese uih deui ka dunya anjeun, namun henteu mustahil."
+LINE_MAHAMANTRI_10,"AHA! Sepertinya, ini jawabannya.",AHA! Sigana ieu jawabanana!
+LINE_MAHAMANTRI_11,"Tertulis disini, untuk membuka kembali celah waktu tersebut, kau harus mengumpulkan ketiga prasasti lalu mengaktifkan portal. Ketiga prasasti itu adalah [Prasasti 1], [Prasasti 2], dan [Prasasti 3]. Ketiga prasasti tersebut tersebar di seluruh kerajaan Jayasundara.","Ieu ditulis di dieu, pikeun muka deui sela waktu, Anjeun kudu ngumpulkeun tilu prasasti lajeng ngaktipkeun portal. Tilu prasasti nyaeta [Prasasti 1], [Prasasti 2], jeung [Prasasti 3]. Tilu prasasti ieu sumebar di sakuliah karajaan Jayasundara."
+LINE_PLAYER_11,Dimana aku bisa menemukan ketiga prasasti tersebut?,Dimana kuring mendakan tilu prasasti?
+LINE_MAHAMANRI_11,Aku kurang tahu pasti. Beri aku sedikit waktu untuk mencari tahu dahulu.,"Abdi henteu terang pasti. Pasihan abdi sakedik kanggo milarian heula."
+LINE_PLAYER_12,Baiklah. Mungkin aku akan berkeliling sebentar mencari udara segar,Oke.... Panginten kuring badé angkat bari milarian hawa seger
+LINE_MAHAMANRI_12 ,"Sebelum kau pergi, aku harus memberitahumu sesuatu. Di kerajaan Jayasundara, segala masalah baku hantam akan diselesaikan di arena khusus untuk mengurangi kerusakan pada lingkungan. Aku akan mengajarimu sedikit teknik dasar, agar kau dapat bertahan disini.","Sateuacan anjeun angkat, kuring kedah nyarioskeun ka anjeun. Dina karajaan Jayasundara, sadaya masalah tarung bakal direngsekeun dina arena khusus pikeun ngirangan karusakan lingkungan. Abdi badé ngajarkeun téknik dasar sakedik, janten anjeun tiasa cicing di dieu."
+LINE_MAHAMANRI_13,"Baiklah, sepertinya kau bisa pergi sekarang. Tolong ingat hal ini;",Oke… Sigana anjeun tiasa angkat ayeuna. Punten emut ieu;
+LINE_PENJAGA_1,"Yang Terhormat Mahamantri, kami baru saja menemukan seorang anak yang terdampar di kebun belakang istana.","Yang Berhormat Mahamantri, kami nembé mendakan murangkalih anu terdampar di kebon tukang karaton."
+LINE_PLAYER_13,[Player 2]!,[Player 2]!
+LINE_PLAYER2_1,[Player 1]!,[Player 1]!
+LINE_MAHAMANTRI_16,"Jadi, kau tak terkirim sendirian kesini ya? Menarik…","Janten, anjeun sanes dikirim ka dieu nyalira, huh? Menarik…"
+LINE_PLAYER_14,"Apakah kau terkirim juga karena ledakan prasasti itu, [player 2]?","Naha anjeun dikirim jauh kusabab ledakan prasasti oge, [player 2]?"
+LINE_PLAYER2_2,Sepertinya begitu…,Sigana kitu…
+LINE_PLAYER_15,"Ah, aku menjadi sedikit lega.","Ah, kuring rada lega."
+LINE_PLAYER_16,"Baiklah, Pak Mahamantri. Kami izin pamit.",Muhun Mahamantri. Urang beunang pamit.
+LINE_MAHAMANTRI_17,"Sampai jumpa lagi, oh ya aku lupa memberitahumu, aku menyediakan rumah khusus untuk kalian tinggal dan beristirahat, ini untuk alamatnya dan kuncinya, simpanlah
+","Ningali anjeun engke, oh enya kuring hilap ngawartosan anjeun, kuring nyayogikeun bumi khusus pikeun anjeun cicing sareng istirahat, ieu kanggo alamat sareng konci, simpenana
+"
+LINE_PATIH_1,"Sepertinya, waktu untuk melaksanakan rencanaku sudah tepat…","Sigana, waktosna pikeun ngalaksanakeun rencana kuring leres ..."
+LINE_PENJAGA_2,"Ah, aku sudah mencari kalian ke seluruh kota. Yang Terhormat Mahamantri mencari kalian.","Ah, abdi parantos milarian anjeun di sakuliah kota. Nu Mulia Mahamantri milarian anjeun."
+LINE_PLAYER2_3,Pasti Mahamantri sudah menemukan dimana artefak itu berada.,Mahamantri pasti mendakan dimana artefakna.
+LINE_MAHAMANTRI_18,"Selamat datang. Jadi, aku sudah menemukan bagaimana kalian bisa mendapatkan artefak-artefak itu.","Wilujeung. Janten, kuring parantos terang kumaha anjeun tiasa kengingkeun artefak eta."
+LINE_MAHAMANTRI_19,"Kalian harus membuat sebuah alat bernama [alat pencari artefak]. Kalian memerlukan beberapa bahan, seperti [bahan 1] yang ada di hutan, [bahan 2] ada di sekitaran desa, dan yang terakhir [bahan 3] berada dipegang oleh seorang dukun yang tinggal di [lokasi]. Tolong kalian carikan bahan-bahan itu, dan akan kubuatkan alat pencarinya.","Anjeun kudu nyieun alat disebut [alat pilarian artefak]. Anjeun peryogi sababaraha bahan, sapertos [bahan 1] anu aya di leuweung, [bahan 2] anu aya di sabudeureun kampung, sareng anu terakhir [bahan 3] anu dicekel ku dukun anu cicing di [lokasi]. Mangga manggihan bahan, sarta kuring baris nyieun alat pilarian."
+LINE_MAHAMANTRI_20,"Sayang sekali, saat ini aku masih tidak bisa membantu kalian karena aku sedang cukup sibuk saat ini. Tapi, kalau kalian ingin bertanya tentang sesuatu, aku akan selalu berada di Istana.","Hanjakalna, kuring masih teu tiasa ngabantosan anjeun ayeuna kusabab kuring rada sibuk ayeuna. Tapi, lamun rek nanya ngeunaan hiji hal, abdi bakal salawasna aya di Istana."
+LINE_PLAYER_17,"Baiklah, terima kasih. Kami akan mencari barang-barang tersebut.",Oke. Hatur nuhun. Urang bakal neangan eta barang.
+LINE_PLAYER2_4,"baiklah, kami sudah siap","Oke, kami geus siap"
+LINE_PLAYER_18,Sepertinya aku melihat sesuatu yang mengkilap disana…,Jigana kuring ningali anu ngagurilap di dinya...
+LINE_PLAYER2_5,Bukankah ini [bahan 1]? Itu yang kita cari!,Sanes ieu [bahan 1]? eta naon urang pilari!
+LINE_PLAYER_19,Iya! Ini ternyata tak sesulit yang kupikirkan.,Sumuhun! Ieu tetela teu jadi hese sakumaha Abdi sangka.
+LINE_PLAYER2_6,Sepertinya kita harus pergi,Sigana mah urang kedah angkat
+LINE_PLAYER_20,"Tunggu apa lagi, ayo!","Naon anu anjeun nungguan, uih!"
+LINE_PLAYER2_7,Lihat!,Tingali!
+LINE_PETERNAK_1,Duh… beberapa ayamku kabur. Apakah kalian melihat ayam-ayamku?,Duh... sakadang hayam mah kabur. Dupi anjeun ningali hayam kuring?
+LINE_PLAYER_20,Biarkan kami bantu untuk mengumpulkan ayam-ayam Anda Bu.,"Hayu urang mantuan Anjeun ngumpulkeun hayam Anjeun, Pak."
+LINE_PETERNAK_2,Terimakasih anak baik,"Hatur nuhun, budak alus."
+LINE_PETERNAK_3,Kalian hebat sekali. Apa yang bisa aku lakukan tanpa bantuan kalian?,Anjeun hebat pisan. Naon anu kuring tiasa laksanakeun tanpa bantosan anjeun?
+LINE_PETERNAK_4,Ambilah barang ini sebagai tanda terima kasih.,Nyokot barang ieu minangka tanda syukur.
+LINE_PLAYER2_8,Bukankah ini Pamuncak Emas ? Barang yang kita cari?,Henteu ieu Pamuncak Emas ? barang anu urang milarian?
+LINE_PLAYER_21,Iya. Ini barang yang kita cari. Bagaimana Anda bisa memilikinya?,Enya. Ieu mangrupikeun barang anu urang pilari. Kumaha anjeun tiasa gaduh?
+LINE_PETERNAK_5,Aku menemukan barang ini di halaman belakangku. Aku pun menyimpannya karena bentuknya bagus.,Kuring mendakan barang ieu di buruan kuring. Kuring disimpen eta kusabab katingali sae.
+LINE_PLAYER_21,"Ini kebetulan yang luar biasa, terima kasih.","Ieu kabeneran rongkah, hatur nuhun."
+LINE_DUKUN_1,"Ssst, anak muda… aku tahu kenapa kalian disini, coba kemari","Ssst, para nonoman... Kuring terang kunaon anjeun ka dieu, kadieu"
+LINE_PLAYER2_9,"(Jangan mudah tertipu, [player]. dia terlihat mencurigakan.)","(Ulah gampang katipu, [player]. Anjeunna Sigana curiga.)"
+LINE_PLAYER_22,Benarkah? Coba buktikan.,Naha leres? Buktikeun.
+LINE_DUKUN_2,"Kalian pasti mencari [bahan 3], kan? Kebetulan, aku mempunyai barang itu.","Anjeun kedah milarian [bahan 3], leres? Kabeneran kuring gaduh barang eta."
+LINE_DUKUN_3,"Tapi, aku hanya akan memberikannya jika kita melakukan perjanjian…","Tapi, kuring ngan bakal masihan upami urang ngadamel perjanjian ..."
+LINE_PLAYER_23,Perjanjian seperti apa?,Jenis perjangjian?
+LINE_DUKUN_4,"Hahahaha. Mudah saja. Berikan aku 1 tumbal, dan aku akan memberikannya kepadamu secara langsung.","Ha ha ha. gampil. Pasihan abdi 1 kurban, sarta kuring bakal masihan langsung ka anjeun."
+LINE_PLAYER2_10,(Tidak mungkin kita akan melakukannya!),(Teu aya cara urang ngalakukeun eta!)
+LINE_PLAYER_24,"(Iya, aku tahu.)",(Leres abdi terang.)
+LINE_PLAYER_25,Aku tidak mau mengorbankan orang yang tidak bersalah!,Abdi henteu hoyong ngorbankeun jalma anu teu bersalah!
+LINE_DUKUN_5,"Baiklah… kalau begitu, bagaimana jika kita bertarung? Jika kau kalah, kau yang akan jadi tumbalku. Dan jika kau menang, aku akan memberikan [bahan 3].","Muhun ... teras, kumaha upami urang gelut? Upami anjeun eleh, anjeun bakal janten pangorbanan kuring. Tur upami Anjeun salah ngelehkeun , Kuring ge masihan anjeun [bahan 3]."
+LINE_PLAYER2_11,(Hati-hati [player]. Kita tidak tahu seberapa kuat dia.),(Ati-ati [pamaen]. Kami henteu terang kumaha kuatna anjeunna.)
+LINE_DUKUN_6,"Argh. Aku tak menyangka kau sekuat itu. Baiklah, janji adalah janji. Ambil ini dan pergi dari sini.","Argh. Abdi henteu nyangka anjeun kuat. Tah, jangji teh jangji. Candak ieu sareng angkat ti dieu."
+LINE_PLAYER2_12,Kita sudah berhasil mengumpulkan semua bahannya. Ayo kita bawa ke Mahamantri!,Kami geus junun ngumpulkeun kabeh bahan. Hayu urang bawa ka Mahamantri!
+LINE_MAHAMANTRI_21,"Ah, kalian sudah membawa bahan-bahannya, ya.","Ah, anjeun geus mawa bahan, enya."
+LINE_MAHAMANTRI_22,"Tunggu sebentar, aku akan membuat alat itu terlebih dahulu.","Antosan sakedap, abdi bade ngadamel alat heula."
+LINE_MAHAMANTRI_23,Ini dia alat pelacaknya.,Ieu alat palacakna.
+LINE_PLAYER2_9,"Aha, ini sudah berfungsi!","Aha, eta jalan!"
+LINE_PLAYER_26,"Baiklah, Mahamantri. Terima kasih banyak.","Muhun, Mahamantri. Hatur nuhun pisan"
+LINE_MAHAMANTRI_24,Bukan masalah,Henteu masalah
+LINE_PLAYER_27,"Prasasti pertama dipegang oleh seorang pendeta wanita bernama Dewi, sang Pendeta Bulan.”, seperti yang dikatakan buku ini…","""prasasti pertama dipegang ku imam wanita namina dewi, sang Pendeta Bulan"". itu nu dikatakeun ku alat palacaknya."
+LINE_PLAYER2_10,"Pendeta, harusnya dia berada di kuil, bukan?","Imam, anjeunna kedah di kuil, leres?"
+LINE_PLAYER_28,Sepertinya begitu. Aku akan mencarinya.,Sigana kitu. Abdi bade milarianana.
+LINE_PENJAGA_KUIL_1,Selamat datang di kuil [nama kuil]. Kuil ini adalah tempat berkumpulnya berbagai pendeta terhebat dari penjuru negeri. Adakah hal yang bisa saya bantu?,Wilujeng sumping di [ngaran kuil] kuil. Kuil ieu mangrupikeun tempat ngumpulna para imam pangageungna ti sakumna nagara. Aya nanaon abdi tiasa mantuan Anjeun?
+LINE_PLAYER_29,Kami ingin bertemu dengan pendeta bulan.,Simkuring hoyong papanggih imam bulan.
+LINE_PENJAGA_KUIL_2,"Ah, Sayangnya sekarang pendeta bulan sedang melakukan ceremony terhadap roh-roh gerhana… karena siang ini akan terjadi gerhana… untuk sementara kalian tidak boleh masuk","Ah, hanjakalna ayeuna imam bulan ngalakukeun upacara samagaha roh ... sabab siang ieu bakal aya samagaha ... bari henteu tiasa asup"
+LINE_PLAYER2_11,Lihat ada kucing disana!,Tingali aya ucing aya!
+LINE_PENJAGA_KUIL_3,"Ah, Dimana?","Ah, Dimana?"
+LINE_PLAYER2_12,"Haha! Sangat mudah ternyata, ayo masuk","Haha! Ieu gampang ternyata, ayo"
+LINE_PENDETA_BULAN_1,"Hormatilah roh gerhana kekasihku… sayang… aku telah memanggilmu yang telah tiada dan ada di langit malam yang gelap, aku kekasihmu didalam gelapnya malam ini terlarut dalam kesunyian malam, aku memanggilmu, datang dan jatuhlah engkau ke bumi membawa bintang-bintang.","Ngahargaan sumanget samagaha kekasih kuring ... orok ... Kuring parantos nyauran anjeun anu musna sareng di langit wengi poék, kuring kekasih anjeun jero dina poék wengi ayeuna dibubarkeun dina tiiseun wengi, kuring nelepon anjeun, datang sareng ragrag ka bumi sareng béntang."
+LINE_PENDETA_BULAN_2,"Bayangkanlah, jika kekasihku semua harapan mengalir mewujudkan imajinasi untuk merajut alam semesta baru, dengan planet-planet yang bercahaya, hutan-hutan yang dipenuhi dengan alam baru dan lautan cairan perak yang berkilau di bawah sinar gerhana.","Bayangkeun, upami pencinta kuring sadayana ngarepkeun pikeun ngawujudkeun imajinasi pikeun ngarajut alam semesta anyar, kalayan planét anu radian, leuweung ngeusi alam anyar sareng laut cair pérak anu nyababkeun samagaha."
+LINE_PENDETA_BULAN_3,"Di malam yang tenang ini, mari kita bersama-sama melihat ke atas, ke langit yang gelap dan diberkati dengan gerhana. gerhana itu adalah pintu bagi kita menuju dunia-dunia yang tak terhitung, tempat kita dapat bersama.","Dina wengi sepi ieu, hayu urang babarengan ningali, kana langit poék sareng kaberkahan ku samagaha. samagaha mangrupikeun panto pikeun urang ka dunya anu teu kaétang, dimana urang tiasa babarengan."
+LINE_PENDETA_BULAN_4,"Sebagai pendeta GERHANA, BIARKAN AKU MEMBACAKAN MANTRA INI :","Salaku pandita GERHANA, ABDI MACA MANTRA IEU :"
+LINE_PENDETA_BULAN_5,"DALAM MIMPI YANG TERLARUT DALAM LAPISAN MALAM PALING GELAP, AKU MEMANGGIL-","DI MIMPI YANG DIHENTEU, DIDALEM KAGELEPAN PALING DALEM, Kuring manggil-"
+LINE_PENDETA_BULAN_6,Apa yang terjadi… aku tidak melakukan kesalahan apapun,Naon anu kajantenan ... kuring henteu ngalakukeun salah
+LINE_PENDETA_BULAN_7,"APA YANG KALIAN LAKUKAN DISANA? Kuil ini saat ini harus dalam posisi suci, kalian tak seharusnya ada disini. Ritual ini harus dilakukan tanpa ada orang lain yang melihat… ini berbahaya","SAHA NU DIA NU DIA? Kuil ieu ayeuna kedah aya dina posisi suci, anjeun henteu kedah ka dieu. Ritual ieu kedah dilakukeun tanpa saha waé anu ningali ... ieu bahaya"
+LINE_PLAYER2_13,kami tidak sengaja,urang teu kahaja
+LINE_PLAYER_30,benar… kami tidak sengaja masuk kedalam kuil ini… maaf,leres ... urang teu kahaja asup ka kuil ieu ... punten
+LINE_PENDETA_BULAN_8,"arghh, kalian… lari seka-… @_$&&@&@","arghh, anjeun ... ka-@_$&&@&@"
+LINE_GREWI_1,kalian… akan… membayar… apa… yang… telah… kalian… perbuat…,anjeun... bakal ... mayar ... naon ... anjeun ... gaduh...
+LINE_PLAYER_31,apa yang terjadi?!,Naon anu kajantenan?!
+LINE_PLAYER2_14,"sadar lah Dewi, sungguh kami tidak bermaksud",": sadar Dewi, leres-leres urang henteu hartosna"
+LINE_GREWI_2,"HAHAHAHA, saya bukan dewi… saya adalah grewi… ini adalah bentuk sebuah konsekuensi dari ritual gerhana… aku menipu dewi, aku sebenarnya adalah iblis gerhana, aku sengaja menyerupai kekasihnya supaya aku dapat memasuki tubuhnya, sekarang… kalian juga harus mendapatkan konsekuensi nya juga…","HAHAHAHA, kuring sanes Dewi ... Abdi Grewi ... ieu mangrupikeun bentuk akibat tina ritual samagaha ... Kuring nipu Dewi, saleresna mah sétan samagaha, Kuring ngahaja nyarupaan kekasihna ku kituna kuring tiasa asup awakna, ayeuna ... anjeun ogé kedah nampi akibatna…"
+LINE_PLAYER_32,[ Player 2 ] mundur! Dasar iblis licik!,[ Player 2 ] mundur! Anjeun licik setan!
+LINE_GREWI_3,arghhh@-#&&@,arghhh@-#&&@
+LINE_PENDETA_BULAN_9,arghhh@-#&&@,arghhh@-#&&@
+LINE_PENDETA_BULAN_10,aku kembali… maafkan saya…,Kuring uih deui ... Hapunten…
+LINE_PLAYER2_15,harusnya kami yang meminta maaf… apa yang terjadi?,kedah urang hapunten ... naon anu kajantenan?
+LINE_PENDETA_BULAN_11,Aku melakukan sebuah ritual terlarang… ritual memanggil roh melalui gerhana… aku kehilangan kekasihku saat terjadinya perang… aku merindukannya. Ternyata ritual itu adalah tipuan licik dari iblis gerhana untuk mengambil alih tubuhku…,Kuring ngalaksanakeun ritual anu dilarang ... ritual nyauran roh-roh ngalangkungan samagaha ... Kuring kaleungitan kekasih kuring nalika perang ... kuring sono ka anjeunna. Tétéla yén ritual éta mangrupikeun trik licik tina sétan samagaha pikeun ngarebut awak kuring…
+LINE_PLAYER_33,syukurlah engkau telah kembali… kami hampir tidak bisa mengalahkan iblis licik itu…,alhamdulillah anjeun parantos wangsul ... urang bieu tiasa eleh setan licik…
+LINE_PLAYER2_16,saya meminta maaf atas apa yang telah terjadi… terutama pada kekasihmu… ini bukan salah mu,Hapunten pikeun naon anu kajantenan ... khususna pikeun kekasih anjeun ... ieu sanés kalepatan anjeun
+LINE_PENDETA_BULAN_12,"harusnya saya yang meminta maaf, saya juga berterimakasih kepada kalian… untunglah kalian datang ke kuil ku…","kedah kuring hapunten, kuring ogé hatur nuhun ka guys ... untung anjeun sumping ka kuil kuring…"
+LINE_PLAYER_34,tidak masalah…,teu masalah…
+LINE_PENDETA_BULAN_13,"aku memiliki pertanyaan, kenapa kalian bisa masuk ke kuil ku? Bukankah ada penjaga yang menjaga?","Kuring gaduh patarosan, naha anjeun guys asup ka kuil kuring? Bukanna aya penjaga?"
+LINE_PLAYER_35,Ceritanya Panjang...,Caritana Panjang...
+LINE_PENDETA_BULAN_14,baiklah… apa tujuan kalian kemari?,Teu nanaon ... naon tujuan anjeun di dieu?
+LINE_PLAYER2_17,kami sedang mencari artefak seperti ini…,urang milarian artefak sapertos kieu…
+LINE_PENDETA_BULAN_15,bukankah ini mahkota yang saya pakai?,sanes ieu makuta anu kuring ngagem?
+LINE_PENDETA_BULAN_16,untuk apa kalian memerlukannya?,naon anu anjeun butuhkeun pikeun?
+LINE_PLAYER_36,kami bukanlah seseorang yang berasal dari dunia ini… kami membutuhkan mahkota itu untuk kembali ke dunia asal kami…,urang sanes jalma ti dunya ieu ... urang peryogi makuta pikeun uih deui ka dunya bumi urang…
+LINE_PENDETA_BULAN_17,"baiklah, anggap ini sebagai ucapan terimakasih kepada kalian",pikirkeun ieu salaku hatur nuhun ka anjeun
+LINE_PLAYER2_18,benar kahh?,ieu bener?...
+LINE_PENDETA_BULAN_18,benar…,bener…
+LINE_PLAYER_37,terimakasih,Haturnuhun…
+LINE_PENDETA_BULAN_19,Sama-sama,Sami-sami
+LINE_PLAYER_38,Tadi itu hampir saja,Éta ampir aja.
+LINE_PLAYER2_19,"Benar, untung saja aku mengalihkan penjaga itu","Enya, untungna kuring ngalihkeun penjaga"
+LINE_PLAYER_39,"Ada-ada saja... baiklah, alat aneh ajaib... tunjukan dimana artefak selanjutnya",Aya-aya aja... Okelah... alat sihir aneh ... tunjukeun urang dimana artefak salajengna...

@@ -32,7 +32,7 @@ var current_point = null
 var path_index = 0
 
 func _physics_process(delta):
-	if (is_stunned and current_path.size() != 0):
+	if (current_path.size() != 0):
 		if (global_position.distance_to(current_path[path_index]) > 2):
 			var direction = global_position.direction_to(current_path[path_index])
 			velocity = direction * movement_speed
@@ -112,6 +112,11 @@ func move_along_path(path):
 	path_index = 0
 	
 	await arrived_at_path
+	
+func clear_path():
+	current_path = []
+	current_point = null
+	path_index = 0
 
 func align(direction):
 	animation.set('parameters/walk/blend_position', direction)

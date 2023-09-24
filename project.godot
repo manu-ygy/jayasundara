@@ -116,7 +116,7 @@ interact={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://lang/lang.csv", "res://lang/lang.en.translation", "res://lang/lang.id.translation", "res://lang/lang.su.translation")
+locale/translations=PackedStringArray("res://lang/lang.csv", "res://lang/lang.id.translation", "res://lang/lang.su.translation")
 locale/include_text_server_data=true
 locale/test="su"
 

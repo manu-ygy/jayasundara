@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal casting(what)
+
 @onready var world = $/root/Loader/World/TileMap
 
 @onready var animation = $Animation
@@ -26,8 +28,8 @@ var tracking_instance = load('res://scenes/attacks/tracking.tscn')
 var lantern_instance = load('res://scenes/attacks/lantern.tscn')
 # var dust_instance = load('res://dash.tres')
 
-var mp = 150
-var hp = 100
+@export var mp = 150
+@export var hp = 100
 
 var game_ended = false
 
@@ -39,7 +41,7 @@ var is_levitating = false
 var allow_regen = false
 
 var attack_direction = Vector2.ZERO
-var quick_cast = 'earth_pillar'
+var quick_cast = 'fireball'
 
 var event_key = [KEY_1, KEY_2, KEY_3, KEY_4, KEY_5, KEY_6, KEY_7, KEY_8, KEY_9]
 var keybind = [KEY_COMMA, KEY_PERIOD, KEY_SLASH, KEY_L, KEY_SEMICOLON, KEY_APOSTROPHE, KEY_O, KEY_P, KEY_BRACKETLEFT]
@@ -91,7 +93,7 @@ func _physics_process(delta):
 					animation.play('dash')
 	else:
 		animation.flip_h = attack_direction.x <= 0
-		animation.play('attack')
+		# animation.play('attack')
 	
 	move_and_slide()
 	
@@ -162,10 +164,13 @@ func attacked(damage):
 			
 func cast_attack(attack_name):
 	is_attacking = true
-	attack_timer.start()
 		
-	await get_tree().create_timer(0.2).timeout
-
+	attack_timer.start()
+	if (attack_name):
+		animation.play('attack')
+		emit_signal('casting', attack_name)
+		await get_tree().create_timer(0.2).timeout
+	
 	if (!is_levitating):
 		match (attack_name):
 			'fireball': 
@@ -209,6 +214,8 @@ func cast_attack(attack_name):
 					fireball.global_position = firing_position
 					world.add_child(fireball)
 					fireball.init(firing_position.direction_to(enemy.global_position), self)
+					
+				animation.play('attack')
 				
 			'levitation':
 				is_levitating = true

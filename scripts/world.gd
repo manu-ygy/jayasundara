@@ -18,17 +18,38 @@ signal battle_ended
 @onready var inventory_background = $UI/Inventory/Bg
 @onready var inventory_container = $UI/Inventory/Margin/Grid
 
+@onready var mission_container = $UI/Mission
+@onready var mission_content = $UI/Mission/Margin/Wrapper/Content
+
 var is_in_dialog = false
 var is_typing = false
 var is_choice = false
+var is_mission_visible = false
 var dialog_choices = []
+
+var missions = {}
 
 func _ready():
 	pass
 
+func update_mission(alias, text):
+	missions[alias] = text
+	render_mission()
+
+func remove_mission(alias):
+	missions[alias] = null
+	render_mission()
+
+func render_mission():
+	mission_content.text = ''
+	for key in missions.keys():
+		mission_content.text += missions[key] + '\n'
+
 func dialog(name, content, choices = []):
+	is_mission_visible = mission_container.visible
 	dialog_container.show()
 	information.hide()
+	mission_container.hide()
 	inventory_background.hide()
 	inventory_container.hide()
 	if (name != null):
@@ -84,6 +105,10 @@ func start_battle(name, enemy):
 func add_inventory():
 	pass
 	
+func start_tutorial():
+	loader.start_tutorial()
+	loader.battle_ended.connect(emit_signal.bind('battle_ended'))
+	
 func _input(event):
 	if ((event is InputEventMouseButton and event.pressed) or Input.is_key_pressed(KEY_ENTER) or Input.is_key_pressed(KEY_SPACE)):
 		if (is_typing):
@@ -94,6 +119,7 @@ func _input(event):
 				dialog_container.hide()
 				inventory_container.show()
 				inventory_background.show()
+				mission_container.visible = is_mission_visible
 				# information.show()
 				emit_signal('dialog_finished')
 	

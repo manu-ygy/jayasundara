@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://crji0cn0lkyye"]
 
-[ext_resource type="Script" path="res://scripts/summoning.gd" id="1_i7tbs"]
+[ext_resource type="Script" path="res://scripts/attacks/summoning.gd" id="1_i7tbs"]
 [ext_resource type="Texture2D" uid="uid://dh7wyg03t81c" path="res://assets/player/outline.png" id="3_i104o"]
 [ext_resource type="Texture2D" uid="uid://cxe1mwg0875vr" path="res://assets/effects/summoning/eagle/Projectile 2 wo blur.png" id="3_q2o1x"]
 

@@ -1,12 +1,14 @@
 extends CharacterBody2D
 
+signal killed
+
 @onready var world = $/root/Loader/World
 @onready var collision = $Collision
 @onready var player = $/root/Loader/World/TileMap/Player
 @onready var animation = $Animation
 @onready var label = $Label
 
-var hp = 500
+@export var hp = 500
 var movement_speed = 100
 var is_stunned = true
 var game_ended = false
@@ -24,18 +26,18 @@ var knockup_direction
 func _ready():
 	add_to_group('enemy')
 
-func _physics_process(delta):
-	if (!is_player_inside and !is_stunned):
-		state = 'wander'
-		velocity = global_position.direction_to(player.global_position) * movement_speed
-	else:
-		if (state != 'knockup'):
-			state = 'attacking'
-			velocity = Vector2.ZERO
-		else:
-			velocity = global_position.direction_to(knockup_direction) * 1000
-	
-	move_and_slide()
+#func _physics_process(delta):
+#	if (!is_player_inside and !is_stunned):
+#		state = 'wander'
+#		velocity = global_position.direction_to(player.global_position) * movement_speed
+#	else:
+#		if (state != 'knockup'):
+#			state = 'attacking'
+#			velocity = Vector2.ZERO
+#		else:
+#			velocity = global_position.direction_to(knockup_direction) * 1000
+#
+#	move_and_slide()
 
 func attacked(damage):
 	# var tween = get_tree().create_tween()
@@ -44,13 +46,13 @@ func attacked(damage):
 	# tween.tween_property($Sprite2D, 'self_modulate', Color(1, 1, 1, 1), 0.2)
 	
 	hp -= damage
-	if (hp < 0 and !game_ended):
-		game_ended = true
-		world.end_battle()
+	if (hp <= 0 and !game_ended):
+		emit_signal('killed')
+		state = 'idle'
 		return
 	
 	label.text = 'HP: ' + str(hp)
-	
+
 func calculate_arc_velocity(source_position, target_position, arc_height, gravity):
 	var velocity = Vector2()
 	var displacement = target_position - source_position

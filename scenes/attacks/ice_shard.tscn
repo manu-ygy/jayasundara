@@ -1,6 +1,6 @@
 [gd_scene load_steps=64 format=3 uid="uid://cx2mggqm1w4gl"]
 
-[ext_resource type="Script" path="res://scripts/ice_shard.gd" id="1_s5ffg"]
+[ext_resource type="Script" path="res://scripts/attacks/ice_shard.gd" id="1_s5ffg"]
 [ext_resource type="Texture2D" uid="uid://b51k3d3r0v67x" path="res://assets/effects/ice/Ice VFX 2/Ice VFX 2 Ending.png" id="2_ewb4a"]
 [ext_resource type="Texture2D" uid="uid://c0vxc5emp1bts" path="res://assets/effects/ice/Ice VFX 1/Ice VFX 1 Start.png" id="2_i6l3u"]
 [ext_resource type="Texture2D" uid="uid://dwp5w1jy15vwt" path="res://assets/effects/ice/Ice VFX 1/Ice VFX 1 Hit.png" id="2_qlvmn"]

@@ -7,6 +7,8 @@ signal arrived_at_path
 @onready var animation = $AnimationTree
 @onready var state_machine = $AnimationTree.get('parameters/playback')
 @onready var interaction = $Interaction
+@onready var following_timer = $FollowingTimer
+@onready var leader = player
 
 var player_inside = false
 var is_in_dialog = false
@@ -17,29 +19,50 @@ var current_path = []
 var path_index = 0
 var current_point = Vector2.ZERO
 
+@export var is_following_leader = false: set = toggle_following_leader
+var leader_positions = []
+
 func _ready():
 	state_machine.travel('idle')
 
 func _physics_process(delta):
-	if (current_path.size() != 0):
-		if (global_position.distance_to(current_path[path_index]) > 2):
-			var direction = global_position.direction_to(current_path[path_index])
+	if (!is_following_leader):
+		if (current_path.size() != 0):
+			if (global_position.distance_to(current_path[path_index]) > 2):
+				var direction = global_position.direction_to(current_path[path_index])
+				velocity = direction * movement_speed
+				
+				animation.set('parameters/walk/blend_position', direction)
+				animation.set('parameters/idle/blend_position', direction)
+				
+				state_machine.travel('walk')
+			else:
+				velocity = Vector2.ZERO
+				if (current_path.size() -1 > path_index):
+					path_index += 1
+				else:
+					current_path = []
+					emit_signal('arrived_at_path')
+					state_machine.travel('idle')
+		else:
+			state_machine.travel('idle')
+	else:
+		if (leader_positions.size() != 0):
+			var direction = global_position.direction_to(leader_positions[0])
 			velocity = direction * movement_speed
 			
 			animation.set('parameters/walk/blend_position', direction)
 			animation.set('parameters/idle/blend_position', direction)
 			
 			state_machine.travel('walk')
+			
+			if (global_position.distance_to(leader_positions[0]) < 3 or global_position.distance_to(leader.global_position) <= 32):
+				leader_positions.remove_at(0)
 		else:
 			velocity = Vector2.ZERO
-			if (current_path.size() -1 > path_index):
-				path_index += 1
-			else:
-				current_path = []
-				emit_signal('arrived_at_path')
-				state_machine.travel('idle')
-				
-		move_and_slide()
+			state_machine.travel('idle')
+
+	move_and_slide()
 
 func move_along_path(path):
 	current_path = path
@@ -47,6 +70,11 @@ func move_along_path(path):
 	path_index = 0
 	
 	await arrived_at_path
+	
+func clear_path():
+	current_path = []
+	current_point = null
+	path_index = 0
 	
 func align(direction):
 	animation.set('parameters/walk/blend_position', direction)
@@ -75,3 +103,15 @@ func _on_interaction_area_body_exited(body):
 	if (body == player):
 		player_inside = false
 		information.hide()
+
+func _on_following_timer_timeout():
+	if (global_position.distance_to(leader.global_position) > 32):
+		leader_positions.append(leader.global_position)
+		
+func toggle_following_leader(value):
+	is_following_leader = value
+	
+	if (is_following_leader):
+		following_timer.start()
+	else:
+		following_timer.stop()

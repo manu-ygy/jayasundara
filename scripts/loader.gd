@@ -5,6 +5,7 @@ extends Node2D
 
 @onready var world = load('res://scenes/world.tscn').instantiate()
 var arena_instance = load('res://scenes/arena.tscn')
+var tutorial_instance = load('res://scenes/battle_tutorial.tscn')
 
 signal battle_ended
 
@@ -15,9 +16,26 @@ func _ready():
 	animation.play('transition')
 	await animation.animation_finished
 	
-	add_child(world)
+	add_child(world) 
 	
 	await get_tree().process_frame
+	
+	animation.play_backwards('transition')
+	await animation.animation_finished
+	transition.hide()
+	
+func start_tutorial():
+	transition.show()
+	animation.play('transition')
+	await animation.animation_finished
+	
+	arena = tutorial_instance.instantiate()
+	arena.connect('battle_ended', end_battle)
+	
+	call_deferred('remove_child', world)
+	call_deferred('add_child', arena)
+	
+	await get_tree().process_frame 
 	
 	animation.play_backwards('transition')
 	await animation.animation_finished
@@ -48,8 +66,8 @@ func end_battle():
 	animation.play('transition')
 	await animation.animation_finished
 	
-	call_deferred('add_child', world)
 	call_deferred('remove_child', arena)
+	call_deferred('add_child', world)
 	
 	await get_tree().process_frame
 	
