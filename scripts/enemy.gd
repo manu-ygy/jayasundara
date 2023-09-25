@@ -46,12 +46,11 @@ func attacked(damage):
 	# tween.tween_property($Sprite2D, 'self_modulate', Color(1, 1, 1, 1), 0.2)
 	
 	hp -= damage
+	label.text = 'HP: ' + str(hp)
 	if (hp <= 0 and !game_ended):
 		emit_signal('killed')
 		state = 'idle'
 		return
-	
-	label.text = 'HP: ' + str(hp)
 
 func calculate_arc_velocity(source_position, target_position, arc_height, gravity):
 	var velocity = Vector2()

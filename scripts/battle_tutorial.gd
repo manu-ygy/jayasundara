@@ -55,6 +55,7 @@ func _ready():
 	enemy.state = 'idle'
 	await show_guide('Bagus. Kamu sudah mengetahui dasarnya. Sekarang, hancurkan boneka latihan itu.')
 	enemy.hp = 100
+	enemy.get_node('Label').text = 'HP: 100'
 	enemy.get_node('Label').show()
 	enemy.state = 'attacking'
 	
