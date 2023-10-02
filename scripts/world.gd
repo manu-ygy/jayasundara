@@ -37,7 +37,7 @@ func update_mission(alias, text):
 	render_mission()
 
 func remove_mission(alias):
-	missions[alias] = null
+	missions.erase(alias)
 	render_mission()
 
 func render_mission():
@@ -126,3 +126,7 @@ func _input(event):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_farmer_visibility_changed():
+	pass # Replace with function body.

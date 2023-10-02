@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://ck1dm3mj6f3x8"]
+[gd_scene load_steps=17 format=3 uid="uid://ck1dm3mj6f3x8"]
 
 [ext_resource type="Texture2D" uid="uid://ba4mktjha754o" path="res://ui/sword.png" id="1_enenp"]
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_tmdxm"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bvcdj2qy0c2vs" path="res://ui/cloud-mid.png" id="2_t6g1r"]
 [ext_resource type="Texture2D" uid="uid://7jjlheomw31f" path="res://ui/latin.png" id="3_cqito"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="3_w3mb0"]
+[ext_resource type="Texture2D" uid="uid://cp512mgk6bylw" path="res://ui/cloud-front.png" id="4_cdbu5"]
+[ext_resource type="Texture2D" uid="uid://c0t3tpx27iew6" path="res://ui/cloud-back.png" id="5_emrtl"]
 [ext_resource type="Theme" uid="uid://57s6nqgbwss4" path="res://ui/title_screen.tres" id="6_k0ye2"]
 [ext_resource type="FontFile" uid="uid://5punbxm32rcb" path="res://ui/fonts/monogram.ttf" id="6_qm1uy"]
 [ext_resource type="Texture2D" uid="uid://btic7scxyld75" path="res://ui/dialog.png" id="8_bvmou"]
@@ -361,22 +363,39 @@ color = Color(0.372549, 0.803922, 0.894118, 1)
 [node name="Title" type="Node2D" parent="."]
 scale = Vector2(0.6, 0.6)
 
-[node name="Sprite2D" type="Sprite2D" parent="Title"]
-position = Vector2(260, 178.333)
-scale = Vector2(1.4974, 1.4974)
+[node name="Clouds" type="Node2D" parent="Title"]
+position = Vector2(0, -40)
+scale = Vector2(1.2, 1.2)
+
+[node name="CloudBack" type="Sprite2D" parent="Title/Clouds"]
+z_index = 1
+position = Vector2(240, 146.667)
+texture = ExtResource("5_emrtl")
+
+[node name="CloudMid" type="Sprite2D" parent="Title/Clouds"]
+z_index = 2
+position = Vector2(240, 146.667)
 texture = ExtResource("2_t6g1r")
 
+[node name="CloudFront" type="Sprite2D" parent="Title/Clouds"]
+z_index = 3
+position = Vector2(240, 146.667)
+texture = ExtResource("4_cdbu5")
+
 [node name="Sword" type="Sprite2D" parent="Title"]
+z_index = 4
 position = Vector2(238.333, 71.6666)
 texture = ExtResource("1_enenp")
 
 [node name="Latin" type="Sprite2D" parent="Title"]
 self_modulate = Color(1, 1, 1, 0)
+z_index = 4
 position = Vector2(238.333, 69.7646)
 texture = ExtResource("3_cqito")
 
 [node name="Sundanese" type="Sprite2D" parent="Title"]
 self_modulate = Color(1, 1, 1, 0)
+z_index = 4
 position = Vector2(238.333, 76.6666)
 scale = Vector2(5, 5)
 texture = ExtResource("2_62htn")

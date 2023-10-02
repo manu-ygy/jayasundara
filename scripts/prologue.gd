@@ -18,11 +18,11 @@ func _ready():
 	await get_tree().create_timer(0.5).timeout
 	await sanjaya.move_along_path([Vector2(-72, -64)])
 	
-	await ui.dialog('Sanjaya', tr('LINE_SANJAYA_1'))
+	await ui.dialog('Kael', tr('LINE_KAEL_1'))
 	
 	riani.align(Vector2.LEFT)
-	await ui.dialog('Riani', tr('LINE_RIANI_1'))
-	await ui.dialog('Sanjaya', tr('LINE_SANJAYA_2'))
+	await ui.dialog('Amara', tr('LINE_AMARA_1'))
+	await ui.dialog('Kael', tr('LINE_KAEL_2'))
 	
 	riani.move_along_path([Vector2(112, -64)])
 	await get_tree().create_timer(0.5).timeout
@@ -30,22 +30,22 @@ func _ready():
 	
 	riani.align(Vector2.UP)
 	sanjaya.align(Vector2.UP)
-	await ui.dialog('Riani', tr('LINE_RIANI_2'))
-	await ui.dialog('Sanjaya', tr('LINE_SANJAYA_2'))
-	await ui.dialog('Riani', tr('LINE_RIANI_3'))
+	await ui.dialog('Amara', tr('LINE_AMARA_2'))
+	await ui.dialog('Kael', tr('LINE_KAEL_2'))
+	await ui.dialog('Amara', tr('LINE_AMARA_3'))
 	
 	riani.move_along_path([Vector2(272, -64), Vector2(272, -96)])
 	await get_tree().create_timer(0.5).timeout
 	await sanjaya.move_along_path([Vector2(240, -64), Vector2(240, -96)])
 	
-	await ui.dialog('Riani', tr('LINE_RIANI_4'))
-	await ui.dialog('Sanjaya', tr('LINE_SANJAYA_3'))
-	await ui.dialog('Riani', tr('LINE_RIANI_5'))
+	await ui.dialog('Amara', tr('LINE_AMARA_4'))
+	await ui.dialog('Kael', tr('LINE_KAEL_3'))
+	await ui.dialog('Amara', tr('LINE_AMARA_5'))
 	
 	await riani.move_along_path([Vector2(320, -96), Vector2(320, -152), Vector2(288, -152)])
 	
-	await ui.dialog('Riani', tr('LINE_RIANI_6'))
-	await ui.dialog('Sanjaya', tr('LINE_SANJAYA_4'))
+	await ui.dialog('Amara', tr('LINE_AMARA_6'))
+	await ui.dialog('Kael', tr('LINE_KAEL_4'))
 	
 	riani.get_node('Glitch').show()
 	sanjaya.get_node('Glitch').show()
@@ -58,7 +58,7 @@ func _ready():
 
 	riani.move(144, 81)
 	
-	await get_tree().create_timer(7.9).timeout
+	await get_tree().create_timer(8).timeout
 	get_tree().change_scene_to_file('res://scenes/loader.tscn')
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -5,7 +5,7 @@ extends Node
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func interact():
-	await ui.dialog('Penjaga', 'Yang Mulia sedang tidak ada di istana. Kembali lagi nanti.')
+	pass
 	# var do_sparring = await ui.dialog('Om-om', 'Mau sparring?', [{'Boleh': 'accept'}, {'Nggak dulu': 'reject'}, {'Riil kah min?': 'real'}])
 
 #	if (do_sparring == 'accept'):

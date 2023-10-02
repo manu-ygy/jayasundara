@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal arrived_at_path
+signal interacted_with_player
 
 @onready var information = $/root/Loader/World/UI/Information
 @onready var player = $/root/Loader/World/TileMap/Player
@@ -9,6 +10,8 @@ signal arrived_at_path
 @onready var interaction = $Interaction
 @onready var following_timer = $FollowingTimer
 @onready var leader = player
+@onready var collision = $Collision
+@onready var interaction_area = $InteractionArea
 
 var player_inside = false
 var is_in_dialog = false
@@ -24,6 +27,7 @@ var leader_positions = []
 
 func _ready():
 	state_machine.travel('idle')
+	render_visibility()
 
 func _physics_process(delta):
 	if (!is_following_leader):
@@ -46,6 +50,7 @@ func _physics_process(delta):
 					state_machine.travel('idle')
 		else:
 			state_machine.travel('idle')
+			velocity = Vector2.ZERO
 	else:
 		if (leader_positions.size() != 0):
 			var direction = global_position.direction_to(leader_positions[0])
@@ -90,6 +95,7 @@ func _input(event):
 	if (Input.is_action_just_released('interact') and player_inside and !is_in_dialog):
 		is_in_dialog = true
 		player.is_stunned = true
+		emit_signal('interacted_with_player')
 		await interaction.interact()
 		is_in_dialog = false
 		player.is_stunned = false
@@ -97,6 +103,7 @@ func _input(event):
 func _on_interaction_area_body_entered(body):
 	if (body == player):
 		player_inside = true
+		information.text = 'Tekan E untuk interaksi.'
 		information.show()
 
 func _on_interaction_area_body_exited(body):
@@ -115,3 +122,14 @@ func toggle_following_leader(value):
 		following_timer.start()
 	else:
 		following_timer.stop()
+
+func _on_visibility_changed():
+	render_visibility()
+
+func render_visibility():
+	if (visible):
+		get_node('Collision').disabled = false
+		get_node('InteractionArea').monitoring = true
+	else:
+		get_node('Collision').disabled = true
+		get_node('InteractionArea').monitoring = false
