@@ -5,7 +5,7 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	modulate.show()
+	# modulate.show()
 	animation.play('animation')
 	animation.seek(10, true)
 	animation.speed_scale = 0.0125

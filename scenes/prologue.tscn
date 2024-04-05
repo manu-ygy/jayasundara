@@ -1111,7 +1111,6 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="World/TileMap/Riani"]
 tree_root = SubResource("AnimationNodeStateMachine_wcboi")
 anim_player = NodePath("../Animation")
-active = true
 parameters/dash/blend_position = Vector2(0, 0)
 parameters/idle/blend_position = Vector2(0.00232017, 0.0174419)
 parameters/walk/blend_position = Vector2(0, 0)
@@ -1169,7 +1168,6 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="World/TileMap/Sanjaya"]
 tree_root = SubResource("AnimationNodeStateMachine_wcboi")
 anim_player = NodePath("../Animation")
-active = true
 parameters/dash/blend_position = Vector2(0, 0)
 parameters/idle/blend_position = Vector2(0.00232017, 0.0174419)
 parameters/walk/blend_position = Vector2(0, 0)

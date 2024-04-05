@@ -1,6 +1,7 @@
 extends Camera2D
 
-@onready var player = $/root/Loader/World/TileMap/Player
+# @onready var player = $/root/Loader/World/TileMap/Player
+var player = null
 
 @onready var shake_timer = $ShakeTimer
 @onready var following = player
