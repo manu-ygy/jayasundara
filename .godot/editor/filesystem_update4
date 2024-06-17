@@ -1,7 +1,7 @@
+res://lang/lang.id.translation
+res://lang/lang.su.translation
 res://scenes/attacks/fireball.tscn
 res://ui/title_screen.tres
-res://tileset.tres
 res://thunder.gdshader
 res://scenes/title_screen.tscn
-res://scenes/world.tscn
 res://scenes/battle_tutorial.tscn
