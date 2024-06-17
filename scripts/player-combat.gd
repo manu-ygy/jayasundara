@@ -17,11 +17,15 @@ signal casting(what)
 @onready var ui = $/root/Loader/World/UI
 @onready var mp_bar = $/root/Loader/World/UI/Wrapper/Status/Player/MPBar
 @onready var base_skill_progress = $/root/Loader/World/UI/Stat/BaseSkill
+@onready var combo = $/root/Loader/World/UI/Combo
+
+@onready var click_timer = get_node_or_null('ClickTimer')
 
 @onready var camera = $Camera2D
 
 var fireball_instance = load('res://scenes/attacks/fireball.tscn')
-var pillar_instance = load('res://scenes/attacks/earth_pilllar.tscn')
+var pillar_instance = load('res://scenes/attacks/earth_pillar.tscn')
+var push_instance = load('res://scenes/attacks/earth_push.tscn')
 var shard_instance = load('res://scenes/attacks/ice_shard.tscn')
 var summoning_instance = load('res://scenes/attacks/summoning.tscn')
 var tracking_instance = load('res://scenes/attacks/tracking.tscn')
@@ -43,18 +47,16 @@ var allow_regen = false
 var attack_direction = Vector2.ZERO
 var quick_cast = 'fireball'
 
-var event_key = [KEY_1, KEY_2, KEY_3, KEY_4, KEY_5, KEY_6, KEY_7, KEY_8, KEY_9]
-var keybind = [KEY_COMMA, KEY_PERIOD, KEY_SLASH, KEY_L, KEY_SEMICOLON, KEY_APOSTROPHE, KEY_O, KEY_P, KEY_BRACKETLEFT]
-
 var current_combinations = []
 var attack_combinations = {
-	'fireball': [KEY_1, KEY_2],
-	'earth_pillar': [KEY_1, KEY_3],
-	'summoning': [KEY_2, KEY_3],
-	'ice_shard': [KEY_1, KEY_4],
-	'levitation': [KEY_3, KEY_2],
-	'tracking': [KEY_4, KEY_2],
-	'lantern': [KEY_4, KEY_3]
+	'fireball': [0],
+	'earth_pillar': [1],
+	'summoning': [2],
+	'ice_shard': [3],
+	'levitation': [4],
+	'tracking': [5],
+	'lantern': [6],
+	'earth_push': [1, 0]
 }
 
 var is_dashing = false
@@ -66,12 +68,39 @@ var is_base_skill_cooldown = false
 
 var last_ghost_pos = Vector2()
 
+var attack_tween
+var mouse_button_pressed = false
+
 func _physics_process(delta):
 	var direction = Input.get_vector('left', 'right', 'up', 'down')
 	var speed = dash_speed if is_dashing else movement_speed
 	velocity = direction * speed if !is_stunned else Vector2.ZERO 
 	
-	attack_direction = global_position.direction_to(enemy.global_position)
+	attack_direction = global_position.direction_to(get_global_mouse_position())
+	
+	if (Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and !mouse_button_pressed):
+		mouse_button_pressed = true
+
+		click_timer.start()
+
+		attack_tween = get_tree().create_tween()
+		attack_tween.tween_property(base_skill_progress, 'value', 100, 0.2)
+	
+	if (mouse_button_pressed and !Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
+		mouse_button_pressed = false
+		attack_tween.stop()
+		
+		if (click_timer.time_left <= 0.05): 
+			current_combinations.append(1)
+		else:
+			current_combinations.append(0)
+	
+		base_skill_progress.value = 0
+		click_timer.stop()
+	
+		combo.text = '-'.join(current_combinations)
+	
+		cast_attack(find_combinations())
 	
 	if (!is_attacking):
 		if (velocity == Vector2.ZERO):
@@ -98,7 +127,8 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func _input(event):
-	if (Input.is_action_just_pressed('base_skill') and !is_dashing and !is_base_skill_cooldown and velocity != Vector2.ZERO and !game_ended):
+	#if (Input.is_action_just_pressed('base_skill') and !is_dashing and !is_base_skill_cooldown and velocity != Vector2.ZERO and !game_ended):
+	if (false):
 		is_base_skill_cooldown = true
 		base_skill_progress.value = 0
 		
@@ -136,22 +166,36 @@ func _input(event):
 				
 				world.add_child(ghost)
 				
-		var tween = get_tree().create_tween()
-		tween.tween_property(base_skill_progress, 'value', 100, base_skill_cooldown)
-		tween.tween_callback(set_not_cooldown)
+		#var tween = get_tree().create_tween()
+		#tween.tween_property(base_skill_progress, 'value', 100, base_skill_cooldown)
+		#tween.tween_callback(set_not_cooldown)
 				
-	elif (Input.is_action_just_pressed('quick_cast') and !game_ended):
-		cast_attack(quick_cast)
+	#elif (Input.is_action_just_pressed('quick_cast') and !game_ended):
+		#cast_attack(quick_cast)
+		#
+	#elif (Input.is_action_pressed('left_click') or Input.is_action_pressed('right_click')):
+		#base_skill_progress.value = 0
+		#click_timer.wait_time = 0.2
+		#click_timer.start()
+		#
+		#attack_tween = get_tree().create_tween()
+		#attack_tween.tween_property(base_skill_progress, 'value', 100, 0.2)
 		
-	elif (event is InputEventKey and event.pressed and !game_ended):
-		if event.keycode in keybind:
-			current_combinations.append(event_key[keybind.find(event.keycode)])
-			
-			cast_attack(find_combinations())
-		else:
-			current_combinations = []
-			return
-			
+	#elif (Input.is_action_just_released('left_click') or Input.is_action_just_released('right_click')):
+		#var time_left = click_timer.time_left
+		#click_timer.stop()
+		#
+		#if (time_left <= 0.05): 
+			#current_combinations.append(1)
+		#else:
+			#current_combinations.append(0)
+			#
+		#attack_tween.stop()
+		#base_skill_progress.value = 0
+		#
+		#print(current_combinations)
+		#cast_attack(find_combinations())
+
 func set_not_cooldown():
 	is_base_skill_cooldown = false
 			
@@ -188,6 +232,18 @@ func cast_attack(attack_name):
 					pillar.global_position = global_position
 					world.add_child(pillar)
 					pillar.init(attack_direction, self)
+					# pillar.add_to_group('particle')
+					
+					mp -= 30
+					ui.update_mp_bar(mp)
+					
+			'earth_push':
+				print('earth push')
+				if (!raycast.is_colliding()):
+					var push = push_instance.instantiate()
+					push.global_position = global_position
+					world.add_child(push)
+					push.init(attack_direction, self)
 					# pillar.add_to_group('particle')
 					
 					mp -= 30

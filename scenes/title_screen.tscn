@@ -178,7 +178,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_ot6e7"]
 resource_name = "title_enterance"
-length = 1.5
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -390,7 +390,7 @@ texture = ExtResource("1_enenp")
 [node name="Latin" type="Sprite2D" parent="Title"]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 4
-position = Vector2(238.333, 69.7646)
+position = Vector2(233.333, 69.7646)
 texture = ExtResource("3_cqito")
 
 [node name="Sundanese" type="Sprite2D" parent="Title"]
@@ -401,6 +401,7 @@ scale = Vector2(5, 5)
 texture = ExtResource("2_62htn")
 
 [node name="UI" type="CanvasLayer" parent="."]
+layer = 10
 
 [node name="Studio" type="MarginContainer" parent="UI"]
 anchors_preset = 15
@@ -417,9 +418,11 @@ theme_override_constants/margin_bottom = 4
 [node name="Label" type="Label" parent="UI/Studio"]
 layout_mode = 2
 size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.445488, 0.445488, 0.445488, 1)
 theme_override_fonts/font = ExtResource("6_qm1uy")
 theme_override_font_sizes/font_size = 8
-text = "2023 © Mokad Gamestudio"
+text = "Versi 1.0.0 (Beta)
+2024 © Mokad Gamestudio"
 vertical_alignment = 2
 
 [node name="Buttons" type="MarginContainer" parent="UI"]
@@ -553,10 +556,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Animation" type="AnimationPlayer" parent="."]
-speed_scale = 1.5
 libraries = {
 "": SubResource("AnimationLibrary_7acof")
 }
+speed_scale = 1.5
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(144, 81)

@@ -8,10 +8,10 @@ signal interacted_with_player
 @onready var animation = $AnimationTree
 @onready var state_machine = $AnimationTree.get('parameters/playback')
 @onready var interaction = $Interaction
-@onready var following_timer = $FollowingTimer
 @onready var leader = player
 @onready var collision = $Collision
 @onready var interaction_area = $InteractionArea
+@onready var following_timer = get_node_or_null('FollowingTimer')
 
 var player_inside = false
 var is_in_dialog = false
@@ -25,7 +25,7 @@ var current_point = Vector2.ZERO
 @export var is_following_leader = false: set = toggle_following_leader
 var leader_positions = []
 
-func _ready():
+func _ready():	
 	state_machine.travel('idle')
 	render_visibility()
 

@@ -16,7 +16,7 @@ func init(dir, send):
 	direction = dir
 	sender = send
 	
-	for x in range(3):
+	for x in range(1):
 		var pillar_pos = direction * 32 * x + (Vector2(32, 32) * direction)
 		raycast.target_position = pillar_pos + Vector2(32, 32) * direction
 
@@ -43,7 +43,7 @@ func init(dir, send):
 		await get_tree().create_timer(0.3).timeout
 		explosion.emitting = false
 		
-	await get_tree().create_timer(0.8).timeout
+	await get_tree().create_timer(1.5).timeout
 	queue_free()
 
 func _on_body_entered(body):

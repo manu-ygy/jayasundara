@@ -15,10 +15,10 @@ var player_name = 'Amara'
 var player_two_name = 'Kael'
 
 func _ready():
-	TranslationServer.set_locale('su')
+	TranslationServer.set_locale('id')
 	
 	await get_tree().create_timer(0.2).timeout
-	action('chicken_collected')
+	action('testing')
 	
 func npc(name):
 	return $/root/Loader/World/TileMap.get_node(name)
@@ -154,6 +154,9 @@ func action(name):
 			await ui.dialog(player_name, lzs('LINE_PLAYER_12'))
 			await ui.dialog('Mahamantri', lzs('LINE_MAHAMANTRI_13'))
 			
+			action('battle_tutorial')
+			
+		'battle_tutorial':
 			ui.start_tutorial()
 			await ui.battle_ended
 			# await ui.start_battle('Riani', 'Mahamantri')

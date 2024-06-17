@@ -26,10 +26,10 @@ func _ready():
 		clouds.add_child(cloud_clone)
 	
 	animation.play('title_enterance')
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(2).timeout
 	animation.play('floating')
 	
-func _process(delta):
+func _process(_delta):
 	for cloud in clouds.get_children():
 		var speed = 0
 		if ('Front' in cloud.name):
@@ -58,7 +58,7 @@ func shake_impact():
 func _on_play_pressed():
 	animation.play('transition')
 	await animation.animation_finished
-	get_tree().change_scene_to_file('res://scenes/prologue.tscn')
+	get_tree().change_scene_to_file('res://scenes/loader.tscn')
 
 func resize_camera():
 	viewport_width = get_viewport_rect().size.x

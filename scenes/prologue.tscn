@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://d1yivasr5j30m"]
+[gd_scene load_steps=105 format=3 uid="uid://d1yivasr5j30m"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_6pwme"]
 [ext_resource type="TileSet" uid="uid://ci8nj8rc17d2p" path="res://tileset.tres" id="1_fmk1s"]
@@ -19,6 +19,30 @@
 [ext_resource type="Texture2D" uid="uid://ba4mktjha754o" path="res://ui/sword.png" id="16_u7ctw"]
 [ext_resource type="Texture2D" uid="uid://7jjlheomw31f" path="res://ui/latin.png" id="17_qso2t"]
 [ext_resource type="Texture2D" uid="uid://dux7nxlpymet3" path="res://ui/background.png" id="19_tdhf8"]
+[ext_resource type="Shader" path="res://scenes/start.gdshader" id="20_63auv"]
+[ext_resource type="Texture2D" uid="uid://dsljqjk4i3cyo" path="res://ui/cutscenes/bar.png" id="20_fyb34"]
+[ext_resource type="Texture2D" uid="uid://bnffbvca05kaw" path="res://ui/cutscenes/scene-1/sky-bg.png" id="21_j1et2"]
+[ext_resource type="Shader" path="res://scenes/pixel_smooth.gdshader" id="21_x3q0l"]
+[ext_resource type="Texture2D" uid="uid://cyfpngo0iiooc" path="res://ui/cutscenes/scene-1/earth.png" id="21_y8lqi"]
+[ext_resource type="Texture2D" uid="uid://cema6mb3x6qds" path="res://ui/cutscenes/scene-1/earth-2.png" id="24_amxcm"]
+[ext_resource type="Texture2D" uid="uid://c5ir1jnjoeorc" path="res://ui/cutscenes/scene-1/cloud-back.png" id="24_wn168"]
+[ext_resource type="Texture2D" uid="uid://dfhe58i85eiyn" path="res://ui/cutscenes/scene-1/earth-3.png" id="25_hscnf"]
+[ext_resource type="Texture2D" uid="uid://pqc8ddif5jg7" path="res://ui/cutscenes/scene-1/cloud-left.png" id="25_xeevy"]
+[ext_resource type="Texture2D" uid="uid://cnnvjqm8qkbo" path="res://ui/cutscenes/scene-1/earth-4.png" id="26_6ciov"]
+[ext_resource type="Texture2D" uid="uid://v0yulwgp4ltl" path="res://ui/cutscenes/scene-1/cloud-right.png" id="26_udthu"]
+[ext_resource type="Texture2D" uid="uid://dx58l246ntr8y" path="res://ui/cutscenes/scene-2/sky-bg.png" id="31_6p0nb"]
+[ext_resource type="Texture2D" uid="uid://cp8sc6i0in3fh" path="res://ui/cutscenes/scene-2/land-left.png" id="32_el73f"]
+[ext_resource type="Texture2D" uid="uid://6x8lqaspgb84" path="res://ui/cutscenes/scene-2/mountain.png" id="32_tp38e"]
+[ext_resource type="Texture2D" uid="uid://bq26ams45pyx2" path="res://ui/cutscenes/scene-2/land-right.png" id="33_xnhg6"]
+[ext_resource type="Texture2D" uid="uid://da3rd4xt8qnkk" path="res://ui/cutscenes/scene-2/building-left.png" id="34_eiw1d"]
+[ext_resource type="Texture2D" uid="uid://djk20m21y2kky" path="res://ui/cutscenes/scene-2/building-right.png" id="35_cgsgl"]
+[ext_resource type="Texture2D" uid="uid://deusn46pug4a" path="res://ui/cutscenes/scene-2/handshake.png" id="37_1oq1d"]
+[ext_resource type="Texture2D" uid="uid://y6vsoxw0qwtf" path="res://ui/cutscenes/sky-bg-2.png" id="38_aqoiq"]
+[ext_resource type="Texture2D" uid="uid://de6p7qc0pygsd" path="res://ui/cutscenes/scene-3/mountain.png" id="39_438le"]
+[ext_resource type="Texture2D" uid="uid://cw3epumditn8i" path="res://ui/cutscenes/scene-3/land.png" id="40_k37ds"]
+[ext_resource type="Texture2D" uid="uid://2syn2r0ryxbg" path="res://ui/cutscenes/scene-3/building.png" id="41_uxeih"]
+[ext_resource type="Texture2D" uid="uid://du3x4c8lfnolb" path="res://ui/cutscenes/scene-3/beam.png" id="42_2hel4"]
+[ext_resource type="Texture2D" uid="uid://ci6744aaxgili" path="res://ui/cutscenes/scene-3/particle.png" id="43_w5fsb"]
 
 [sub_resource type="Animation" id="Animation_sp2gd"]
 length = 0.001
@@ -209,7 +233,7 @@ tracks/6/keys = {
 tracks/7/type = "method"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Story")
+tracks/7/path = NodePath("../Story")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -862,13 +886,711 @@ size = Vector2(8, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dp3ua"]
 size = Vector2(26, 16)
 
+[sub_resource type="Animation" id="Animation_5rrat"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Overlay:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene1/Startfield:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scene1/CloudLeft:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-160, -63)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scene1/CloudRight:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20, -63)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Scene1/CloudBack:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Scene1/CloudLeft:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Scene1/CloudRight:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Scene1/Earth:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Scene1/Earth2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.329412, 0.329412, 0.329412, 0.584314)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Scene1/Earth3:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.329412, 0.329412, 0.329412, 0.584314)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Scene1/Earth4:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.329412, 0.329412, 0.329412, 0.584314)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Scene2/Handshake:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Scene2/BuildingLeft:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-160, 32)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Scene2/BuildingRight:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-160, -64)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Scene2/Handshake:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.2, 1.2)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Scene2/Overlay:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Scene2/Handshake:use_parent_material")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Scene2/Handshake:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-160, -64)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Scene2/Handshake:skew")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Scene3/Beam:scale")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Scene3/Beam:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-303, 38)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Scene3/TempleLight:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-303, 38)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Scene3/TempleLight:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_41e3m"]
+resource_name = "scene1"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Overlay:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene1/Startfield:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scene1/CloudLeft:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-352, -63), Vector2(-160, -63)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scene1/CloudRight:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(20, -63), Vector2(-160, -64)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Scene1/CloudBack:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.5, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Scene1/CloudLeft:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.8, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Scene1/CloudRight:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.8, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Scene1/Earth:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.329158, 0.329158, 0.329158, 0.584314), Color(0.329158, 0.329158, 0.329158, 0.584314), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Scene1/Earth2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.8, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.329412, 0.329412, 0.329412, 0.584314), Color(0.329412, 0.329412, 0.329412, 0.584314), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Scene1/Earth3:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 2.2, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.329412, 0.329412, 0.329412, 0.584314), Color(0.329412, 0.329412, 0.329412, 0.584314), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Scene1/Earth4:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 2.6, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.329412, 0.329412, 0.329412, 0.584314), Color(0.329412, 0.329412, 0.329412, 0.584314), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wb3iq"]
+resource_name = "scene2"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scene2/Handshake:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 4.3, 5.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene2/BuildingLeft:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-160, 32), Vector2(-160, -64)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scene2/BuildingRight:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.5, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-160, 72), Vector2(-160, -64)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scene2/Handshake:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4.9, 5.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/Overlay:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Camera")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6, 2.2, 5.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [0.75],
+"method": &"shake_for"
+}, {
+"args": [0.75],
+"method": &"shake_for"
+}, {
+"args": [0.5],
+"method": &"shake_for"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Scene2/Overlay:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 4.6, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Scene2/Handshake:use_parent_material")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 5.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_7d0k2"]
+resource_name = "scene2_idle"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scene2/Handshake:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-160, -64), Vector2(-160, -60)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene2/Handshake:skew")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.0174533, 0.0174533]
+}
+
+[sub_resource type="Animation" id="Animation_1i40a"]
+resource_name = "scene3"
+length = 10.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Overlay:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Scene3/Beam:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.6, 2.7, 2.9, 3.2, 3.3, 3.5, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1e-05), Vector2(1.5, 1.5), Vector2(1, 1), Vector2(1.5, 1.5), Vector2(1, 1), Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Scene3/Beam:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.6, 2.7, 2.9, 3.2, 3.3, 3.5, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-303, 38), Vector2(-303, -118), Vector2(-303, -67), Vector2(-303, -118), Vector2(-303, -67), Vector2(-303, -118), Vector2(-303, -67)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Scene3/TempleLight:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.6),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-303, 32)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Scene3/TempleLight:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.6, 1.65),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8rluv"]
+_data = {
+"RESET": SubResource("Animation_5rrat"),
+"scene1": SubResource("Animation_41e3m"),
+"scene2": SubResource("Animation_wb3iq"),
+"scene2_idle": SubResource("Animation_7d0k2"),
+"scene3": SubResource("Animation_1i40a")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5qt3n"]
+shader = ExtResource("21_x3q0l")
+
+[sub_resource type="Animation" id="Animation_nkus5"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_f4fq0"]
+resource_name = "cloud"
+length = 5.0
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n4qmi"]
+_data = {
+"RESET": SubResource("Animation_nkus5"),
+"cloud": SubResource("Animation_f4fq0")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jgkf1"]
+shader = ExtResource("20_63auv")
+shader_parameter/dimensions = Vector2(384, 216)
+shader_parameter/small_stars = 25.0
+shader_parameter/small_stars_far_size = 0.1
+shader_parameter/small_stars_near_size = 0.1
+shader_parameter/large_stars = 8.0
+shader_parameter/large_stars_far_size = 0.2
+shader_parameter/large_stars_near_size = 0.2
+shader_parameter/far_stars_color = Color(1, 0.905882, 0.678431, 1)
+shader_parameter/near_stars_color = Color(1, 0.832665, 0.743909, 1)
+shader_parameter/base_scroll_speed = 0.0
+shader_parameter/additional_scroll_speed = 0.01
+shader_parameter/resolution = 32.0
+
+[sub_resource type="Gradient" id="Gradient_rjbt2"]
+offsets = PackedFloat32Array(0, 0.701493)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mrobs"]
+gradient = SubResource("Gradient_rjbt2")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_gui6v"]
+offsets = PackedFloat32Array(0, 0.80597, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.0447761, 0.0447761, 0.0447761, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ocysg"]
+gradient = SubResource("Gradient_gui6v")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="Curve" id="Curve_g5kjp"]
+_data = [Vector2(0.01, 1), 0.0, 0.0, 0, 0, Vector2(0.803333, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_y3n4h"]
+offsets = PackedFloat32Array(0, 0.122137, 1)
+colors = PackedColorArray(0.553002, 0.254994, 0.823636, 1, 0.623346, 0.580346, 0.81973, 1, 1, 1, 1, 1)
+
+[sub_resource type="Environment" id="Environment_ykhtp"]
+ambient_light_color = Color(1, 1, 1, 1)
+glow_enabled = true
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_o47ou"]
+
 [node name="Loader" type="Node2D"]
 
-[node name="World" type="Node2D" parent="."]
-script = ExtResource("1_6pwme")
-
-[node name="Story" type="Node" parent="World"]
+[node name="Story" type="Node" parent="."]
 script = ExtResource("2_1qcyw")
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(-376, -64)
+limit_left = -352
+limit_right = 384
+script = ExtResource("11_5dpl6")
+
+[node name="ShakeTimer" type="Timer" parent="Camera"]
+
+[node name="World" type="Node2D" parent="."]
+visible = false
+script = ExtResource("1_6pwme")
 
 [node name="EnteranceAnimation" type="AnimationPlayer" parent="World"]
 libraries = {
@@ -1065,25 +1787,12 @@ layer_0/name = "Base"
 layer_0/z_index = -1
 layer_0/tile_data = PackedInt32Array(-458763, 131074, 3, -393227, 131074, 3, -327691, 131074, 3, -262155, 131074, 3, -196619, 131074, 3, -131083, 131074, 3, -65547, 131074, 3, -11, 131074, 3, 65525, 131074, 3, 131061, 131074, 3, 196597, 131074, 3, 262133, 131074, 3, 327669, 131074, 3, 393205, 131074, 3, -458762, 131074, 3, -393226, 131074, 3, -327690, 1179650, 6, -262154, 131074, 3, -196618, 131074, 3, -131082, 131074, 3, -65546, 1179650, 6, -10, 131074, 3, 65526, 131074, 3, 131062, 131074, 3, 196598, 1179650, 6, 262134, 131074, 3, 327670, 131074, 3, 393206, 131074, 3, -458761, 131074, 3, -393225, 131074, 3, -327689, 131074, 3, -262153, 131072, 2, -196617, 131072, 2, -131081, 131072, 2, -65545, 131074, 3, -9, 131072, 2, 65527, 131072, 2, 131063, 131072, 2, 196599, 131074, 3, 262135, 131072, 2, 327671, 131072, 2, 393207, 131072, 2, -458760, 131074, 3, -393224, 131074, 3, -327688, 131074, 3, -262152, 131072, 2, -196616, 1245186, 5, -131080, 131072, 2, -65544, 131074, 3, -8, 131072, 2, 65528, 1245186, 5, 131064, 131072, 2, 196600, 131074, 3, 262136, 131072, 2, 327672, 1245186, 5, 393208, 131072, 2, -458759, 131074, 3, -393223, 131074, 3, -327687, 131074, 3, -262151, 131072, 2, -196615, 131072, 2, -131079, 131072, 2, -65543, 131074, 3, -7, 131072, 2, 65529, 131072, 2, 131065, 131072, 2, 196601, 131074, 3, 262137, 131072, 2, 327673, 131072, 2, 393209, 131072, 2, -458758, 131074, 3, -393222, 131074, 3, -327686, 131074, 3, -262150, 1179650, 6, -196614, 131072, 2, -131078, 131072, 2, -65542, 131074, 3, -6, 1179650, 6, 65530, 131072, 2, 131066, 131072, 2, 196602, 131074, 3, 262138, 1179650, 6, 327674, 131072, 2, 393210, 131072, 2, -458757, 131074, 3, -393221, 131074, 3, -327685, 131074, 3, -262149, 131072, 2, -196613, 131072, 2, -131077, 131072, 2, -65541, 131074, 3, -5, 131072, 2, 65531, 131072, 2, 131067, 131072, 2, 196603, 131074, 3, 262139, 131072, 2, 327675, 131072, 2, 393211, 131072, 2, -458756, 131074, 3, -393220, 131074, 3, -327684, 131074, 3, -262148, 131072, 2, -196612, 131072, 2, -131076, 131072, 2, -65540, 131074, 3, -4, 131072, 2, 65532, 131072, 2, 131068, 131072, 2, 196604, 131074, 3, 262140, 131072, 2, 327676, 131072, 2, 393212, 131072, 2, -458755, 131074, 3, -393219, 131074, 3, -327683, 131074, 3, -262147, 131072, 2, -196611, 131072, 2, -131075, 131072, 2, -65539, 131074, 3, -3, 131072, 2, 65533, 131072, 2, 131069, 131072, 2, 196605, 131074, 3, 262141, 131072, 2, 327677, 131072, 2, 393213, 131072, 2, -458754, 131074, 3, -393218, 131074, 3, -327682, 131074, 3, -262146, 131072, 2, -196610, 131072, 2, -131074, 1179650, 6, -65538, 131074, 3, -2, 131072, 2, 65534, 131072, 2, 131070, 1179650, 6, 196606, 131074, 3, 262142, 131072, 2, 327678, 131072, 2, 393214, 1179650, 6, -458753, 131074, 3, -393217, 131074, 3, -327681, 131072, 2, -262145, 131072, 2, -196609, 131072, 2, -131073, 131072, 2, -65537, 131072, 2, -1, 131072, 2, 65535, 131072, 2, 131071, 131072, 2, 196607, 131072, 2, 262143, 131072, 2, 327679, 131072, 2, 393215, 131072, 2, -524288, 131074, 3, -458752, 131074, 3, -393216, 131072, 2, -327680, 1376258, 7, -262144, 131072, 2, -196608, 131072, 2, -131072, 131072, 2, -65536, 1376258, 7, 0, 131072, 2, 65536, 131072, 2, 131072, 131072, 2, 196608, 1376258, 7, 262144, 131072, 2, 327680, 131072, 2, -524287, 131074, 3, -458751, 131074, 3, -393215, 131072, 2, -327679, 131072, 2, -262143, 131072, 2, -196607, 131072, 2, -131071, 131072, 2, -65535, 131072, 2, 1, 131072, 2, 65537, 131072, 2, 131073, 131072, 2, 196609, 131072, 2, 262145, 131072, 2, 327681, 131072, 2, -524286, 131074, 3, -458750, 131074, 3, -393214, 1179650, 6, -327678, 131072, 2, -262142, 131072, 2, -196606, 131072, 2, -131070, 1179650, 6, -65534, 131072, 2, 2, 131072, 2, 65538, 131072, 2, 131074, 1179650, 6, 196610, 131072, 2, 262146, 131072, 2, 327682, 131072, 2, -524285, 131074, 3, -458749, 131074, 3, -393213, 131072, 2, -327677, 131072, 2, -262141, 131072, 2, -196605, 131072, 2, -131069, 131072, 2, -65533, 131072, 2, 3, 131072, 2, 65539, 131072, 2, 131075, 131072, 2, 196611, 131072, 2, 262147, 131072, 2, 327683, 131072, 2, -524284, 131074, 3, -458748, 131074, 3, -393212, 131074, 3, -327676, 131074, 3, -262140, 131074, 3, -196604, 131074, 3, -131068, 131074, 3, -65532, 131074, 3, 4, 131074, 3, 65540, 131074, 3, 131076, 131074, 3, 196612, 131074, 3, 262148, 131074, 3, 327684, 131074, 3, -524283, 131074, 3, -458747, 131074, 3, -393211, 131074, 3, -327675, 131074, 3, -262139, 1376258, 7, -196603, 131074, 3, -131067, 131074, 3, -65531, 131074, 3, 5, 1376258, 7, 65541, 131074, 3, 131077, 131074, 3, 196613, 131074, 3, 262149, 1376258, 7, 327685, 131074, 3, -524282, 131074, 3, -458746, 131074, 3, -393210, 131074, 3, -327674, 131074, 3, -262138, 131074, 3, -196602, 131074, 3, -131066, 131074, 3, -65530, 131074, 3, 6, 131074, 3, 65542, 131074, 3, 131078, 131074, 3, 196614, 131074, 3, 262150, 131074, 3, 327686, 131074, 3, -524281, 131074, 3, -458745, 131074, 3, -393209, 131074, 3, -327673, 131074, 3, -262137, 131074, 3, -196601, 131074, 3, -131065, 131074, 3, -65529, 131074, 3, 7, 131074, 3, 65543, 131074, 3, 131079, 131074, 3, 196615, 131074, 3, 262151, 131074, 3, 327687, 131074, 3, -524280, 131074, 3, -458744, 131074, 3, -393208, 131074, 3, -327672, 1179650, 6, -262136, 131074, 3, -196600, 131074, 3, -131064, 131074, 3, -65528, 1179650, 6, 8, 131074, 3, 65544, 131074, 3, 131080, 131074, 3, 196616, 1179650, 6, 262152, 131074, 3, 327688, 131074, 3, -524279, 131074, 3, -458743, 131074, 3, -393207, 131074, 3, -327671, 131074, 3, -262135, 1376258, 7, -196599, 131074, 3, -131063, 131074, 3, -65527, 131074, 3, 9, 1376258, 7, 65545, 131074, 3, 131081, 131074, 3, 196617, 131074, 3, 262153, 1376258, 7, 327689, 131074, 3, -524278, 131074, 3, -458742, 131074, 3, -393206, 131074, 3, -327670, 131074, 3, -262134, 131074, 3, -196598, 131074, 3, -131062, 131074, 3, -65526, 131074, 3, 10, 131074, 3, 65546, 131074, 3, 131082, 131074, 3, 196618, 131074, 3, 262154, 131074, 3, 327690, 131074, 3, -524277, 131074, 3, -458741, 131074, 3, -393205, 131074, 3, -327669, 131074, 3, -262133, 131074, 3, -196597, 131074, 3, -131061, 131074, 3, -65525, 131074, 3, 11, 131074, 3, 65547, 131074, 3, 131083, 131074, 3, 196619, 131074, 3, 262155, 131074, 3, 327691, 131074, 3)
 layer_1/name = "Tree Shadow"
-layer_1/enabled = true
-layer_1/modulate = Color(1, 1, 1, 1)
-layer_1/y_sort_enabled = false
-layer_1/y_sort_origin = 0
-layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(-8, 1507330, 9, 131066, 1507330, 10, 131067, 1572866, 10, -3, 1507330, 10, -2, 1572866, 10, 0, 1572866, 9, -65534, 1507330, 9, -65533, 1572866, 9)
 layer_2/name = "Tree"
-layer_2/enabled = true
-layer_2/modulate = Color(1, 1, 1, 1)
 layer_2/y_sort_enabled = true
-layer_2/y_sort_origin = 0
 layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array(-393224, 1507330, 1, -327688, 1507330, 2, -262152, 1507330, 3, -393223, 1572866, 1, -327687, 1572866, 2, -262151, 1572866, 3, -393219, 1638402, 1, -327683, 1638402, 2, -262147, 1638402, 3, -393218, 1703938, 1, -327682, 1703938, 2, -262146, 1703938, 3, -393214, 6, 1, -327678, 6, 2, -393213, 65542, 1, -327677, 65542, 2, -327673, 262145, 7, -327672, 327681, 7)
 layer_3/name = "Wall"
-layer_3/enabled = true
-layer_3/modulate = Color(1, 1, 1, 1)
-layer_3/y_sort_enabled = false
-layer_3/y_sort_origin = 0
-layer_3/z_index = 0
 layer_3/tile_data = PackedInt32Array(-393225, 65536, 0, -327689, 0, 2, -262153, 0, 2, -196617, 0, 3, -393224, 131072, 0, -196616, 131072, 4, -393223, 131072, 0, -196615, 131072, 4, -393222, 262144, 1, -327686, 262144, 2, -262150, 262144, 2, -196614, 262144, 3, -393220, 65536, 0, -327684, 0, 2, -262148, 0, 2, -196612, 0, 3, -393219, 131072, 0, -196611, 131072, 4, -393218, 131072, 0, -196610, 131072, 4, -393217, 262144, 1, -327681, 262144, 2, -262145, 262144, 2, -196609, 262144, 3, -458751, 65536, 0, -393215, 0, 2, -327679, 0, 2, -262143, 0, 3, -458750, 131072, 0, -262142, 131072, 4, -458749, 131072, 0, -262141, 131072, 4, -458748, 262144, 1, -393212, 262144, 2, -327676, 262144, 2, -262140, 262144, 3, -131081, 6, 0, -131080, 65542, 0, -131079, 131078, 0, -131076, 6, 0, -131075, 65542, 0, -131074, 131078, 0, -196607, 6, 0, -196606, 65542, 0, -196605, 131078, 0, -262138, 6, 0, -262137, 65542, 0, -262136, 131078, 0, -524299, 131072, 0, -524298, 131072, 0, -524297, 131072, 0, -524296, 131072, 0, -524295, 131072, 0, -524294, 131072, 0, -524293, 131072, 0, -524292, 131072, 0, -524291, 131072, 0, -524290, 131072, 0, -524289, 131072, 0, -589824, 131072, 0, -589823, 131072, 0, -589822, 131072, 0, -589821, 131072, 0, -589820, 131072, 0, -589819, 131072, 0, -589818, 131072, 0, -589817, 131072, 0, -589816, 131072, 0, -589815, 131072, 0, -589814, 131072, 0, -589813, 131072, 0, -589812, 196608, 0, -524300, 65536, 0)
 
 [node name="Glitch" type="Sprite2D" parent="World/TileMap"]
@@ -1129,13 +1838,6 @@ collision_mask = 3
 [node name="Collision" type="CollisionShape2D" parent="World/TileMap/Riani/InteractionArea"]
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_dp3ua")
-
-[node name="Camera" type="Camera2D" parent="World/TileMap/Riani"]
-limit_left = -352
-limit_right = 384
-script = ExtResource("11_5dpl6")
-
-[node name="ShakeTimer" type="Timer" parent="World/TileMap/Riani/Camera"]
 
 [node name="Sprite" type="Sprite2D" parent="World/TileMap/Riani"]
 texture = ExtResource("11_tnuyo")
@@ -1227,12 +1929,248 @@ texture = ExtResource("17_qso2t")
 self_modulate = Color(1, 1, 1, 0)
 z_index = 10
 z_as_relative = false
-position = Vector2(238.333, 76.6666)
+position = Vector2(245, 76.6667)
 scale = Vector2(5, 5)
 texture = ExtResource("16_2mldf")
 
+[node name="Cutscenes" type="Node2D" parent="."]
+z_index = 100
+
+[node name="Animation" type="AnimationPlayer" parent="Cutscenes"]
+libraries = {
+"": SubResource("AnimationLibrary_8rluv")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Cutscenes"]
+
+[node name="Bar1" type="TextureRect" parent="Cutscenes/CanvasLayer"]
+offset_right = 384.0
+offset_bottom = 16.0
+texture = ExtResource("20_fyb34")
+
+[node name="Bar2" type="TextureRect" parent="Cutscenes/CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+texture = ExtResource("20_fyb34")
+
+[node name="MarginContainer" type="MarginContainer" parent="Cutscenes/CanvasLayer"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Content" type="Label" parent="Cutscenes/CanvasLayer/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_08k63")
+theme_override_font_sizes/font_size = 8
+text = "Kemakmuran, kemajuan teknologi, dan kebijaksanaan berhasil mereka raih bersama-sama. "
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Overlay" type="TextureRect" parent="Cutscenes/CanvasLayer"]
+offset_right = 384.0
+offset_bottom = 214.0
+texture = ExtResource("20_fyb34")
+
+[node name="Scene1" type="Node2D" parent="Cutscenes"]
+visible = false
+texture_filter = 2
+material = SubResource("ShaderMaterial_5qt3n")
+
+[node name="CloudAnimation" type="AnimationPlayer" parent="Cutscenes/Scene1"]
+libraries = {
+"": SubResource("AnimationLibrary_n4qmi")
+}
+
+[node name="Background" type="Sprite2D" parent="Cutscenes/Scene1"]
+position = Vector2(-160, -64)
+texture = ExtResource("21_j1et2")
+
+[node name="Startfield" type="Sprite2D" parent="Cutscenes/Scene1"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_jgkf1")
+position = Vector2(-160, -64)
+texture = ExtResource("21_j1et2")
+
+[node name="Earth" type="Sprite2D" parent="Cutscenes/Scene1"]
+modulate = Color(1, 1, 1, 0)
+z_index = 10
+texture_filter = 1
+position = Vector2(-160, -64)
+texture = ExtResource("21_y8lqi")
+
+[node name="Earth2" type="Sprite2D" parent="Cutscenes/Scene1"]
+modulate = Color(0.329412, 0.329412, 0.329412, 0.584314)
+z_index = 10
+texture_filter = 1
+position = Vector2(-160, -64)
+texture = ExtResource("24_amxcm")
+
+[node name="Earth3" type="Sprite2D" parent="Cutscenes/Scene1"]
+modulate = Color(0.329412, 0.329412, 0.329412, 0.584314)
+z_index = 10
+texture_filter = 1
+position = Vector2(-160, -64)
+texture = ExtResource("25_hscnf")
+
+[node name="Earth4" type="Sprite2D" parent="Cutscenes/Scene1"]
+modulate = Color(0.329412, 0.329412, 0.329412, 0.584314)
+z_index = 10
+texture_filter = 1
+position = Vector2(-160, -64)
+texture = ExtResource("26_6ciov")
+
+[node name="CloudBack" type="Sprite2D" parent="Cutscenes/Scene1"]
+use_parent_material = true
+position = Vector2(-160, -64)
+texture = ExtResource("24_wn168")
+
+[node name="CloudLeft" type="Sprite2D" parent="Cutscenes/Scene1"]
+z_index = 11
+use_parent_material = true
+position = Vector2(-160, -63)
+texture = ExtResource("25_xeevy")
+
+[node name="CloudRight" type="Sprite2D" parent="Cutscenes/Scene1"]
+z_index = 11
+use_parent_material = true
+position = Vector2(20, -63)
+texture = ExtResource("26_udthu")
+
+[node name="Scene2" type="Node2D" parent="Cutscenes"]
+visible = false
+texture_filter = 2
+material = SubResource("ShaderMaterial_5qt3n")
+
+[node name="Background" type="Sprite2D" parent="Cutscenes/Scene2"]
+texture_filter = 1
+position = Vector2(-160, -64)
+texture = ExtResource("31_6p0nb")
+
+[node name="Mountain" type="Sprite2D" parent="Cutscenes/Scene2"]
+texture_filter = 1
+position = Vector2(-160, -64)
+texture = ExtResource("32_tp38e")
+
+[node name="BuildingLeft" type="Sprite2D" parent="Cutscenes/Scene2"]
+use_parent_material = true
+position = Vector2(-160, 32)
+texture = ExtResource("34_eiw1d")
+
+[node name="BuildingRight" type="Sprite2D" parent="Cutscenes/Scene2"]
+use_parent_material = true
+position = Vector2(-160, -64)
+texture = ExtResource("35_cgsgl")
+
+[node name="LandRight" type="Sprite2D" parent="Cutscenes/Scene2"]
+texture_filter = 1
+position = Vector2(-160, -64)
+texture = ExtResource("33_xnhg6")
+
+[node name="LandLeft" type="Sprite2D" parent="Cutscenes/Scene2"]
+texture_filter = 1
+position = Vector2(-160, -64)
+texture = ExtResource("32_el73f")
+
+[node name="Overlay" type="Sprite2D" parent="Cutscenes/Scene2"]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+position = Vector2(-160, -64)
+texture = ExtResource("38_aqoiq")
+
+[node name="Handshake" type="Sprite2D" parent="Cutscenes/Scene2"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-160, -64)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("37_1oq1d")
+
+[node name="Scene3" type="Node2D" parent="Cutscenes"]
+texture_filter = 2
+material = SubResource("ShaderMaterial_5qt3n")
+
+[node name="Background" type="Sprite2D" parent="Cutscenes/Scene3"]
+texture_filter = 1
+position = Vector2(-160, -64)
+texture = ExtResource("38_aqoiq")
+metadata/_edit_lock_ = true
+
+[node name="Mountain" type="Sprite2D" parent="Cutscenes/Scene3"]
+texture_filter = 1
+position = Vector2(-160, -64)
+texture = ExtResource("39_438le")
+metadata/_edit_lock_ = true
+
+[node name="Beam" type="Sprite2D" parent="Cutscenes/Scene3"]
+texture_filter = 1
+position = Vector2(-303, 38)
+texture = ExtResource("42_2hel4")
+metadata/_edit_lock_ = true
+
+[node name="TempleLight" type="PointLight2D" parent="Cutscenes/Scene3"]
+texture_filter = 1
+position = Vector2(-303, 38)
+color = Color(0.66015, 0.000329214, 0.661363, 1)
+energy = 1.2
+texture = SubResource("GradientTexture2D_mrobs")
+
+[node name="CityLight" type="PointLight2D" parent="Cutscenes/Scene3"]
+texture_filter = 1
+position = Vector2(-157, 13)
+scale = Vector2(6.59375, 1)
+color = Color(0.66015, 0.000329214, 0.661363, 1)
+range_z_max = 100
+texture = SubResource("GradientTexture2D_ocysg")
+
+[node name="Building" type="Sprite2D" parent="Cutscenes/Scene3"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-160, -64)
+texture = ExtResource("41_uxeih")
+metadata/_edit_lock_ = true
+
+[node name="Land" type="Sprite2D" parent="Cutscenes/Scene3"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-160, -64)
+texture = ExtResource("40_k37ds")
+metadata/_edit_lock_ = true
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Cutscenes/Scene3"]
+position = Vector2(-303, 30)
+amount = 16
+lifetime = 3.0
+explosiveness = 0.2
+randomness = 0.5
+texture = ExtResource("43_w5fsb")
+emission_shape = 1
+emission_sphere_radius = 4.0
+direction = Vector2(0, -1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 30.0
+initial_velocity_max = 120.0
+scale_amount_min = 0.5
+scale_amount_max = 0.8
+scale_amount_curve = SubResource("Curve_g5kjp")
+color_ramp = SubResource("Gradient_y3n4h")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Cutscenes/Scene3/CPUParticles2D"]
+environment = SubResource("Environment_ykhtp")
+camera_attributes = SubResource("CameraAttributesPractical_o47ou")
+
+[connection signal="timeout" from="Camera/ShakeTimer" to="Camera" method="_on_shake_timer_timeout"]
 [connection signal="body_entered" from="World/TileMap/Riani/InteractionArea" to="World/TileMap/Riani" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="World/TileMap/Riani/InteractionArea" to="World/TileMap/Riani" method="_on_interaction_area_body_exited"]
-[connection signal="timeout" from="World/TileMap/Riani/Camera/ShakeTimer" to="World/TileMap/Riani/Camera" method="_on_shake_timer_timeout"]
 [connection signal="body_entered" from="World/TileMap/Sanjaya/InteractionArea" to="World/TileMap/Sanjaya" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="World/TileMap/Sanjaya/InteractionArea" to="World/TileMap/Sanjaya" method="_on_interaction_area_body_exited"]
