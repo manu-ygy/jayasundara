@@ -8,9 +8,9 @@ signal battle_ended
 @onready var loader = $/root/Loader
 
 @onready var dialog_container = $UI/Dialog
-@onready var dialog_name = $UI/Dialog/Wrapper/ProfileWrapper/Name
+@onready var dialog_name = $UI/Dialog/Wrapper/ProfileWrapper/Text/Margin/Wrapper/Name
 @onready var dialog_picture = $UI/Dialog/Wrapper/ProfileWrapper/Picture
-@onready var dialog_content = $UI/Dialog/Wrapper/Text/Margin/Content
+@onready var dialog_content = $UI/Dialog/Wrapper/ProfileWrapper/Text/Margin/Wrapper/Content
 @onready var dialog_choices_container = $UI/Dialog/Wrapper/ProfileWrapper/Choices/Wrapper
 
 @onready var information = $UI/Information
@@ -45,7 +45,7 @@ func render_mission():
 	for key in missions.keys():
 		mission_content.text += missions[key] + '\n'
 
-func dialog(name, content, choices = []):
+func dialog(name, content, avatar = null, choices = []):
 	is_mission_visible = mission_container.visible
 	dialog_container.show()
 	information.hide()
@@ -57,6 +57,13 @@ func dialog(name, content, choices = []):
 		dialog_name.text = name
 	else:
 		dialog_name.hide()
+		
+	if (avatar != null):
+		dialog_picture.show()
+		dialog_picture.texture = load('res://assets/potrait/' + avatar.to_lower() + '.png')
+	else:
+		dialog_picture.hide()
+	
 	is_choice = choices.size() > 0
 	is_in_dialog = true
 	

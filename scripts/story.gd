@@ -18,14 +18,17 @@ func _ready():
 	TranslationServer.set_locale('id')
 	
 	await get_tree().create_timer(0.2).timeout
-	action('testing')
+	action('transfered')
 	
 func npc(name):
 	return $/root/Loader/World/TileMap.get_node(name)
 	
+func format(string):
+	return string.replace('[Player]', player_name).replace('[Player 2]', player_two_name)
+	
 # localize string
 func lzs(string):
-	return tr(string).replace('[Player]', player_name).replace('[Player 2]', player_two_name)
+	return tr(format(string))
 	
 func show_overlay(is_start = false, is_end = false):
 	overlay.show()
@@ -43,60 +46,23 @@ func show_overlay(is_start = false, is_end = false):
 func action(name):
 	match(name):
 		'transfered':
-			player.move(-1152, 224)
-			player.movement_speed = 75
+			player.move(260, 260)
 			player.is_stunned = true
 			
-			npc('King').move(-1152, 437)
-			npc('Guard1').move(-1203, 397)
-			npc('Guard2').move(-1103, 397)
-			npc('GrandMinister').move(-1128, 421)
+			await ui.dialog(player_name, format('Di-dimana ini, ini bukan hutan yang tadi!'), player_name + '/default')
+			await ui.dialog(player_name, format('[Player 2] juga menghilang. Aku harus mencarinya dulu.'), player_name + '/default')
 			
-			await ui.dialog(player_name, lzs('LINE_PLAYER_1'))
-			await ui.dialog(player_name, lzs('LINE_PLAYER_2'))
+			player.is_stunned = false
 			
-			await player.move_along_path([Vector2(-1152, 368)])
+			ui.update_mission('find_player_2', format('Cari [Player 2]'))
+			ui.mission_container.show()
 			
-			await ui.dialog('Raja', lzs('LINE_BIANTARA_1'))
-			await ui.dialog('Raja', lzs('LINE_BIANTARA_2'))
-			await ui.dialog('Raja', lzs('LINE_BIANTARA_3'))
+			await npc('Player2').interacted_with_player
 			
-			await ui.dialog('Raja', lzs('LINE_RAJA_1'))
-			await ui.dialog('Raja', lzs('LINE_RAJA_2'))
+			await ui.dialog(player_two_name, format('Aduh... kepalaku pusing sekali...'), player_two_name + '/default')
 			
-			await ui.dialog(null, '(kretak)')
-			await ui.dialog('Raja', lzs('LINE_RAJA_3'))
-			
-			npc('King').align(Vector2.UP)
-			npc('GrandMinister').align(Vector2.UP)
-			npc('Guard1').align(Vector2.UP)
-			npc('Guard2').align(Vector2.UP)
-			
-			player.glitch.show()
-			await ui.dialog(player_name, lzs('LINE_PLAYER_5'))
-			player.glitch.hide()
-			
-			await npc('King').move_along_path([Vector2(-1152, 421)])
-			npc('King').align(Vector2.RIGHT)
-			await ui.dialog('Raja', lzs('LINE_RAJA_4'))
-			
-			npc('GrandMinister').align(Vector2.LEFT)
-			
-			await ui.dialog('Mahamantri', lzs('LINE_MAHAMANTRI_1'))
-			
-			npc('King').align(Vector2.UP)
-			await npc('GrandMinister').move_along_path([Vector2(-1128, 397)])
-			
-			await ui.dialog(player_name, lzs('LINE_PLAYER_6'))
-			await ui.dialog('Mahamantri', lzs('LINE_MAHAMANTRI_2'))
-			
-			npc('GrandMinister').move_along_path([Vector2(-1128, 128)])
-			await get_tree().create_timer(0.6).timeout
-			player.move_along_path([Vector2(-1152, 128)])
-			
-			await get_tree().create_timer(1.5).timeout
-			
-			action('arrived_at_library')
+			ui.remove_mission('find_player_2')
+			ui.mission_container.hide()
 			
 		'arrived_at_library':
 			player.movement_speed = 75

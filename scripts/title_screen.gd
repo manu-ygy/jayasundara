@@ -58,7 +58,7 @@ func shake_impact():
 func _on_play_pressed():
 	animation.play('transition')
 	await animation.animation_finished
-	get_tree().change_scene_to_file('res://scenes/loader.tscn')
+	get_tree().change_scene_to_file('res://scenes/prologue.tscn')
 
 func resize_camera():
 	viewport_width = get_viewport_rect().size.x

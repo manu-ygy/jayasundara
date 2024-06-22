@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6fpfij673d6"]
+
+[ext_resource type="Texture2D" uid="uid://d12yaw7g5u74g" path="res://ui/cutscenes/scene-6/chain.png" id="1_ly4gm"]
+[ext_resource type="Script" path="res://scripts/chain.gd" id="2_mnj5t"]
+
+[node name="Chain" type="Sprite2D"]
+z_index = 1
+texture_filter = 1
+position = Vector2(-224, -280)
+texture = ExtResource("1_ly4gm")
+script = ExtResource("2_mnj5t")

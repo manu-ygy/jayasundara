@@ -67,6 +67,11 @@ func _physics_process(delta):
 			velocity = Vector2.ZERO
 			state_machine.travel('idle')
 
+	if (global_position.y > player.global_position.y):
+		$Sprite.z_index = 1000
+	else:
+		$Sprite.z_index = 0
+
 	move_and_slide()
 
 func move_along_path(path):

@@ -11,7 +11,7 @@ signal arrived_at_path
 @onready var bump_detection = $Area2D/CollisionShape2D
 @onready var state_machine = $AnimationTree.get('parameters/playback')
 @onready var animation = $AnimationTree
-@onready var sprite = $Sprite
+@onready var sprite = $SubViewport/Sprite
 @onready var glitch = $Glitch
 
 var movement_speed = 125
