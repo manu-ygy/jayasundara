@@ -46,7 +46,7 @@ func show_overlay(is_start = false, is_end = false):
 func action(name):
 	match(name):
 		'transfered':
-			player.move(260, 260)
+			#player.move(260, 260)
 			player.is_stunned = true
 			
 			await ui.dialog(player_name, format('Di-dimana ini, ini bukan hutan yang tadi!'), player_name + '/default')

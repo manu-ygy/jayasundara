@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://ck1dm3mj6f3x8"]
+[gd_scene load_steps=20 format=3 uid="uid://ck1dm3mj6f3x8"]
 
 [ext_resource type="Texture2D" uid="uid://ba4mktjha754o" path="res://ui/sword.png" id="1_enenp"]
 [ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_tmdxm"]
 [ext_resource type="Texture2D" uid="uid://2lmcrwninasr" path="res://ui/sundanese.png" id="2_62htn"]
+[ext_resource type="Shader" path="res://scenes/pixel_smooth.gdshader" id="2_drqf7"]
 [ext_resource type="Texture2D" uid="uid://bvcdj2qy0c2vs" path="res://ui/cloud-mid.png" id="2_t6g1r"]
 [ext_resource type="Texture2D" uid="uid://7jjlheomw31f" path="res://ui/latin.png" id="3_cqito"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="3_w3mb0"]
@@ -11,6 +12,10 @@
 [ext_resource type="Theme" uid="uid://57s6nqgbwss4" path="res://ui/title_screen.tres" id="6_k0ye2"]
 [ext_resource type="FontFile" uid="uid://5punbxm32rcb" path="res://ui/fonts/monogram.ttf" id="6_qm1uy"]
 [ext_resource type="Texture2D" uid="uid://btic7scxyld75" path="res://ui/dialog.png" id="8_bvmou"]
+[ext_resource type="Texture2D" uid="uid://dme6hpco6vtd3" path="res://assets/compliments/discord.jpg" id="10_2u0hi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_stlxc"]
+shader = ExtResource("2_drqf7")
 
 [sub_resource type="Animation" id="Animation_sgtx7"]
 length = 0.001
@@ -160,7 +165,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4, 4.2, 4.4, 4.6, 4.8, 5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
+"update": 0,
 "values": [Vector2(238.333, 71), Vector2(238.333, 70.5557), Vector2(238.333, 70.091), Vector2(238.333, 69.6263), Vector2(238.333, 69.1617), Vector2(238.333, 68.697), Vector2(238.333, 68), Vector2(238.333, 68.8519), Vector2(238.333, 69.7038), Vector2(238.333, 70.5557), Vector2(238.333, 71.4076), Vector2(238.333, 72.2595), Vector2(238.333, 73.1113), Vector2(238.333, 73.9632), Vector2(238.333, 74.8151), Vector2(238.333, 75.667), Vector2(238.333, 75.2023), Vector2(238.333, 74.7377), Vector2(238.333, 74.273), Vector2(238.333, 73.8083), Vector2(238.333, 73.3437), Vector2(238.333, 72.879), Vector2(238.333, 72.4143), Vector2(238.333, 71.9497), Vector2(238.333, 71.485)]
 }
 tracks/1/type = "value"
@@ -361,41 +366,50 @@ scale = Vector2(1.7, 1.7)
 color = Color(0.372549, 0.803922, 0.894118, 1)
 
 [node name="Title" type="Node2D" parent="."]
+texture_filter = 2
+material = SubResource("ShaderMaterial_stlxc")
 scale = Vector2(0.6, 0.6)
 
 [node name="Clouds" type="Node2D" parent="Title"]
+use_parent_material = true
 position = Vector2(0, -40)
 scale = Vector2(1.2, 1.2)
 
 [node name="CloudBack" type="Sprite2D" parent="Title/Clouds"]
 z_index = 1
+use_parent_material = true
 position = Vector2(240, 146.667)
 texture = ExtResource("5_emrtl")
 
 [node name="CloudMid" type="Sprite2D" parent="Title/Clouds"]
 z_index = 2
+use_parent_material = true
 position = Vector2(240, 146.667)
 texture = ExtResource("2_t6g1r")
 
 [node name="CloudFront" type="Sprite2D" parent="Title/Clouds"]
 z_index = 3
+use_parent_material = true
 position = Vector2(240, 146.667)
 texture = ExtResource("4_cdbu5")
 
 [node name="Sword" type="Sprite2D" parent="Title"]
 z_index = 4
+use_parent_material = true
 position = Vector2(238.333, 71.6666)
 texture = ExtResource("1_enenp")
 
 [node name="Latin" type="Sprite2D" parent="Title"]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 4
+use_parent_material = true
 position = Vector2(233.333, 69.7646)
 texture = ExtResource("3_cqito")
 
 [node name="Sundanese" type="Sprite2D" parent="Title"]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 4
+use_parent_material = true
 position = Vector2(238.333, 76.6666)
 scale = Vector2(5, 5)
 texture = ExtResource("2_62htn")
@@ -404,11 +418,13 @@ texture = ExtResource("2_62htn")
 layer = 10
 
 [node name="Studio" type="MarginContainer" parent="UI"]
-anchors_preset = 15
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -40.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 size_flags_vertical = 4
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
@@ -424,6 +440,20 @@ theme_override_font_sizes/font_size = 8
 text = "Versi 1.0.0 (Beta)
 2024 © Mokad Gamestudio"
 vertical_alignment = 2
+
+[node name="Discord" type="Button" parent="UI/Studio"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+flat = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="UI/Studio/Discord"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+offset_right = 24.0
+offset_bottom = 24.0
+texture = ExtResource("10_2u0hi")
 
 [node name="Buttons" type="MarginContainer" parent="UI"]
 modulate = Color(1, 1, 1, 0)
@@ -567,5 +597,6 @@ script = ExtResource("3_w3mb0")
 
 [node name="ShakeTimer" type="Timer" parent="Camera"]
 
+[connection signal="pressed" from="UI/Studio/Discord" to="." method="_on_discord_pressed"]
 [connection signal="pressed" from="UI/Buttons/Wrapper/Play" to="." method="_on_play_pressed"]
 [connection signal="timeout" from="Camera/ShakeTimer" to="Camera" method="_on_shake_timer_timeout"]

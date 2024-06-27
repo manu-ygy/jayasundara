@@ -22,6 +22,7 @@ func _ready():
 		cloud_clone.name = cloud.name + 'Clone'
 		cloud_clone.flip_h = true
 		cloud_clone.z_index = cloud.z_index
+		cloud_clone.use_parent_material = true
 		
 		clouds.add_child(cloud_clone)
 	
@@ -58,7 +59,7 @@ func shake_impact():
 func _on_play_pressed():
 	animation.play('transition')
 	await animation.animation_finished
-	get_tree().change_scene_to_file('res://scenes/prologue.tscn')
+	get_tree().change_scene_to_file('res://scenes/loader.tscn')
 
 func resize_camera():
 	viewport_width = get_viewport_rect().size.x
@@ -68,3 +69,6 @@ func resize_camera():
 	
 #	for element in ui.get_children():
 #		element.scale = zoom_size
+
+func _on_discord_pressed():
+	OS.shell_open('https://discord.gg/27aEgbrEQy')
